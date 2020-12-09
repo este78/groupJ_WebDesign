@@ -29,14 +29,14 @@
 	align-items: center;		/*aligns the two elements (logo, menu list) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
 	justify-content: space-between;  /*justify the elements so the items are at both extremes of the page*/
 }
-.navBar .menu_list{
+.navBar .menu-list{
 	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
 } 
-.menu_list li{
+.menu-list li{
 	list-style: none; /*getsrid of  the bullet points*/
 }
 
-.menu_list li a{
+.menu-list li a{
 	color: #fff;
 	font-size: 18px;
 	font-weight: 500;
@@ -44,7 +44,7 @@
 	text-decoration: none; /*gets rid of the link's underline*/
 }
 
-.menu_list li a:hover{
+.menu-list li a:hover{
 	color: darkorange;
 }
 
@@ -67,14 +67,29 @@
 	text-align: justify; /*justifies text */
 }
 
+.icon{
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+	display: none;
+}
+.icon.off-btn{
+	position: absolute;  /**/
+	right: 30px;   /**/
+	top: 20px;     /*location of the "X" in the shrunk down menu*/
+}
+
 @media (max-width: ){
 }
 
 @media (max-width: 868px){
-	.navBar .menu_list{
+	.icon{
+		display: block;
+	}
+	.navBar .menu-list{
 		position: fixed;
 		top: 0;  /*aligns  menu  with the top left corner of the screen*/
-		left: 0;
+		left: -100%; /*hides the  box off-screen*/
 		height: 100vh;
 		width: 100%;
 		max-width: 400px; /*max widht of the "shrunk" menu's screen*/
@@ -82,11 +97,15 @@
 		display: block; /*menu elements show one above the other instean on the same line*/
 		padding: 40px 0; /*spacing between the elements of the lmenu_ist an the navBar box*/
 		text-align: center;
+		transition: all 0.3s ease; /*creates delay between the js instruction and the display modification*/
 	}
-	.navBar .menu_list li{
+	.navBar .menu-list.active{
+		left: 0%;
+	}
+	.navBar .menu-list li{
 		margin-top: 45px; /*spacing between the elements in the menu_list*/
 	}
-	.navBar .menu_list li a{
+	.navBar .menu-list li a{
 		font-size: 24px;
 	}
 	
