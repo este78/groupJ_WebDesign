@@ -38,7 +38,7 @@ Samsom	Mihreteab - x
 					<div class="icon off-btn">  <!--"X"icon in -->
 						<i class="fas fa-times"></i>
 					</div> 
-					<li><a href="#">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="#">Products</a></li>
 					<li><a href="#">Shopping Cart</a></li>
 					<li><a href="#">About</a></li>
@@ -61,8 +61,14 @@ Samsom	Mihreteab - x
 			const menu = document.querySelector(".menu-list");
 			const menuBtn = document.querySelector(".menu-btn");
 			const offBtn = document.querySelector(".off-btn");
-			menuBtn.onclick = () =>{ menu.classList.add("active");  }//adds a css mode for the menu_list when active tthat shows a hiden element
-			offBtn.onclick = () =>{ menu.classList.remove("active"); } //remove a css mode for the menu_list hiding the displayed element
+			menuBtn.onclick = () =>{ 
+				menu.classList.add("active"); //adds a css mode for the menu_list when active tthat shows a hiden element
+				menuBtn.classList.add("hide"); //hides the three bar menu icon when it's active
+			}
+			offBtn.onclick = () =>{ 
+				menu.classList.remove("active"); //remove a css mode for the menu_list hiding the displayed element
+				menuBtn.classList.remove("hide"); //shows the three bar menu icon when the side panel is closed
+			}
 		</script>
        <footer class="footer">
             
