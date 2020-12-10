@@ -13,4 +13,5 @@ window.onload = function(){
 		menuBtn.classList.remove("hide"); //shows the three bar menu icon when the side panel is closed
 	}
 }
+
 //========================================================================================================================================

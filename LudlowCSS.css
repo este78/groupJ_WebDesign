@@ -12,17 +12,27 @@
 }
 .navBar{
 	position: fixed;
-	background: darkgreen;
+	background: #fff;
 	z-index: 5; /*displays the element on top of any other box that ocupies the same "line" on the screen*/
 	width: 100%;
-	padding: 10px 0;
+	padding: 0 0;
+	transition: all 0.3s ease;
 }
 
-.navBar .logo a{
-	color: #fff;
-	font-size: 30px;
-	font-weight: 600; /*thickness of the characters */
-	text-decoration: none; /*gets rid of the link's underline*/
+.navBar.sticky{
+	padding: 8px 0;
+	background: rgba(255, 255, 255, 0.7); /*sets up opacity in the background of the menu but not the text.*/
+}
+
+.navBar .logo img{
+	width: 75%;
+	height: 75%;
+}
+
+.search{
+	position: fixed;
+	right: 61px;
+	top: 10px;
 }
 
 .navBar .content{
@@ -32,13 +42,15 @@
 }
 .navBar .menu-list{
 	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
+	margin-top: 100px;
+	margin-right: 26px;
 } 
 .menu-list li{
 	list-style: none; /*getsrid of  the bullet points*/
 }
 
 .menu-list li a{
-	color: #fff;
+	color: rgb(5,119,61);
 	font-size: 18px;
 	font-weight: 500;
 	margin-left: 25px; /*creates space between the list's elements*/
@@ -58,6 +70,7 @@
 }
 .reviews{
 	padding: 40px 0; /*creates a separation this box from the one before it*/
+	overflow: hidden;
 }
 .reviews .test{
 	font-size: 35px;
@@ -80,8 +93,6 @@
 	top: 20px;     /*location of the "X" in the shrunk down menu*/
 }
 
-@media (max-width: ){
-}
 
 @media screen and (max-width: 868px) {
 	.icon{
@@ -97,7 +108,7 @@
 		height: 100vh;
 		width: 100%;
 		max-width: 400px; /*max widht of the "shrunk" menu's screen*/
-		background: darkgreen;
+		background: rgba(1, 152, 117, 1);
 		display: block; /*menu elements show one above the other instean on the same line*/
 		padding: 40px 0; /*spacing between the elements of the lmenu_ist an the navBar box*/
 		text-align: center;
@@ -114,3 +125,16 @@
 	}	
 }
 /*========================================================================================================================================================================================================================================================*/
+#carousel{
+	position: absolute;
+	top: 200px;
+	width: 100%;
+}
+
+.item{
+	padding-left: 320px;
+}
+.item img{
+	width:100%;
+	min-width: 585px;
+}
