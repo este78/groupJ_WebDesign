@@ -103,11 +103,11 @@
 		display: none;
 	}
 	.search{
-		padding-bottom: 2px;
+		padding-bottom: 10%;
 	}
 	.navBar .logo img{
-	width: 25%;
-	height: 25%;
+		width: 25%;
+		height: 25%;
 	}
 	.navBar .menu-list{
 		position: fixed;
@@ -121,7 +121,6 @@
 		padding: 40px 0; /*spacing between the elements of the lmenu_ist an the navBar box*/
 		text-align: center;
 		transition: all 0.3s ease; /*creates delay between the js instruction and the display modification*/
-		z-index: 5;
 	}
 	.navBar .menu-list.active{
 		left: 0%;
@@ -141,9 +140,12 @@
 }
 
 .item{
-	padding-left: 320px;
+	padding-left: 25%;
 }
 .item img{
 	width:100%;
 	min-width: 585px;
+}
+.item .carousel-caption{
+	z-index:2;
 }
