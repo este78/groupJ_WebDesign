@@ -97,9 +97,17 @@
 @media screen and (max-width: 868px) {
 	.icon{
 		display: block;
+		color: rgb(5,119,61);
 	}
 	.icon.hide{
 		display: none;
+	}
+	.search{
+		padding-bottom: 2px;
+	}
+	.navBar .logo img{
+	width: 25%;
+	height: 25%;
 	}
 	.navBar .menu-list{
 		position: fixed;
@@ -108,11 +116,12 @@
 		height: 100vh;
 		width: 100%;
 		max-width: 400px; /*max widht of the "shrunk" menu's screen*/
-		background: rgba(1, 152, 117, 1);
+		background: rgba(255, 255, 255, 0.9);
 		display: block; /*menu elements show one above the other instean on the same line*/
 		padding: 40px 0; /*spacing between the elements of the lmenu_ist an the navBar box*/
 		text-align: center;
 		transition: all 0.3s ease; /*creates delay between the js instruction and the display modification*/
+		z-index: 5;
 	}
 	.navBar .menu-list.active{
 		left: 0%;
