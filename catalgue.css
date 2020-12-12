@@ -1,67 +1,117 @@
-/* {
-    box-sizing: border-box;
+/*MENU CSS CODE========================================================================================================================================================================================================================================*/
+
+* {
     margin: 0;
     padding: 0;
-    font-family: 'kumb Sans', sans-serif;
-    scroll-behavior: smooth;
-}*/
-
-.navbar {
-    background-color: #fdf5f5;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    position: static;
-    top: 0;
-    z-index: 978;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica;
 }
 
-.navbar_container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
+
+/* Div NavBar setup */
+
+.navBar {
+    position: absolute;
+    /* Set a fixed position */
+    background: rgba(254, 254, 250, 0.7);
+    /* Background Color */
+    z-index: 5;
+    /* Displays the elements on top of any other box that ocupies the same "line" on the screen */
+    box-shadow: 0px 0px 10px #888888b9;
     width: 100%;
-    max-width: 130px;
-    margin: 0 auto;
-    padding: 0 50px;
+    /* Occupies 100% of the page in Width */
+    padding: 0;
+    /* Padding set as 0 */
+    transition: all 0.3s ease;
+    /* Transition style setup */
 }
 
-#nav_logo {
-    background-color: #ff8177;
-    background-size: 100%;
+.navBar.sticky {
+    padding: 8px 0;
+    background: rgba(254, 254, 250, 1);
+    /*Sets up opacity in the background of the menu but not the text.*/
+}
+
+.navBar .logo img {
+    width: 75%;
+    height: 75%;
+}
+
+.search {
+    position: absolute;
+    right: 2%;
+    top: 10px;
+}
+
+.search input {
+    border: none;
+    background: rgba(254, 254, 250, 0.7);
+    border-bottom: 1px solid darkgreen;
+    font-size: 25px;
+}
+
+.search button {
+    font-size: 27px;
+    background: rgba(254, 254, 250, 0.7);
+    color: darkgreen;
+    border: none;
+}
+
+.navBar .content {
     display: flex;
     align-items: center;
+    /*aligns the two elements (logo, menu list) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+    justify-content: space-between;
+    /*justify the elements so the items are at both extremes of the page*/
+}
+
+
+/* 3 lines Button Style and it does not display it */
+
+.icon {
+    color: #fff;
+    /* Colour */
+    font-size: 20px;
+    /* Font Size */
     cursor: pointer;
-    text-decoration: none;
-    font-size: 1.8rem;
+    /* Changes cursor when it is houvered */
+    display: none;
+    /* Hide Icon */
 }
 
-.navbar_menu {
-    display: flex;
-    align-items: center;
+.icon.off-btn {
+    position: absolute;
+    /* Sets potision as Absolute */
+    right: 30px;
+    /* Location of the "X" when the menu is shrunk */
+    top: 20px;
+    /* Location of the "X" in the shrunk down menu*/
+}
+
+.navBar .menu-list {
+    display: inline-flex;
+    /*displays all the elements of the list one next to the other in the same line*/
+    margin-top: 100px;
+    margin-right: 26px;
+}
+
+.menu-list li {
     list-style: none;
+    /*getsrid of  the bullet points*/
 }
 
-.navbar_items {
-    height: 80px;
-}
-
-.navbar_links {
-    color: rgb(24, 18, 18);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 125px;
+.menu-list li a {
+    color: rgb(5, 119, 61);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    /*creates space between the list's elements*/
     text-decoration: none;
-    height: 100%;
+    /*gets rid of the link's underline*/
 }
 
-.logo {
-    display: flex;
-    align-items: flex-start;
+.menu-list li a:hover {
+    color: darkorange;
 }
 
 
@@ -72,26 +122,15 @@
     justify-content: center;
 }
 
-.info p {
-    text-align: center;
-    text-size-adjust: bold;
-}
-
 .cook-items {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
-    height: 50PX;
-    margin-left: 200px;
-    margin-right: 200px;
-    border-top: 1PX solid rgb(146, 140, 140);
-    border-bottom: 1px solid rgb(146, 140, 140);
-}
-
-.cook-items {
     align-items: center;
     text-align: center;
-    height: 80px;
+    height: 80PX;
+    border-top: 1PX solid rgb(146, 140, 140);
+    border-bottom: 1px solid rgb(146, 140, 140);
 }
 
 .dropdown {
@@ -103,37 +142,29 @@
     cursor: pointer;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
+.dropdown-catagory {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #866767;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-catagory a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1
+.dropdown-catagory a:hover {
+    background-color: #e43838;
+    border: none;
 }
 
-.dropdown:hover .dropdown-content {
+.catagory:hover .dropdown-catagory {
     display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
 }
 
 .filter {
@@ -146,22 +177,96 @@
     border: 1px solid rgb(146, 140, 140);
 }
 
-.footer {
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    background-color: rgb(188, 193, 199);
+.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 20px;
+    height: 1000px;
+    margin-top: 50px;
 }
 
-.inf {
+.products img {
+    width: 200px;
     height: 200px;
-    background-color: rgb(202, 200, 200);
 }
 
-.copy {
-    clear: both;
-    background-color: rgb(190, 187, 187);
-    height: 50px;
-    padding: 0px;
-    margin-bottom: 0px;
+.products p a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+#product_list a:hover {
+    background-color: rgb(161, 153, 153);
+}
+
+#product_list {
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 10px;
+    height: 210px;
+    width: 210px;
+    margin: 20px;
+}
+
+.section-bottom-links {
+    /*background-color: rgba(0, 100, 0, 0.068);*/
+    margin-left: 10%;
+    margin-right: 10%;
+    /*box-shadow: 0px 0px 10px #888888b9;*/
+    text-align: center;
+    display: flex;
+    align-items: top;
+    /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+    /*justify-content: space-between; /* justifies the elements. So the items are at both extremes of the page */
+}
+
+.section-sub-bottom-links {
+    margin-top: 3%;
+    margin-bottom: 1%;
+    width: 50%;
+}
+
+.sub-bottom-links-title strong {
+    color: darkgreen;
+    font-size: 25px;
+    border-bottom: 1px solid darkgreen;
+}
+
+.sub-bottom-links-title ul,
+li {
+    color: black;
+    font-size: 15px;
+    display: block;
+    /*displays all the elements of the list one next to the other in the same line*/
+    margin: 2% 0 0 0;
+    /* Defines margin top of the Menu Bar */
+    list-style: none;
+    /* It gets rid of the bullet points */
+}
+
+.sub-bottom-links-title a {
+    color: black;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.sub-bottom-links-title a:hover {
+    text-decoration: none;
+    /* It gets rid with the decoration when hovered */
+    color: darkorange;
+    /* Changes the colour when Buttons are hovered */
+}
+
+.footer p {
+    background-color: darkgreen;
+    /* Footes Background Colour */
+    border: 1px solid darkgreen;
+    /* Sets the Footer border */
+    text-align: center;
+    /* Align the Footer's paragraph in the centre */
+    color: whitesmoke;
+    /* Sets the colour of the letters */
 }
