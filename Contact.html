@@ -43,40 +43,32 @@ Samsom	Mihreteab - x
         <!----------------------------------------  Navegation Bar ---------------------------------------->
         <!------------------------------------------------------------------------------------------------->
         <nav class="navBar">
-            <!-- Logo Image -->
-			<div class="navBar-content">
-                <div class="navBar-content-logo">
-                    <a href="#"><img src="img/logo.png" alt="logo"></a>
-                </div>
-                <!-- Division for the Search Bar and the Search Button -->
-                <div class="navBar-search">
-                    <!-- Search Bar and Search Button are placed into a Form in order to get them together for any logic needs -->
-                    <form class="navBar-search-form" action="/action_page.php">
-                        <input class="navBar-search-form-input" type="text" placeholder="Search..." name="search" >
-                        <button class="navBar-search-form-btn" type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-                <!-- Menu Buttons (Placed as a Unorderd List -->
-				<ul class= "navBar-content-menu-list">
-                    <!-- Button to Close Menu when the Website is accessed by a Mobide Device or a Tablet-->
-                    <div class="icon off-btn">  <!-- "X"icon in -->
+			<div class="search">
+				<form  action="/action_page.php">
+					<input type="text" placeholder="Search.." name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<div class="content">
+				<div class="logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
+				<!-- Search button-- -->
+				<ul class= "menu-list">
+					<div class="icon off-btn">  <!--"X"icon in -->
 						<i class="fas fa-times"></i>
-                    </div> 
-                    
-                    <!-- Menu Buttons and Links redirecting to related pages -->
+					</div> 
 					<li><a href="index.html">Home</a></li>
 					<li><a href="#">Products</a></li>
 					<li><a href="#">Shopping Cart</a></li>
-					<li><a href="#">FAQ</a></li>
+					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 
-                <!-- 3 lines Button when the Website is accessed by a Mobide Device or a Tablet -->
 				<div class="icon menu-btn">
 					<i class="fas fa-bars"></i>
-                </div> 
+				</div>
 			</div>
-        </nav>
+		</nav>
+		
 
         <!--Script needs to be here to avoid null error . It cannot be called before the object is loaded  -->
 		<script>	
@@ -90,10 +82,10 @@ Samsom	Mihreteab - x
         <!----------------------------------------- Contact Form  ----------------------------------------->
         <!------------------------------------------------------------------------------------------------->
 
-        <div class="body-content">
-            <div class="body-content-div">
+       <div class="body-content">
+          <div class="body-content-div">
+			
                 <form class="body-content-div-form">
-                    
                         <table class="body-content-div-from-table">
                             <tr>
                                 <td class="form-label">Name:</td>
@@ -121,38 +113,38 @@ Samsom	Mihreteab - x
                                 </td>
                             </tr>
                         </table>
-                        
-                        <div class="contact-details">
-                            <h4>Contact Details</h4>
-                            <label>Address:</label> Ludford Bridge Ind Est, Temeside, Ludlow SY8 1PE, UK
-                            </br>
-                            <label>Phone:</label> +44 1584 874554
-                            </br>
-                            <label>Opening Hours:</label> Monday-Saturday 9am–5pm
-                        </div>
-                        </br>
-                        <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2414.164912097155!2d-2.718658652714522!3d52.36380375342915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sie!4v1607711675131!5m2!1sen!2sie" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                        </div>                   
-                </form>            
-            </div>
-            <div class="ADS">
+                </form>    
+					<div class="notform">
+						<div class="contact-details">
+							<h4>Contact Details</h4>
+							<label>Address:</label> Ludford Bridge Ind Est, Temeside, Ludlow SY8 1PE, UK
+							</br>
+							<label>Phone:</label> +44 1584 874554
+							</br>
+							<label>Opening Hours:</label> Monday-Saturday 9am–5pm
+						</div>
+						<div class="map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2414.164912097155!2d-2.718658652714522!3d52.36380375342915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sie!4v1607711675131!5m2!1sen!2sie" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						</div> 
+					</div>
+			</div>
+          <div class="ADS">
 				<p>ADS</p>
-            </div>
-            <div class="section-bottom-links">
-                <div class="section-sub-bottom-links">
-                    <div class="sub-section-bottom-links">
-                        <div class="sub-bottom-links-title">
-                            <strong>
-                                <span>Contact Us</span>
-                            </strong>
-                            <ul>
-                                <li><a href="#">Test 1</a></li>
-                                <li><a href="#">Test 2</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="section-bottom-links">
+             <div class="section-sub-bottom-links">
+					<div class="sub-section-bottom-links">
+						<div class="sub-bottom-links-title">
+								<strong>
+									<span>Contact Us</span>
+								</strong>
+								<ul>
+									<li><a href="#">Test 1</a></li>
+									<li><a href="#">Test 2</a></li>
+								</ul>
+						</div>
+					</div>
+             </div>
                 <div class="section-sub-bottom-links">
                     <div class="sub-section-bottom-links">
                         <div class="sub-bottom-links-title">

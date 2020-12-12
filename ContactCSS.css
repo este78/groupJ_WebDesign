@@ -9,81 +9,39 @@
 /* Div NavBar setup */
 .navBar{
 	position: fixed; /* Set a fixed position */
-	background: white; /* Background Color */
+	background: rgba(254,254,250, 0.7);/* Background Color */
 	z-index: 5; /* Displays the elements on top of any other box that ocupies the same "line" on the screen */
+	box-shadow: 0px 0px 10px #888888b9;
 	width: 100%; /* Occupies 100% of the page in Width */
-	padding: 0 0; /* Padding set as 0 */
-    transition: all 0.3s ease; /* Transition style setup */
+	padding: 0 ; /* Padding set as 0 */
+   transition: all 0.3s ease; /* Transition style setup */
 }
 
 .navBar.sticky{
 	padding: 8px 0;
-	background: rgba(255, 255, 255, 0.7); /*Sets up opacity in the background of the menu but not the text.*/
+	background: rgba(254,254,250, 1); /*Sets up opacity in the background of the menu but not the text.*/
 }
 
-/* It Sizes the Logo Imge */
-.navBar-content-logo img{
-	width: 100%;
-	height: 100%;
+.navBar .logo img{
+	width: 75%;
+	height: 75%;
 }
 
-/* Navbar Content size, margin and padding setup */
-.navBar-content{
-	max-width: 80%;
-	margin: auto;	
-    box-shadow: 0px 0px 10px #888888b9;
-    display: flex;
-    align-items: center; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
-    justify-content: space-between; /* justifies the elements. So the items are at both extremes of the page */
+.search{
+	position: fixed;
+	right: 61px;
+	top: 10px;
 }
 
-/* Search Bar positioning and style */
-.navBar-search{
-    display: absolute; /* Sets the item to accept an Absolute position */
-    text-align: center; /* Centralize the item in the center of the Div */
-    font-size: 20px; /* Font Size */
-	width: 35%; /* Width of the div based on the size of the ".navBar-content" */
-}
-
-/* Set the searchBar Style */
-.navBar-search-form-input{
-    box-shadow: 0px 1px 0px darkgreen; /* Shadow of the Box */
-	border:none; 
-	
-}
-
-/* Search Bar button style */
-.navBar-search-form-btn{
-    border: 5px solid white; /* Defines Border */
-    background-color: white; /* Defines Background colour */
-    color: darkgreen; /* Defines Item Colour */
-    width:5%;  /* Defines its width base don the ".navBar-search" div */
-}
-
-/* Content-Menu-List container positioning */
-.navBar-content-menu-list{
-	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
-    margin-top: 10%; /* Defines margin top of the Menu Bar */
-    list-style: none; /* It gets rid of the bullet points */
-	width:40%; /* Defines the width size */
-}
-
-/* Menu Buttons Style */
-.navBar-content-menu-list li a{
-    color: darkgreen; /* Colour */
-    font-size: 25px; /* Size */
-	margin: 0 0 0 27px; /* Margin between buttons, it creates a space between them */
-}
-
-/* Menu Buttons Style when they get hovered */
-.navBar-content-menu-list li a:hover{
-    text-decoration: none; /* It gets rid with the decoration when hovered */
-	color: darkorange; /* Changes the colour when Buttons are hovered */
+.navBar .content{
+	display: flex;
+	align-items: center;		/*aligns the two elements (logo, menu list) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+	justify-content: space-between;  /*justify the elements so the items are at both extremes of the page*/
 }
 
 /* 3 lines Button Style and it does not display it */
 .icon{
-	color: #fff; /* Collour */
+	color: #fff; /* Colour */
 	font-size: 20px; /* Font Size */
 	cursor: pointer; /* Changes cursor when it is houvered */
  	display: none; /* Hide Icon */
@@ -94,6 +52,32 @@
 	top: 20px;     /* Location of the "X" in the shrunk down menu*/
 }
 
+
+
+.navBar .menu-list{
+	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
+	margin-top: 100px;
+	margin-right: 26px;
+} 
+.menu-list li{
+	list-style: none; /*getsrid of  the bullet points*/
+}
+
+.menu-list li a{
+	color: rgb(5,119,61);
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 25px; /*creates space between the list's elements*/
+	text-decoration: none; /*gets rid of the link's underline*/
+}
+
+.menu-list li a:hover{
+	color: darkorange;
+}
+
+
+
+
 /* Places de body under the Menu */
 .body-content{
 	height: 100vh; /*stablishes the height of the the box*/
@@ -101,19 +85,30 @@
 	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
 	background-position: center;
 	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
-	margin:0% 10% 0% 10%; /* Background Margin */
+	/*margin:0% 10% 0% 10%; Background Margin */
 	padding: 40px 0; /*creates a separation this box from the one before it*/
 }
 
+.body-content-div{
+	display: flex;
+	align-items: center;
+	justify-content:justify;
+	padding-top: 5%;
+}
 
 /* Form Positioning */
 .body-content-div-form{
-	margin:15% 10%5% 10%;
+	margin:15% 5% 5% 5%;
 	text-align: justify; /*justifies text */
 	height: 80%;
-	width: 80%;
+	width: 100%;
 }
-
+.notform{
+	width: 75%;
+	overflow: hide;
+	margin-top: 5%;
+	margin-right:5%;
+}
 /* Table positioning and Style */
 .body-content-div-from-table tr, td{
 	padding: 2px;
@@ -147,10 +142,10 @@
 }
 
 .contact-details{	
-	position:absolute;
+	/*position:absolute;
 	margin-left: 40%;
-	margin-top: -17%;
-	width: 22%;
+	margin-top: -17%;*/
+	width: 100%;
 }
 
 .contact-details label{
@@ -163,12 +158,11 @@
 }
 
 .map{
-	position:absolute;
-	margin-left: 42%;
-	margin-top: -11.5%;
-	width: 300px;
-	height: 200px;
+	margin-top: 5%;
 	box-shadow: 0px 0px 10px #888888b9;
+}
+.map iframe{
+	width: 100%;
 }
 
 .ADS{
@@ -224,11 +218,52 @@
 	color: darkorange; /* Changes the colour when Buttons are hovered */
 }
 
-
-
 .footer p{
     background-color: darkgreen; /* Footes Background Colour */
     border: 1px solid darkgreen; /* Sets the Footer border */
     text-align: center; /* Align the Footer's paragraph in the centre */
     color: whitesmoke; /* Sets the colour of the letters */   
 }
+
+/* Mobile Screen Setup */
+
+@media screen and (max-width: 868px) {
+	.icon{
+		display: block;
+		color: rgb(5,119,61);
+	}
+	.icon.hide{
+		display: none;
+	}
+	.search{
+		padding-bottom: 10%;
+	}
+	.navBar .logo img{
+		width: 25%;
+		height: 25%;
+	}
+	.navBar .menu-list{
+		position: fixed;
+		top: 0;  /*aligns  menu  with the top left corner of the screen*/
+		left: -100%; /*hides the  box off-screen*/
+		height: 100vh;
+		width: 100%;
+		max-width: 400px; /*max widht of the "shrunk" menu's screen*/
+		background: rgba(255, 255, 255, 0.9);
+		display: block; /*menu elements show one above the other instean on the same line*/
+		padding: 40px 0; /*spacing between the elements of the lmenu_ist an the navBar box*/
+		text-align: center;
+		transition: all 0.3s ease; /*creates delay between the js instruction and the display modification*/
+	}
+	.navBar .menu-list.active{
+		left: 0%;
+	}
+	.navBar .menu-list li{
+		margin-top: 45px; /*spacing between the elements in the menu_list*/
+	}
+	.navBar .menu-list li a{
+		font-size: 24px;
+	}	
+}
+
+
