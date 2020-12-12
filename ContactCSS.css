@@ -128,6 +128,24 @@
 	width:100%;
 }
 
+/* Send Button Style and positioning */
+.message-btn{
+	font-size: 20px;
+	width: 50%;
+	margin-left:25%;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: rgba(0, 100, 0, 0.561);
+	color: whitesmoke;
+}
+
+/* Send Button Stylewhen hovered */
+.message-btn:hover{
+    text-decoration: none; /* It gets rid with the decoration when hovered */
+	background-color: darkgreen; /* Changes the colour when Buttons are hovered */
+}
+
 .contact-details{	
 	position:absolute;
 	margin-left: 40%;
