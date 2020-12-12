@@ -114,18 +114,24 @@
 
 /* Form Positioning */
 .body-content-div-form{
-	margin:15% 5% 5% 5%;
+	margin:5% 5% 5% 5%;
 	text-align: justify; /*justifies text */
 	height: 80%;
 	width: 100%;
 }
 .notform{
-	width: 75%;
+	width: 60%;
 	overflow: hide;
-	margin-top: 5%;
-	margin-right:5%;
+	margin-top: 0%;
+	margin-right:15%;
 }
 /* Table positioning and Style */
+
+.body-content-div-from-table{
+	margin-left: 15%;
+	margin-top: 5%;
+}
+
 .body-content-div-from-table tr, td{
 	padding: 2px;
 	width:70%;
@@ -314,8 +320,12 @@
 		width: 90%;
 	}
 
+	.body-content-div-from-table{
+		margin-left: 0%;		
+	}
+
 	.notform{
-		margin-top: 0%;
+		margin-top: 2%;
 		margin-left: 5%;
 		width: 90%;
 		text-align: center;
