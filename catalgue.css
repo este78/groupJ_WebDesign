@@ -11,7 +11,7 @@
 /* Div NavBar setup */
 
 .navBar {
-    position: absolute;
+    position: fixed;
     /* Set a fixed position */
     background: rgba(254, 254, 250, 0.7);
     /* Background Color */
@@ -38,7 +38,7 @@
 }
 
 .search {
-    position: absolute;
+    position: fixed;
     right: 2%;
     top: 10px;
 }
@@ -80,7 +80,7 @@
 }
 
 .icon.off-btn {
-    position: absolute;
+    position: fixed;
     /* Sets potision as Absolute */
     right: 30px;
     /* Location of the "X" when the menu is shrunk */
@@ -117,17 +117,12 @@
 
 /* container*/
 
-.conteiner {
-    display: flex;
-    justify-content: center;
-}
-
 .cook-items {
     display: flex;
-    justify-content: center;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    margin-top: 200px;
     height: 80PX;
     border-top: 1PX solid rgb(146, 140, 140);
     border-bottom: 1px solid rgb(146, 140, 140);
@@ -145,7 +140,7 @@
 .dropdown-catagory {
     display: none;
     position: absolute;
-    background-color: #866767;
+    background-color: #ffffff;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -159,7 +154,7 @@
 }
 
 .dropdown-catagory a:hover {
-    background-color: #e43838;
+    background-color: #f1eaea;
     border: none;
 }
 
@@ -177,9 +172,13 @@
     border: 1px solid rgb(146, 140, 140);
 }
 
+
+/*product details*/
+
 .products {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-left: 20px;
@@ -187,10 +186,16 @@
     margin-top: 50px;
 }
 
-.products img {
+
+/*edit size image product details*/
+
+.product_image {
     width: 200px;
     height: 200px;
 }
+
+
+/*edit product details*/
 
 .products p a {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -204,12 +209,56 @@
 }
 
 #product_list {
+    /*flex: 1 15%;*/
     border: 2px solid rgb(112, 112, 112);
     border-radius: 10px;
     height: 210px;
     width: 210px;
     margin: 20px;
+    margin-top: 10px;
+    cursor: pointer;
 }
+
+.shop_item_detail {
+    margin-top: 20px;
+}
+
+.shop_item_detail button,
+p,
+span {
+    margin: 5px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
+    cursor: pointer;
+}
+
+
+/*checkout*/
+
+.checkout_content {
+    margin-top: 200px;
+    height: 1000px;
+}
+
+
+/*edit product add shopping cart */
 
 .section-bottom-links {
     /*background-color: rgba(0, 100, 0, 0.068);*/
