@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lodlow Homecare Ltd</title>
     <link rel="stylesheet" href="css/catalgue.css">
+    <script src="js/catelogue.js"></script>
 </head>
 
 <body>
     <!------------------------------------------------------------------------------------------------->
     <!----------------------------------------  Navegation Bar ---------------------------------------->
     <!------------------------------------------------------------------------------------------------->
-    <div class="naviagation_barS">
+    <div class="naviagation_bar">
         <nav class="navBar">
             <div class="search">
                 <form action="/action_page.php">
@@ -24,10 +25,10 @@
                 <div class="logo">
                     <a href="#"><img src="resources/logo/logoo.png" alt="logo"></a>
                 </div>
-                <!-- Search button-- -->
+                <!--Search button-->
                 <ul class="menu-list">
                     <div class="icon off-btn">
-                        <!--"X"icon in -->
+                        <!-- "X"icon in -->
                         <i class="fas fa-times"></i>
                     </div>
                     <li><a href="index.html">Home</a></li>
@@ -43,6 +44,7 @@
             </div>
         </nav>
     </div>
+    </div>-->
     <div class="container">
         <!--info about store
         <div class="info">
@@ -59,93 +61,129 @@
             </p>
         </div>-->
         <!--dropdown menu-->
-        <DIV class="cook-items">
+        <div class="cook-items">
             <div class="catagory" id="catagory_detail">
                 <a href="#" class="cookware" id="item_details">COOKWARE</a>
                 <div class="dropdown-catagory cookware" id="dropdown">
-                    <a href="#" class="Casseroles & Dutch Ovens" onclick="CasserolesDutchOvens">Casseroles & Dutch Ovens</a>
-                    <a href="#" class="Frying pans">Frying pans</a>
-                    <a href="#" class="Skillets & Griddles">Skillets & Griddles</a>
-                    <a href="#" class="Roasting Pans & Dishes">Roasting Pans & Dishes</a>
-                    <a href="#" class="Soasting pans & Dishes">Soasting pans & Dishes</a>
+                    <a herf="#" class="btn active" onclick="filterSelection('all')"> Show all</a>
+                    <a class="btn" onclick="filterSelection('Casseroles & Dutch Ovens')"> Casseroles & Dutch Ovens</a>
+                    <a class="btn" onclick="filterSelection('Frying pans')"> Frying pans</a>
+                    <a class="btn" onclick="filterSelection('Skillets & Griddles')"> Skillets & Griddles</a>
+                    <a class="btn" onclick="filterSelection('Roasting Pans & Dishes')"> Roasting Pans & Dishes</a>
                 </div>
             </div>
             <div class="catagory" id="catagory_detail">
                 <a href="#" class="kitchenware" id="item_details">KITCHENWARE</a>
                 <div class="dropdown-catagory kitchenware" id="dropdown">
-                    <a href="#" class="Casseroles & Dutch Ovens" onclick="CasserolesDutchOvens">Aprons & Tea Towels</a>
+                    <a href="#" class="btn" onclick="filterSelection('Ovens')">Aprons & Tea Towels</a>
                     <a href="#" class="Frying pans">Brushes & Cleaning Tools</a>
                     <a href="#" class="Skillets & Griddles">Strainers & Colanders</a>
                     <a href="#" class="Roasting Pans & Dishes">Spoons, Ladles, Spatulas & Whisks</a>
                     <a href="#" class="Soasting pans & Dishes">Timers & Scales</a>
                 </div>
             </div>
-            <DIv class="tableware" id="item_details">TABLEWARE</DIv>
-            <DIv class="bakeware" id="item_details">BAKEWARE</DIv>
-            <DIv class="knife" id="item_details">KNIFE</DIv>
-        </DIV>
+            <div class="tableware" id="item_details">TABLEWARE</div>
+            <div class="bakeware" id="item_details">BAKEWARE</div>
+            <div class="knife" id="item_details">KNIFE</div>
+        </div>
         <div class="products">
             <!--Casseroles & Dutch Ovens-->
-            <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <a href="#"><img src="resources/images/LodgeDutchOven_580x.jpg" alt="LodgeDutchOven"></a>
-                <p><a href="#">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</a></p>
-                <p><a href="#">€139.00</a></p>
+            <div class="catagory cookware Ovens" id="product_list">
+                <img class="product_image" src="resources/images/LodgeDutchOven_580x.jpg" alt="LodgeDutchOven">
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
+                    <p class="shop-item-price"><a href="#">€139.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <a href="#"><img src="resources/images/Dexam_ChausseurTagine_1024x1024.png" alt="LodgeDutchOven"></a>
-                <p><a href="#">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</a></p>
-                <p><a href="#">€139.00</a></p>
+                <img class="product_image" src="resources/images/Dexam_ChausseurTagine_1024x1024.png" alt="LodgeDutchOven">
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
+                    <p class="shop-item-price"><a href="#">€139.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <a href="#"><img src="resources/images/lid_22f970a2-5d03-4f8c-aa38-1841cb63040b_1024x1024.png" alt="LodgeDutchOven"></a>
-                <p><a href="#">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</a></p>
-                <p><a href="#">€139.00</a></p>
+                <a href="#"><img class="product_image" src="resources/images/lid_22f970a2-5d03-4f8c-aa38-1841cb63040b_1024x1024.png" alt="LodgeDutchOven"></a>
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
+                    <p class="shop-item-price"><a href="#">€139.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <a href="#"><img src="resources/images/Le_Pentole_Casserole_with_Lid_24cm_Website_1024x1024.jpg" alt="LodgeDutchOven"></a>
-                <p><a href="#">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</a></p>
-                <p><a href="#">€139.00</a></p>
+                <a href="#"><img class="product_image" src="resources/images/Le_Pentole_Casserole_with_Lid_24cm_Website_1024x1024.jpg" alt="LodgeDutchOven"></a>
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
+                    <p class="shop-item-price"><a href="#">€139.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <a href="#"><img src="resources/images/MusselsPOST_1024x1024.png" alt="LodgeDutchOven"></a>
-                <p><a href="#">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</a></p>
-                <p><a href="#">€139.00</a></p>
+                <a href="#"><img class="product_image" src="resources/images/MusselsPOST_1024x1024.png" alt="LodgeDutchOven"></a>
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
+                    <p class="shop-item-price"><a href="#">€139.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <a href="#"><img src="resources/images/primappetystockpot_1024x1024.jpg" alt="LodgeDutchOven"></a>
-                <p><a href="#">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</a></p>
-                <p><a href="#">€139.00</a></p>
+                <a href="#"><img class="product_image" src="resources/images/primappetystockpot_1024x1024.jpg" alt="LodgeDutchOven"></a>
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
+                    <p class="shop-item-price"><a href="#">€139.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <!--Frying pans-->
             <div class="Frying pans" id="product_list">
-                <a href="#"><img src="resources/images/Fryingpans_1.jpg" alt="LodgeDutchOven"></a>
-                <p><a href="#">De Buyer Non Stick Frypan 32cm - Blue</a></p>
-                <p><a href="#">€74.00</a></p>
+                <a href="#"><img class="product_image" src="resources/images/Fryingpans_1.jpg" alt="LodgeDutchOven"></a>
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
+                    <p class="shop-item-price"><a href="#">€74.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <div class="Frying pans" id="product_list">
-                <a href="#"><img src="resources/images/Fryingpans2.png" alt="LodgeDutchOven"></a>
-                <p><a href="#">De Buyer Non Stick Frypan 32cm - Blue</a></p>
-                <p><a href="#">€74.00</a></p>
+                <a href="#"><img class="product_image" src="resources/images/Fryingpans2.png" alt="LodgeDutchOven"></a>
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
+                    <p class="shop-item-price"><a href="#">€74.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <div class="Frying pans" id="product_list">
-                <a href="#"><img src="resources/images/Fryingpans3.png" alt="LodgeDutchOven"></a>
-                <p><a href="#">De Buyer Non Stick Frypan 32cm - Blue</a></p>
-                <p><a href="#">€74.00</a></p>
+                <a href="#"><img class="product_image" src="resources/images/Fryingpans3.png" alt="LodgeDutchOven"></a>
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
+                    <p class="shop-item-price"><a href="#">€74.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <div class="Frying pans" id="product_list">
-                <a href="#"><img src="resources/images/Fryingpans4.png" alt="LodgeDutchOven"></a>
-                <p><a href="#">De Buyer Non Stick Frypan 32cm - Blue</a></p>
-                <p><a href="#">€74.00</a></p>
+                <a href="#"><img class="product_image" src="resources/images/Fryingpans4.png" alt="LodgeDutchOven"></a>
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
+                    <p class="shop-item-price"><a href="#">€74.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <div class="Frying pans" id="product_list">
-                <a href="#"><img src="resources/images/Fryingpans6.jpg" alt="LodgeDutchOven"></a>
-                <p><a href="#">De Buyer Non Stick Frypan 32cm - Blue</a></p>
-                <p><a href="#">€74.00</a></p>
+                <a href="#"><img class="product_image" src="resources/images/Fryingpans6.jpg" alt="LodgeDutchOven"></a>
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
+                    <p class="shop-item-price"><a href="#">€74.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <div class="Frying pans" id="product_list">
-                <a href="#"><img src="resources/images/Fryingpans7.jpg" alt="LodgeDutchOven"></a>
-                <p><a href="#">De Buyer Non Stick Frypan 32cm - Blue</a></p>
-                <p><a href="#">€74.00</a></p>
+                <a href="#"><img class="product_image" src="resources/images/Fryingpans7.jpg" alt="LodgeDutchOven"></a>
+                <div class="shop_item_detail">
+                    <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
+                    <p class="shop-item-price"><a href="#">€74.00</a></p>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
             </div>
             <!--<div class="catagory cookware Casseroles & Dutch Ovens">Orange</div>
             <div class="filterDiv cars">Volvo</div>
