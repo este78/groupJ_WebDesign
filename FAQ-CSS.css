@@ -5,21 +5,23 @@
 	box-sizing: border-box;
 	font-family: 'Helvetica Neue', Helvetica;
 }
-
-/* Div NavBar setup */
+.content{
+	max-width: 1250px;
+	margin: auto;	
+	padding: 0px 30px;
+}
 .navBar{
-	position: fixed; /* Set a fixed position */
-	background: rgba(254,254,250, 0.7);/* Background Color */
-	z-index: 5; /* Displays the elements on top of any other box that ocupies the same "line" on the screen */
-	box-shadow: 0px 0px 10px #888888b9;
-	width: 100%; /* Occupies 100% of the page in Width */
-	padding: 0 ; /* Padding set as 0 */
-   transition: all 0.3s ease; /* Transition style setup */
+	position: fixed;
+	background: rgba(255, 255, 255, 0.7);
+	z-index: 5; /*displays the element on top of any other box that ocupies the same "line" on the screen*/
+	width: 100%;
+	padding: 0 0;
+	transition: all 0.3s ease;
 }
 
 .navBar.sticky{
 	padding: 8px 0;
-	background: rgba(254,254,250, 1); /*Sets up opacity in the background of the menu but not the text.*/
+	background: rgba(255, 255, 255, 1); /*sets up opacity in the background of the menu but not the text.*/
 }
 
 .navBar .logo img{
@@ -29,22 +31,58 @@
 
 .search{
 	position: fixed;
-	right: 2%;
+	right: 20%;
 	top: 10px;
 }
 
 .search input{
 	border: none;
-	background:rgba(254,254,250, 0.7);
+	background: rgba(255, 255, 255, 1);
+	opacity: 0.5;
 	border-bottom: 1px solid darkgreen;
-	font-size:25px;
+	font-size:20px;
 }
 
 .search button{
 	font-size: 27px;
-	background:rgba(254,254,250, 0.7);
+	background: rgba(255, 255, 255, 1);
+	opacity: 1;
 	color: darkgreen;
 	border: none;
+}
+
+.navBar .content{
+	display: flex;
+	align-items: center;		/*aligns the two elements (logo, menu list) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+	justify-content: space-between;  /*justify the elements so the items are at both extremes of the page*/
+}
+.navBar .menu-list{
+	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
+	margin-top: 100px;
+	margin-right: 26px;
+} 
+.menu-list li{
+	list-style: none; /*getsrid of  the bullet points*/
+}
+
+.menu-list li a{
+	color: rgb(5,119,61);
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 25px; /*creates space between the list's elements*/
+	text-decoration: none; /*gets rid of the link's underline*/
+}
+
+.menu-list li a:hover{
+	color: darkorange;
+}
+
+.header{
+	height: 100vh; /*stablishes the height of the the box*/
+	background: url("img/storeFront.jpg") no-repeat; /*places image of store front as a background*/
+	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
+	background-position: center;
+	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
 }
 
 .navBar .content{
@@ -65,8 +103,6 @@
 	right: 30px;   /* Location of the "X" when the menu is shrunk */
 	top: 20px;     /* Location of the "X" in the shrunk down menu*/
 }
-
-
 
 .navBar .menu-list{
 	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
@@ -89,6 +125,11 @@
 	color: darkorange;
 }
 
+
+
+
+
+
 /* Places de body under the Menu */
 .body-content{
 	height: 100vh; /*stablishes the height of the the box*/
@@ -100,16 +141,24 @@
 	display: flex;
 }
 
+.faq-logo{
+	position: fixed;
+	margin-left: 70%;
+	margin-top: 8%;
+	height: 200px;
+	width:200px;
+}
+
 /* Side Navegation Options Positioning and Style*/
 .side-content{
 	position: flex; /* Set DIV as Flex */
-	height: 50%; /* Height Size */
-	width: 20%; /* Widt Size */
+	height: 45%; /* Height Size */
+	width: 15%; /* Widt Size */
 	margin-top: 15%; /* Top margin */
-	margin-left: 10%; /* Left margin */
+	margin-left: 20%; /* Left margin */
 	font-size: 18px; /* Font size */
 	font-weight: 500; /*Font Weight*/
-	border: 1px solid black;
+	border-right: 2px solid darkgreen; /* right border of the side nav*/
 }
 
 .side-content p, a{
@@ -117,31 +166,37 @@
 	color: darkgreen; /*Font Color*/
 }
 
-.side-content a:hover{
+.side-content p, a:hover{
 	text-decoration: none; /* It gets rid with the Text Decoration */
 	color: darkorange; /* Button becomes orange when hoverred */
 }
 
 .main-content{
 	position: flex;
-	height: 50%;
-	width: 55%;
+	height:45%;
+	width: 42%;
 	margin-top: 15%;
-	margin-left: 5%;
-	border: 1px solid black;
+	margin-left: 2%;
 }
 
 .btn-collapsible{
 	background-color: whitesmoke;
 	color: darkgreen;
 	cursor: pointer;
-	padding: 18px;
+	padding: 20px 5px 10px;
 	width: 100%;
 	border: none;
 	border-bottom: 1px solid darkgreen;
 	text-align: left;
 	outline: none;
 	font-size: 18px;
+}
+
+.opt-span{
+	display:flex;
+	font-size: 25px;
+	margin-left: 95%;
+	margin-top: -4%;
 }
 
 .active, .btn-collapsible:hover {
@@ -179,7 +234,6 @@
 	margin-top: 3%;
 	margin-bottom: 1%;
 	width: 50%;
-
 	
 }
 
@@ -218,7 +272,7 @@
 
 /* Mobile Screen Setup */
 
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 1000px) {
 	.icon{
 		display: block;
 		color: rgb(5,119,61);
@@ -275,6 +329,10 @@
 	.navBar .menu-list li a{
 		font-size: 24px;
 	}	
+
+	.faq-logo{
+		display:none;
+	}
 
 	.side-content{
 		display: none;

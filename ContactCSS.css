@@ -5,21 +5,23 @@
 	box-sizing: border-box;
 	font-family: 'Helvetica Neue', Helvetica;
 }
-
-/* Div NavBar setup */
+.content{
+	max-width: 1250px;
+	margin: auto;	
+	padding: 0px 30px;
+}
 .navBar{
-	position: fixed; /* Set a fixed position */
-	background: rgba(254,254,250, 0.7);/* Background Color */
-	z-index: 5; /* Displays the elements on top of any other box that ocupies the same "line" on the screen */
-	box-shadow: 0px 0px 10px #888888b9;
-	width: 100%; /* Occupies 100% of the page in Width */
-	padding: 0 ; /* Padding set as 0 */
-   transition: all 0.3s ease; /* Transition style setup */
+	position: fixed;
+	background: rgba(255, 255, 255, 0.7);
+	z-index: 5; /*displays the element on top of any other box that ocupies the same "line" on the screen*/
+	width: 100%;
+	padding: 0 0;
+	transition: all 0.3s ease;
 }
 
 .navBar.sticky{
 	padding: 8px 0;
-	background: rgba(254,254,250, 1); /*Sets up opacity in the background of the menu but not the text.*/
+	background: rgba(255, 255, 255, 1); /*sets up opacity in the background of the menu but not the text.*/
 }
 
 .navBar .logo img{
@@ -29,25 +31,59 @@
 
 .search{
 	position: fixed;
-	right: 2%;
+	right: 20%;
 	top: 10px;
 }
 
 .search input{
 	border: none;
-	background:rgba(254,254,250, 0.7);
+	background: rgba(255, 255, 255, 1);
+	opacity: 0.5;
 	border-bottom: 1px solid darkgreen;
-	font-size:25px;
+	font-size:20px;
 }
 
 .search button{
 	font-size: 27px;
-	background:rgba(254,254,250, 0.7);
+	background: rgba(255, 255, 255, 1);
+	opacity: 1;
 	color: darkgreen;
 	border: none;
 }
 
+.navBar .content{
+	display: flex;
+	align-items: center;		/*aligns the two elements (logo, menu list) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+	justify-content: space-between;  /*justify the elements so the items are at both extremes of the page*/
+}
+.navBar .menu-list{
+	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
+	margin-top: 100px;
+	margin-right: 26px;
+} 
+.menu-list li{
+	list-style: none; /*getsrid of  the bullet points*/
+}
 
+.menu-list li a{
+	color: rgb(5,119,61);
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 25px; /*creates space between the list's elements*/
+	text-decoration: none; /*gets rid of the link's underline*/
+}
+
+.menu-list li a:hover{
+	color: darkorange;
+}
+
+.header{
+	height: 100vh; /*stablishes the height of the the box*/
+	background: url("img/storeFront.jpg") no-repeat; /*places image of store front as a background*/
+	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
+	background-position: center;
+	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
+}
 
 .navBar .content{
 	display: flex;
@@ -67,8 +103,6 @@
 	right: 30px;   /* Location of the "X" when the menu is shrunk */
 	top: 20px;     /* Location of the "X" in the shrunk down menu*/
 }
-
-
 
 .navBar .menu-list{
 	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
@@ -90,6 +124,7 @@
 .menu-list li a:hover{
 	color: darkorange;
 }
+
 
 
 
@@ -128,8 +163,8 @@
 /* Table positioning and Style */
 
 .body-content-div-from-table{
-	margin-left: 15%;
-	margin-top: 5%;
+	margin-left: 32%;
+	
 }
 
 .body-content-div-from-table tr, td{
@@ -164,10 +199,7 @@
 }
 
 .contact-details{	
-	/*position:absolute;
-	margin-left: 40%;
-	margin-top: -17%;*/
-	width: 100%;
+	width: 80%;
 }
 
 .contact-details label{
@@ -177,10 +209,12 @@
 .contact-details h4{
 	border-bottom: 1px solid black;
 	font-weight: bold;
+	margin-bottom: 6%;
 }
 
 .map{
 	margin-top: 5%;
+	width:80%;
 	box-shadow: 0px 0px 10px #888888b9;
 }
 .map iframe{
@@ -195,15 +229,11 @@
 }
 
 .section-bottom-links{
-	/*background-color: rgba(0, 100, 0, 0.068);*/
-
 	margin-left: 10%;
 	margin-right: 10%;
-	/*box-shadow: 0px 0px 10px #888888b9;*/
 	text-align:center;
     display: flex;
 	align-items: top; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
-    /*justify-content: space-between; /* justifies the elements. So the items are at both extremes of the page */
 }
 
 .section-sub-bottom-links{
