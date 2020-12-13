@@ -37,7 +37,7 @@
 
 .search input{
 	border: none;
-	background: rgba(255, 255, 255);
+	background-color: rgba(245, 245, 245, 0.7);
 	opacity: 0.3;
 	border-bottom: 1px solid darkgreen;
 	font-size:20px;
@@ -45,7 +45,7 @@
 
 .search button{
 	font-size: 27px;
-	background-color: white;
+	background-color: rgba(245, 245, 245, 0.7);
 	opacity: 0.3;
 	color: darkgreen;
 	border: none;
@@ -205,7 +205,7 @@
 
 
 /*Responsive=================================================================================================================================================================================================================================================*/
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 1000px) {
 	.icon{
 		display: block;
 		color: rgb(5,119,61);
@@ -214,8 +214,25 @@
 		display: none;
 	}
 	.search{
-		padding-bottom: 10%;
+		position: fixed;
+		right: 18%;
+		top: 10px;
 	}
+	
+	.search input{
+		border: none;
+		background: rgba(255, 255, 255, 0.431);
+		border-bottom: 1px solid darkgreen;
+		font-size:14px;
+	}
+	
+	.search button{
+		font-size: 17px;
+		background: rgba(255, 255, 255, 0.431);
+		color: rgb(5,119,61);
+		border: none;
+	}
+
 	.navBar .logo img{
 		width: 25%;
 		height: 25%;

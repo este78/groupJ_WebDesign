@@ -289,23 +289,25 @@
 	.icon.hide{
 		display: none;
 	}
+	
 	.search{
-		padding-bottom: 10%;
 		position: fixed;
-		right: 10%;
-		top: 2%;
+		right: 18%;
+		top: 1%;
 	}
-
+	
 	.search input{
 		border: none;
-		background:rgba(254,254,250, 0.7);
+		background: rgba(255, 255, 255);
+		opacity: 0.3;
 		border-bottom: 1px solid darkgreen;
-		font-size:12px;
+		font-size:13px;
 	}
 	
 	.search button{
-		font-size: 15px;
-		background:rgba(254,254,250, 0.7);
+		font-size: 17px;
+		background: rgba(255, 255, 255);
+		opacity: 0.3;
 		color: darkgreen;
 		border: none;
 	}
@@ -355,8 +357,9 @@
 	}
 
 	.notform{
-		margin-top: 2%;
-		margin-left: 5%;
+		margin-top: 15%;
+		margin-left: 14%;
+		padding-bottom: 15%;
 		width: 90%;
 		text-align: center;
 		background-color: whitesmoke;
