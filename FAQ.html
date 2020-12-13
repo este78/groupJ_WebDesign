@@ -1,0 +1,181 @@
+<!-- Created by 
+
+Esteban Araujo-Fervenza - x20170416
+Jose Carlos Kuzolitz Garcia - x20164840
+Samsom	Mihreteab - x  
+
+-->
+
+<!-- Indicates this is HTML5-->
+<!DOCTYPE html>
+
+<!-- Defines Language-->
+<html lang="en">
+    
+    <head>
+        <!--Defines the char format-->
+        <meta charset="utf-8">
+
+        <!--Allow ViewPort Visualization-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--Bootstrap link-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <!--Google API JQuery link-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!--css file link-->
+		<link href="FAQ-CSS.css" rel="stylesheet">
+        
+        <!--Java Script Functions Link-->
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- from w3schools-->
+		<script src="Ludlow_JS.js"></script>
+        
+        <!--Tab Title-->
+        <title>Ludlow Homecare</title>
+    </head>
+
+    <!-- Body of the Website structure-->
+    <body>
+        <!------------------------------------------------------------------------------------------------->
+        <!----------------------------------------  Navegation Bar ---------------------------------------->
+        <!------------------------------------------------------------------------------------------------->
+        <nav class="navBar">
+			<div class="search">
+				<form  action="/action_page.php">
+					<input type="text" placeholder="Search.." name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<div class="content">
+				<div class="logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
+				<!-- Search button-- -->
+				<ul class= "menu-list">
+					<div class="icon off-btn">  <!--"X"icon in -->
+						<i class="fas fa-times"></i>
+					</div> 
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Shopping Cart</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+
+				<div class="icon menu-btn">
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+		</nav>
+		
+
+        <!--Script needs to be here to avoid null error . It cannot be called before the object is loaded  -->
+		<script>	
+			const navBar = document.querySelector(".navBar");
+			window.onscroll = () =>{
+				this.scrollY > 20 ?  navBar.classList.add("sticky") : navBar.classList.remove("sticky");  //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
+			}
+        </script>
+        
+        <div class="body-content">
+            <div class="side-content">
+                <p><a href="#">Popular FAQ's</a></p>
+                <p><a href="#">How to with Ludlow Homecare</a></p>
+                <p><a href="#">Delivery and Returns</a></p>
+                <p><a href="#">Privacy and Security</a></p>
+                <p><a href="#">Terms and Conditions</a></p>
+            </div>
+            <div class="main-content">
+                <h3>Popular FAQ's</h3>
+                <button type="button" class="btn-collapsible">Question 1</button>
+                <div class="collapsible-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button type="button" class="btn-collapsible">Question 2</button>
+                <div class="collapsible-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button type="button" class="btn-collapsible">Question 3</button>
+                <div class="collapsible-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button type="button" class="btn-collapsible">Question 4</button>
+                <div class="collapsible-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ADS">
+				<p>ADS</p>
+          </div>
+          <div class="section-bottom-links">
+             <div class="section-sub-bottom-links">
+					<div class="sub-section-bottom-links">
+						<div class="sub-bottom-links-title">
+								<strong>
+									<span>Contact Us</span>
+								</strong>
+								<ul>
+									<li><a href="#">Test 1</a></li>
+									<li><a href="#">Test 2</a></li>
+								</ul>
+						</div>
+					</div>
+             </div>
+                <div class="section-sub-bottom-links">
+                    <div class="sub-section-bottom-links">
+                        <div class="sub-bottom-links-title">
+                            <strong>
+                                <span>Social Media</span>
+                            </strong>
+                            <ul>
+                                <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-sub-bottom-links">
+                    <div class="sub-section-bottom-links">
+                        <div class="sub-bottom-links-title">
+                            <strong>
+                                <span>Social Media</span>
+                            </strong>
+                            <ul>
+                                <li><a href="#">Tips & Advice</a></li>
+                                <li><a href="#">Inspiration</a></li>
+                                <li><a href="#">Calculators</a></li>
+                                <li><a href="#">Shop Brands</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+            </form>
+		</div>
+        <footer class="footer">
+            <p>Copyright &copy; Ludlow Homecare</p>
+        </footer>
+
+        <!-- Script to hide and show the Collapsible content -->
+        <script>
+            var coll = document.getElementsByClassName("btn-collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>    
+
+    </body>
+</html>
