@@ -132,26 +132,25 @@
 
 /* Places de body under the Menu */
 .body-content{
-	height: 100vh; /*stablishes the height of the the box*/
+	height: 150vh; /*stablishes the height of the the box*/
 	background-color: whitesmoke; /* Background Colour */
 	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
 	background-position: center;
 	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
-	padding: 40px 0; /*creates a separation this box from the one before it*/
+	padding-top: 15%; /*creates a separation this box from the one before it*/
 	display: flex;
 }
 
 .faq-logo{
-	position: fixed;
+	position: absolute;
 	margin-left: 70%;
-	margin-top: 8%;
-	height: 200px;
-	width:200px;
+	margin-top: 8.5%;
+	height: 150px;
+	width:150px;
 }
 
 /* Side Navegation Options Positioning and Style*/
 .side-content{
-	position: flex; /* Set DIV as Flex */
 	height: 45%; /* Height Size */
 	width: 15%; /* Widt Size */
 	margin-top: 15%; /* Top margin */
@@ -172,7 +171,6 @@
 }
 
 .main-content{
-	position: flex;
 	height:45%;
 	width: 42%;
 	margin-top: 15%;
@@ -226,8 +224,8 @@
 	/*box-shadow: 0px 0px 10px #888888b9;*/
 	text-align:center;
     display: flex;
-	align-items: top; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
-    /*justify-content: space-between; /* justifies the elements. So the items are at both extremes of the page */
+	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+	justify-content: space-evenly;
 }
 
 .section-sub-bottom-links{
@@ -272,7 +270,7 @@
 
 /* Mobile Screen Setup */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 	.icon{
 		display: block;
 		color: rgb(5,119,61);
@@ -331,9 +329,15 @@
 	.navBar .menu-list li a{
 		font-size: 24px;
 	}	
+	
+	.body-content{
+		height: 80vh;
+		padding-top: 5%;
+	}
 
 	.faq-logo{
-		display:none;
+		height: 80px;
+		width: 80px;
 	}
 
 	.side-content{
@@ -341,7 +345,6 @@
 	}
 
 	.main-content{
-		position: flex;
 		height: 50%;
 		width: 90%;
 		margin-top: 15%;
@@ -359,10 +362,6 @@
 		width: 100%;
 		
 	}
-
-
-
-	
 
 	
 }

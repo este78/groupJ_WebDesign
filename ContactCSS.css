@@ -1,5 +1,7 @@
 /*MENU CSS CODE========================================================================================================================================================================================================================================*/
 *{
+	max-width:100%;
+	overflow-x: hidden; /*responsive  horizontal bar suppression*/
 	margin: 0;
 	padding: 0; 
 	box-sizing: border-box;
@@ -143,7 +145,6 @@
 .body-content-div{
 	display: flex;
 	align-items: center;
-	justify-content:justify;
 	padding-top: 5%;
 }
 
@@ -156,7 +157,6 @@
 }
 .notform{
 	width: 60%;
-	overflow: hide;
 	margin-top: 0%;
 	margin-right:15%;
 }
@@ -184,12 +184,13 @@
 .message-btn{
 	font-size: 20px;
 	width: 50%;
-	margin-left:25%;
+	
 	border: none;
 	border-radius: 5px;
 	padding: 5px;
 	background-color: rgba(0, 100, 0, 0.561);
 	color: whitesmoke;
+	text-align: center;
 }
 
 /* Send Button Stylewhen hovered */
@@ -233,7 +234,8 @@
 	margin-right: 10%;
 	text-align:center;
     display: flex;
-	align-items: top; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+	justify-content: space-evenly;
 }
 
 .section-sub-bottom-links{
@@ -279,7 +281,7 @@
 
 /* Mobile Screen Setup */
 
-@media screen and (max-width: 868px) {
+@media screen and (max-width:1000px) {
 	.icon{
 		display: block;
 		color: rgb(5,119,61);
@@ -348,7 +350,6 @@
 	.body-content-div-form{
 		margin-top:1%;
 		margin-left: 5%;
-		position:block;
 		width: 90%;
 	}
 
@@ -375,11 +376,6 @@
 		width: 100%;
 		
 	}
-
-
-
-	
-
 	
 }
 

@@ -153,14 +153,13 @@
 /*Footer*/
 .section-bottom-links{
 	/*background-color: rgba(0, 100, 0, 0.068);*/
-
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left:10%;
+	margin-right:10%;
 	/*box-shadow: 0px 0px 10px #888888b9;*/
 	text-align:center;
     display: flex;
-	align-items: top; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
-    /*justify-content: space-between; /* justifies the elements. So the items are at both extremes of the page */
+	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+    justify-content: space-evenly; /* justifies the elements. So the items are at both extremes of the page */
 }
 
 .section-sub-bottom-links{
@@ -188,7 +187,6 @@
 	color:black;
 	font-size: 17px;
 	font-weight: 300;
-
 }
 
 .sub-bottom-links-title a:hover{
@@ -202,6 +200,7 @@
     text-align: center; /* Align the Footer's paragraph in the centre */
     color: whitesmoke; /* Sets the colour of the letters */   
 }
+
 
 
 /*Responsive=================================================================================================================================================================================================================================================*/
@@ -267,4 +266,5 @@
 	.item img{
 	width:100%;
 	}
+
 }

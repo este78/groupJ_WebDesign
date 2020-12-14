@@ -134,7 +134,7 @@
 /* container*/
 
 .body-content{
-    height: 150vh;
+    height: 400vh;
     padding-top: 150px;
     background-color: whitesmoke;
 }
@@ -143,7 +143,7 @@
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    align-items: center;
+    align-items: initial;
     background-color: rgba(0, 100, 0, 1);
     border: 2px solid darkgreen;
     width: 100%;
@@ -335,9 +335,8 @@ span {
     /*box-shadow: 0px 0px 10px #888888b9;*/
     text-align: center;
     display: flex;
-    align-items: top;
-    /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
-    /*justify-content: space-between; /* justifies the elements. So the items are at both extremes of the page */
+	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+	justify-content: space-evenly;
 }
 
 .section-sub-bottom-links {
@@ -388,3 +387,68 @@ li {
     /* Sets the colour of the letters */
 }
 
+
+/*=====================================================================================================================================================================================*/
+@media screen and (max-width: 1000px) {
+	.icon{
+		display: block;
+		color: rgb(5,119,61);
+	}
+	.icon.hide{
+		display: none;
+	}
+	.search{
+		position: fixed;
+		right: 18%;
+		top: 10px;
+	}
+	
+	.search input{
+		border: none;
+		background: rgba(255, 255, 255, 0.431);
+		border-bottom: 1px solid darkgreen;
+		font-size:14px;
+	}
+	
+	.search button{
+		font-size: 17px;
+		background: rgba(255, 255, 255, 0.431);
+		color: rgb(5,119,61);
+		border: none;
+	}
+
+	.navBar .logo img{
+		width: 25%;
+		height: 25%;
+	}
+	.navBar .menu-list{
+		position: fixed;
+		top: 0;  /*aligns  menu  with the top left corner of the screen*/
+		left: -100%; /*hides the  box off-screen*/
+		height: 100vh;
+		width: 100%;
+		max-width: 400px; /*max widht of the "shrunk" menu's screen*/
+		background: rgba(255, 255, 255, 0.9);
+		display: block; /*menu elements show one above the other instean on the same line*/
+		padding: 40px 0; /*spacing between the elements of the lmenu_ist an the navBar box*/
+		text-align: center;
+		z-index: 2;    /*displays above all other elements*/
+		transition: all 0.3s ease; /*creates delay between the js instruction and the display modification*/
+	}
+	.navBar .menu-list.active{
+		left: 0%;
+	}
+	.navBar .menu-list li{
+		margin-top: 45px; /*spacing between the elements in the menu_list*/
+	}
+	.navBar .menu-list li a{
+		font-size: 24px;
+	}	
+	/*Carousel mobile*/
+	.item{
+	padding-left: 0%;
+	}
+	.item img{
+	width:100%;
+	}
+}
