@@ -1,66 +1,76 @@
 <!DOCTYPE html>
+
+<!-- Defines Language-->
 <html lang="en">
+    
+    <head>
+        <!--Defines the char format-->
+        <meta charset="utf-8">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lodlow Homecare Ltd</title>
-    <link rel="stylesheet" href="css/catalgue.css">
-    <script src="js/catelogue.js"></script>
-</head>
+        <!--Allow ViewPort Visualization-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--Bootstrap link-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <!--Google API JQuery link-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!--css file link-->
+		<link href="catalogue.css" rel="stylesheet">
+        
+        <!--Java Script Functions Link-->
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- from w3schools-->
+		<script src="catalogue.js"></script>
+        
+        <!--Tab Title-->
+        <title>Ludlow Homecare</title>
+    </head>
 
-<body>
-    <!------------------------------------------------------------------------------------------------->
-    <!----------------------------------------  Navegation Bar ---------------------------------------->
-    <!------------------------------------------------------------------------------------------------->
-    <div class="naviagation_bar">
+
+    <!-- Body of the Website structure-->
+    <body>
+        <!------------------------------------------------------------------------------------------------->
+        <!----------------------------------------  Navegation Bar ---------------------------------------->
+        <!------------------------------------------------------------------------------------------------->
         <nav class="navBar">
-            <div class="search">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-            <div class="content">
-                <div class="logo">
-                    <a href="#"><img src="resources/logo/logoo.png" alt="logo"></a>
-                </div>
-                <!--Search button-->
-                <ul class="menu-list">
-                    <div class="icon off-btn">
-                        <!-- "X"icon in -->
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Shopping Cart</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+			<div class="search">
+				<form  action="/action_page.php">
+					<input type="text" placeholder="Search..." name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<div class="content">
+				<div class="logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
+				<!-- Search button-- -->
+				<ul class= "menu-list">
+					<div class="icon off-btn">  <!--"X"icon in -->
+						<i class="fas fa-times"></i>
+					</div> 
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./Catalogue.html">Products</a></li>
+					<li><a href="#">Shopping Cart</a></li>
+					<li><a href="./FAQ.html">FAQ</a></li>
+					<li><a href="./Contact.html">Contact</a></li>
+				</ul>
 
-                <div class="icon menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </nav>
-    </div>
-    </div>-->
-    <div class="container">
-        <!--info about store
-        <div class="info">
+				<div class="icon menu-btn">
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+		</nav>
+		<!--Script needs to be here to avoid null error . It cannot be called before the object is loaded  -->
+		<script>	
+			const navBar = document.querySelector(".navBar");
+			window.onscroll = () =>{
+				this.scrollY > 20 ?  navBar.classList.add("sticky") : navBar.classList.remove("sticky");  //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
+			}
+        </script>
+        
 
-            <p>Our Store on the Main Street of Blackrock Village</p>
-            <p>OPEN MONDAY to SATURDAY 10.00am to 6.30pm</p>
-            <p>We are open 12.00 to 16.00 on Saturday</p>
-            <p>OUR ONLINE STORE IS ALWAYS OPEN</p>
-            <p>FREE DELIVERY when you spend €100+</p>
-            <p><a href="Ludford Bridge Ind Est Temeside SY8 1 Ludlow, UK">Find us on store</a> </p>
-            <p>
-                <a href="mailto=customerservices@ludlowhomecare.co.uk">Got a question? mail us</a> </p>
-
-            </p>
-        </div>-->
         <!--dropdown menu-->
+    <div class="body-content">
         <div class="cook-items">
             <div class="catagory" id="catagory_detail">
                 <a href="#" class="cookware" id="item_details">COOKWARE</a>
@@ -75,61 +85,69 @@
             <div class="catagory" id="catagory_detail">
                 <a href="#" class="kitchenware" id="item_details">KITCHENWARE</a>
                 <div class="dropdown-catagory kitchenware" id="dropdown">
-                    <a href="#" class="btn" onclick="filterSelection('Ovens')">Aprons & Tea Towels</a>
+                    <a href="#" class="btn" onclick="filterSelection('##')">Aprons & Tea Towels</a>
                     <a href="#" class="Frying pans">Brushes & Cleaning Tools</a>
                     <a href="#" class="Skillets & Griddles">Strainers & Colanders</a>
                     <a href="#" class="Roasting Pans & Dishes">Spoons, Ladles, Spatulas & Whisks</a>
                     <a href="#" class="Soasting pans & Dishes">Timers & Scales</a>
                 </div>
             </div>
-            <div class="tableware" id="item_details">TABLEWARE</div>
-            <div class="bakeware" id="item_details">BAKEWARE</div>
-            <div class="knife" id="item_details">KNIFE</div>
+            <div class="catagory" id="catagory_detail">
+                <div class="tableware" id="item_details">TABLEWARE</div>
+            </div>
+            <div class="catagory" id="catagory_detail">
+                <div class="bakeware" id="item_details">BAKEWARE</div>
+            </div>
+            <div class="catagory" id="catagory_detail">
+                <div class="knife" id="item_details">KNIFE</div>
+            </div>
+            
         </div>
+        
         <div class="products">
             <!--Casseroles & Dutch Ovens-->
-            <div class="catagory cookware Ovens" id="product_list">
-                <img class="product_image" src="resources/images/LodgeDutchOven_580x.jpg" alt="LodgeDutchOven">
+            <div class="filterDiv Casseroles & Dutch Ovens" id="product_list">
+                <img class="product_image" src="img/LodgeDutchOven_580x.jpg" alt="LodgeDutchOven">
                 <div class="shop_item_detail">
                     <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
                     <p class="shop-item-price"><a href="#">€139.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <img class="product_image" src="resources/images/Dexam_ChausseurTagine_1024x1024.png" alt="LodgeDutchOven">
+            <div class="filterDiv Casseroles & Dutch Ovens" id="product_list">
+                <img class="product_image" src="img/Dexam_ChausseurTagine_1024x1024.png" alt="LodgeDutchOven">
                 <div class="shop_item_detail">
                     <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
                     <p class="shop-item-price"><a href="#">€139.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <a href="#"><img class="product_image" src="resources/images/lid_22f970a2-5d03-4f8c-aa38-1841cb63040b_1024x1024.png" alt="LodgeDutchOven"></a>
+            <div class="filterDiv Casseroles & Dutch Ovens" id="product_list">
+                <a href="#"><img class="product_image" src="img/lid_22f970a2-5d03-4f8c-aa38-1841cb63040b_1024x1024.png" alt="LodgeDutchOven"></a>
                 <div class="shop_item_detail">
                     <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
                     <p class="shop-item-price"><a href="#">€139.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <a href="#"><img class="product_image" src="resources/images/Le_Pentole_Casserole_with_Lid_24cm_Website_1024x1024.jpg" alt="LodgeDutchOven"></a>
+            <div class="filterDiv Casseroles & Dutch Ovens" id="product_list">
+                <a href="#"><img class="product_image" src="img/Le_Pentole_Casserole_with_Lid_24cm_Website_1024x1024.jpg" alt="LodgeDutchOven"></a>
                 <div class="shop_item_detail">
                     <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
                     <p class="shop-item-price"><a href="#">€139.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <a href="#"><img class="product_image" src="resources/images/MusselsPOST_1024x1024.png" alt="LodgeDutchOven"></a>
+            <div class="filterDiv Casseroles & Dutch Ovens" id="product_list">
+                <a href="#"><img class="product_image" src="img/MusselsPOST_1024x1024.png" alt="LodgeDutchOven"></a>
                 <div class="shop_item_detail">
                     <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
                     <p class="shop-item-price"><a href="#">€139.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="catagory cookware Casseroles & Dutch Ovens" id="product_list">
-                <a href="#"><img class="product_image" src="resources/images/primappetystockpot_1024x1024.jpg" alt="LodgeDutchOven"></a>
+            <div class="filterDiv Casseroles & Dutch Ovens" id="product_list">
+                <a href="#"><img class="product_image" src="img/primappetystockpot_1024x1024.jpg" alt="LodgeDutchOven"></a>
                 <div class="shop_item_detail">
                     <span class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</span>
                     <p class="shop-item-price"><a href="#">€139.00</a></p>
@@ -137,71 +155,58 @@
                 </div>
             </div>
             <!--Frying pans-->
-            <div class="Frying pans" id="product_list">
-                <a href="#"><img class="product_image" src="resources/images/Fryingpans_1.jpg" alt="LodgeDutchOven"></a>
+            <div class="filterDiv Frying pans" id="product_list">
+                <a href="#"><img class="product_image" src="img/Fryingpans_1.jpg" alt="LodgeDutchOven"></a>
                 <div class="shop_item_detail">
                     <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
                     <p class="shop-item-price"><a href="#">€74.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="Frying pans" id="product_list">
-                <a href="#"><img class="product_image" src="resources/images/Fryingpans2.png" alt="LodgeDutchOven"></a>
+            <div class="filterDiv Frying pans" id="product_list">
+                <a href="#"><img class="product_image" src="img/Fryingpans2.png" alt="LodgeDutchOven"></a>
                 <div class="shop_item_detail">
                     <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
                     <p class="shop-item-price"><a href="#">€74.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="Frying pans" id="product_list">
-                <a href="#"><img class="product_image" src="resources/images/Fryingpans3.png" alt="LodgeDutchOven"></a>
+            <div class="filterDiv Frying pans" id="product_list">
+                <a href="#"><img class="product_image" src="img/Fryingpans3.png" alt="LodgeDutchOven"></a>
                 <div class="shop_item_detail">
                     <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
                     <p class="shop-item-price"><a href="#">€74.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="Frying pans" id="product_list">
-                <a href="#"><img class="product_image" src="resources/images/Fryingpans4.png" alt="LodgeDutchOven"></a>
+            <div class="filterDiv Frying pans" id="product_list">
+                <a href="#"><img class="product_image" src="img/Fryingpans4.png" alt="LodgeDutchOven"></a>
                 <div class="shop_item_detail">
                     <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
                     <p class="shop-item-price"><a href="#">€74.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="Frying pans" id="product_list">
-                <a href="#"><img class="product_image" src="resources/images/Fryingpans6.jpg" alt="LodgeDutchOven"></a>
+            <div class="filterDiv Frying pans" id="product_list">
+                <a href="#"><img class="product_image" src="img/Fryingpans6.jpg" alt="LodgeDutchOven"></a>
                 <div class="shop_item_detail">
                     <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
                     <p class="shop-item-price"><a href="#">€74.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="Frying pans" id="product_list">
-                <a href="#"><img class="product_image" src="resources/images/Fryingpans7.jpg" alt="LodgeDutchOven"></a>
+            <div class="filterDiv Frying pans" id="product_list">
+                <a href="#"><img class="product_image" src="img/Fryingpans7.jpg" alt="LodgeDutchOven"></a>
                 <div class="shop_item_detail">
                     <span class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</span>
                     <p class="shop-item-price"><a href="#">€74.00</a></p>
                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <!--<div class="catagory cookware Casseroles & Dutch Ovens">Orange</div>
-            <div class="filterDiv cars">Volvo</div>
-            <div class="filterDiv colors">Red</div>-->
+            
         </div>
-        <!--filter producls using brand, type and size
-        <div class="filter">
-            <div class="brand">
-                <h3>brand</h3>
-            </div>
-            <div class="type">
-                <h3>Type</h3>
-            </div>
-            <div class="size">
-                <h3>Size</h3>
-            </div>
-        </div>-->
     </div>
+</div>
     <div class="section-bottom-links">
         <div class="section-sub-bottom-links">
             <div class="sub-section-bottom-links">
@@ -252,7 +257,5 @@
     </footer>
 </body>
 
-</html>
-</body>
 
 </html>

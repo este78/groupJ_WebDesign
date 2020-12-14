@@ -1,0 +1,390 @@
+/*MENU CSS CODE========================================================================================================================================================================================================================================*/
+*{
+	margin: 0;
+	padding: 0; 
+	box-sizing: border-box;
+	font-family: 'Helvetica Neue', Helvetica;
+}
+.content{
+	max-width: 1250px;
+	margin: auto;	
+	padding: 0px 30px;
+}
+.navBar{
+	position: fixed;
+	background: rgba(255, 255, 255, 0.7);
+	z-index: 5; /*displays the element on top of any other box that ocupies the same "line" on the screen*/
+	width: 100%;
+	padding: 0 0;
+	transition: all 0.3s ease;
+}
+
+.navBar.sticky{
+	padding: 8px 0;
+	background: rgba(255, 255, 255, 1); /*sets up opacity in the background of the menu but not the text.*/
+}
+
+.navBar .logo img{
+	width: 75%;
+	height: 75%;
+}
+
+.search{
+	position: fixed;
+	right: 20%;
+	top: 10px;
+}
+
+.search input{
+	border: none;
+	background: rgba(255, 255, 255, 1);
+	opacity: 0.5;
+	border-bottom: 1px solid darkgreen;
+	font-size:20px;
+}
+
+.search button{
+	font-size: 27px;
+	background: rgba(255, 255, 255, 1);
+	opacity: 1;
+	color: darkgreen;
+	border: none;
+}
+
+.navBar .content{
+	display: flex;
+	align-items: center;		/*aligns the two elements (logo, menu list) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+	justify-content: space-between;  /*justify the elements so the items are at both extremes of the page*/
+}
+.navBar .menu-list{
+	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
+	margin-top: 100px;
+	margin-right: 26px;
+} 
+.menu-list li{
+	list-style: none; /*getsrid of  the bullet points*/
+}
+
+.menu-list li a{
+	color: rgb(5,119,61);
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 25px; /*creates space between the list's elements*/
+	text-decoration: none; /*gets rid of the link's underline*/
+}
+
+.menu-list li a:hover{
+	color: darkorange;
+}
+
+.header{
+	height: 100vh; /*stablishes the height of the the box*/
+	background: url("img/storeFront.jpg") no-repeat; /*places image of store front as a background*/
+	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
+	background-position: center;
+	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
+}
+
+.navBar .content{
+	display: flex;
+	align-items: center;		/*aligns the two elements (logo, menu list) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+	justify-content: space-between;  /*justify the elements so the items are at both extremes of the page*/
+}
+
+/* 3 lines Button Style and it does not display it */
+.icon{
+	color: #fff; /* Colour */
+	font-size: 20px; /* Font Size */
+	cursor: pointer; /* Changes cursor when it is houvered */
+ 	display: none; /* Hide Icon */
+}
+.icon.off-btn{
+	position: absolute; /* Sets potision as Absolute */ 
+	right: 30px;   /* Location of the "X" when the menu is shrunk */
+	top: 20px;     /* Location of the "X" in the shrunk down menu*/
+}
+
+.navBar .menu-list{
+	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
+	margin-top: 100px;
+	margin-right: 26px;
+} 
+.menu-list li{
+	list-style: none; /*getsrid of  the bullet points*/
+}
+
+.menu-list li a{
+	color: rgb(5,119,61);
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 25px; /*creates space between the list's elements*/
+	text-decoration: none; /*gets rid of the link's underline*/
+}
+
+.menu-list li a:hover{
+	color: darkorange;
+}
+
+/*===========================================================================================================*/
+
+
+
+
+
+/* container*/
+
+.body-content{
+    height: 150vh;
+    padding-top: 7.5%;
+    background-color: whitesmoke;
+}
+
+.cook-items {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(0, 100, 0, 1);
+    border: 2px solid darkgreen;
+    width: 100%;
+}
+
+.catagory{
+    margin: 0 -20% 0;
+}
+
+#item_details{
+    margin: 0 -20% 0;
+    font-size: 18px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.dropdown {
+    background-color: #ffffff;
+    color: white;
+    padding: 0;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-catagory {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-catagory a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-catagory a:hover {
+    background-color: #f1eaea;
+    border: none;
+}
+
+.catagory:hover .dropdown-catagory {
+    display: block;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    width: 150px;
+    height: 500px;
+    border: 1px solid rgb(146, 140, 140);
+}
+
+
+/*product details*/
+
+.products {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin: 2% 20%;
+    height: 100%;
+}
+
+.filterDiv{
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 10px;
+    height: 210px;
+    width: 210px;
+    margin: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+  }
+
+  /* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+  }
+
+  /* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Add a light grey background on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background to the active button */
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+
+
+/*edit size image product details*/
+
+.product_image {
+    width: 200px;
+    height: 200px;
+}
+
+
+/*edit product details*/
+
+.products p a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+#product_list a:hover {
+    background-color: rgb(161, 153, 153);
+}
+
+#product_list {
+    /*flex: 1 15%;*/
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 10px;
+    height: 210px;
+    width: 210px;
+    margin: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.shop_item_detail {
+    margin-top: 20px;
+}
+
+.shop_item_detail button,
+p,
+span {
+    margin: 5px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
+    cursor: pointer;
+}
+
+
+/*checkout*/
+
+.checkout_content {
+    margin-top: 200px;
+    height: 1000px;
+}
+
+
+/*edit product add shopping cart */
+
+.section-bottom-links {
+    /*background-color: rgba(0, 100, 0, 0.068);*/
+    margin-left: 10%;
+    margin-right: 10%;
+    /*box-shadow: 0px 0px 10px #888888b9;*/
+    text-align: center;
+    display: flex;
+    align-items: top;
+    /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+    /*justify-content: space-between; /* justifies the elements. So the items are at both extremes of the page */
+}
+
+.section-sub-bottom-links {
+    margin-top: 3%;
+    margin-bottom: 1%;
+    width: 50%;
+}
+
+.sub-bottom-links-title strong {
+    color: darkgreen;
+    font-size: 25px;
+    border-bottom: 1px solid darkgreen;
+}
+
+.sub-bottom-links-title ul,
+li {
+    color: black;
+    font-size: 15px;
+    display: block;
+    /*displays all the elements of the list one next to the other in the same line*/
+    margin: 2% 0 0 0;
+    /* Defines margin top of the Menu Bar */
+    list-style: none;
+    /* It gets rid of the bullet points */
+}
+
+.sub-bottom-links-title a {
+    color: black;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.sub-bottom-links-title a:hover {
+    text-decoration: none;
+    /* It gets rid with the decoration when hovered */
+    color: darkorange;
+    /* Changes the colour when Buttons are hovered */
+}
+
+.footer p {
+    background-color: darkgreen;
+    /* Footes Background Colour */
+    border: 1px solid darkgreen;
+    /* Sets the Footer border */
+    text-align: center;
+    /* Align the Footer's paragraph in the centre */
+    color: whitesmoke;
+    /* Sets the colour of the letters */
+}
+
