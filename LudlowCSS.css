@@ -76,7 +76,7 @@
 .menu-list li a:hover{
 	color: darkorange;
 }
-
+/*Background Image and box styling behind the carousel*/
 .header{
 	height: 100vh; /*stablishes the height of the the box*/
 	background: url("img/storeFront.jpg") no-repeat; /*places image of store front as a background*/
@@ -85,6 +85,43 @@
 	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
 	position: relative;
 }
+/*Carousel ==============================================================================================================================================================================================================================================*/
+/*========================================================================================================================================================================================================================================================*/
+#carousel{
+	position: absolute;
+	top: 30%;
+	right: 10%;
+	left: 10%;
+	width: 80%;
+}
+.carousel-inner{
+	border: 5px solid white;
+	background-color: rgba(245, 245, 245, 0.7);
+}
+.carousel-indicators{
+	z-index:1; /*indicators sit above the images*/
+}
+/*Centers the picute in the middle of the carousel*/
+.item img{
+	margin: auto;
+	width:100%;
+	min-width: 585px;
+}
+.item .carousel-caption{
+	color: black;
+	background-color: rgba(245, 245, 245, 0.2);
+}
+
+/*Video============================================================================================================================================================================================================================================*/
+.video-player{
+	float: right;
+	width: 40%;
+	border: 3px solid darkgreen;
+	margin: 5px;
+}
+
+/*About Text=======================================================================================================================================================================================================================================*/
+
 .reviews{
 	padding: 40px 0; /*creates a separation this box from the one before it*/
 	overflow: hidden;
@@ -95,9 +132,14 @@
 	font-weight: 700;
 	color: rgb(5,119,61);
 }
+.reviews a{
+	font-style: bold;
+	color: rgb(5,119,61);
+}
 .reviews p{
 	padding-top: 20px; /*separation between paragraphs inside this box*/
 	text-align: justify; /*justifies text */
+	font-size: 1.3em;
 }
 
 .icon{
@@ -113,49 +155,17 @@
 	top: 20px;     /*location of the "X" in the shrunk down menu*/
 }
 
-
-/*Carousel ==============================================================================================================================================================================================================================================*/
-/*========================================================================================================================================================================================================================================================*/
-#carousel{
-	position: absolute;
-	top: 30%;
-	right: 10%;
-	left: 10%;
-	width: 80%;
-}
-.carousel-inner{
-	border: 3px solid white;
-	background-color: rgba(245, 245, 245, 0.7);
-}
-.carousel-indicators{
-	z-index:1; /*indicators sit above the images*/
-}
-
-.item img{
-	margin: auto;
-	width:100%;
-	min-width: 585px;
-}
-.item .carousel-caption{
-	-webkit-text-stroke: 1px white; /* width and color */
-	color: black;
-	z-index:1; /*captions sit on top of the images in carousel*/
-}
-/*About Text=======================================================================================================================================================================================================================================*/
-
-/*Video============================================================================================================================================================================================================================================*/
-.video-player{
-	float: right;
-	width: 40%;
-	border: 1px solid darkgreen;
-	margin: 5px;
-}
 /*Google Map============================================================================================================================================================================================================================================*/
 .map{
 	padding-top: 10%;
 	width: 100%;
 	text-align:center;
 	margin: 0.5%;
+}
+.map iframe{
+	width: 400px;
+	height: 300px;
+	border: 1px solid darkgreen;
 }
 .map h3{
 	font-size: 200%;
@@ -217,7 +227,7 @@
 
 
 /*Responsive=================================================================================================================================================================================================================================================*/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 	.icon{
 		display: block;
 		color: rgb(5,119,61);
@@ -283,6 +293,10 @@
 	.video-player{
 		float: none;
 		width: 100%;
+	}
+	.map iframe{
+		margin: auto;
+		width: 90%;
 	}
 
 }
