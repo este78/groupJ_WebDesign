@@ -128,7 +128,7 @@
 /*===========================================================================================================*/
 
 
-                                /* container*/
+                                                  /* container*/
                     
                     .body-content {
                         box-sizing: border-box;
@@ -207,8 +207,9 @@
                     }
                     /*product details*/
                     
-                    .products {
-                        width: 95%;
+                    .produproduct-container {
+                        display: flex;
+                        justify-content: center;
                         overflow: hidden;
                         margin-left: 50px;
                         padding: 20px;
@@ -232,8 +233,8 @@
                         /* Hidden by default */
                     }
                     
-                    .filterDiv p,
-                    button {
+                    .row h1,
+                    h2 button {
                         position: baseline;
                     }
                     /*edit size image product details*/
@@ -244,7 +245,7 @@
                     }
                     /*edit a product*/
                     
-                    .products p a {
+                    .row a {
                         font-family: Georgia, 'Times New Roman', Times, serif;
                         font-weight: bold;
                         color: black;
@@ -259,7 +260,6 @@
                     /* Add margin on shop detail button*/
                     
                     .filterDiv button,
-                    p,
                     img {
                         margin: 7px;
                         font-weight: bold;
@@ -309,13 +309,6 @@
                             margin: 20px;
                         }
                     }
-/*checkout*/
-
-.checkout_content {
-    margin-top: 200px;
-    height: 1000px;
-}
-
 
 /*edit product add shopping cart */
 
