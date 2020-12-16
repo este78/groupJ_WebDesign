@@ -186,6 +186,7 @@
 
 /*Footer*/
 .section-bottom-links{
+	
 	/*background-color: rgba(0, 100, 0, 0.068);*/
 	margin-left:10%;
 	margin-right:10%;
@@ -237,8 +238,8 @@
   color: white;
 }
 /* Instagram*/
-.fa-instagram {
-  background: #E1306C;
+.fa-linkedin {
+  background: #007bb5;
   color: white;
 }
 .blog{
