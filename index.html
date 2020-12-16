@@ -16,23 +16,22 @@ Samsom	Mihreteab - x
        <!--Defines the char format-->
       <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Homebrew CSS-->
+		<!-- Homebrew CSS and javascript-->
 		<link href="LudlowCSS.css" rel="stylesheet">
+		<script src="Ludlow_JS.js"></script>
 		<!--W3 Schools bootstrap for the carousel, css and js -->
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<!--Tab Title-->
-		<title>;Ludlow Homecare</title>        
-       <!--Java Script Functions Link-->
+		<title> Ludlow Homecare</title>        
+       <!--Java Script Functions Link also used for menufunctionality. Taken from https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s-->
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- from w3schools-->
-		<script src="Ludlow_JS.js"></script>
-    
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
-		
-		<!--Menu===========================================================================================================================================================================================================================================-->
+		<!--Menu: Adapted  from a youtube tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ================================================================================================================================================-->
 
        <nav class="navBar">
 			<div class="search">
@@ -61,7 +60,7 @@ Samsom	Mihreteab - x
 			</div>
 		</nav>
 		
-		<!--Script needs to be here to avoid null error . It cannot be called before the object is loaded  -->
+		<!--Script needs to be here to avoid null error. Code  from tutorial: https://youtu.be/UHSeFxZIuv8. It cannot be called before the object is loaded  -->
 		<script>	
 			const navBar = document.querySelector(".navBar");
 			window.onscroll = () =>{
@@ -69,7 +68,7 @@ Samsom	Mihreteab - x
 			}
 		</script>
 		
-<!-- Carousel  ====================================================================================================================================================================================================================================   -->		
+<!-- Carousel , Code adapted from W3 Schools  =======================================================================================================================================================================================================   -->		
 		<div class="header">
 			<div id="carousel" class="container">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -118,6 +117,7 @@ Samsom	Mihreteab - x
 <!-- Reviews==================================================================================================================================================================================================================================================-->
 		<div class="reviews" >
 			<div class="content">
+			<!-- Video and text from Ludlow Homecare website, we were given permission to use  their content for the college project -->
 			<video class="video-player" controls controlsList="nodownload"> <source src="https://ludlowhomecare.co.uk/wp-content/uploads/2019/10/Ludlow-Homecare-Ltd.mp4" type="video/mp4" > Your browser does not support the video tag.</video>
 				
 			<div class="about">A Reputable Home Decor Store In Ludlow </div>
@@ -164,9 +164,9 @@ Samsom	Mihreteab - x
 							   <span>Social Media</span>
 						   </strong>
 						   <ul>
-							   <li><a href="#">Facebook</a></li>
-						   <li><a href="#">Instagram</a></li>
-						   <li><a href="#">Twitter</a></li>
+							   <li><a href="#" class="fa fa-facebook"></a></li>
+						   <li><a href="#"class="fa fa-instagram"></a></li>
+						   <li><a href="#"class="fa fa-twitter"></a></li>
 						   </ul>
 					   </div>
 				   </div>
@@ -175,19 +175,20 @@ Samsom	Mihreteab - x
 				   <div class="sub-section-bottom-links">
 					   <div class="sub-bottom-links-title">
 						   <strong>
-							   <span>Social Media</span>
+							   <span>Our Blogs</span>
 						   </strong>
 						   <ul>
-							   <li><a href="#">Tips & Advice</a></li>
-							   <li><a href="#">Inspiration</a></li>
-							   <li><a href="#">Calculators</a></li>
-							   <li><a href="#">Shop Brands</a></li>
+							   <li><a class="blog blog-tips" href="#">Tips & Advice</a></li>
+							   <li><a class="blog blog-insp" href="#">Inspiration</a></li>
+							   <li><a class="blog blog-calc" href="#">Calculators</a></li>
+							   <li><a class="blog blog-shopB" href="#">Shop Brands</a></li>
 						   </ul>
 					   </div>
 				   </div>
 			   </div>   
 	   </div>
 	   <footer class="footer">
+			<!--W3 Validator gave us this badge when it found no errors in our CSS code for this page-->
 		   <p>Copyright &copy; Ludlow Homecare &nbsp; <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
 						src="http://jigsaw.w3.org/css-validator/images/vcss"
 						alt="Valid CSS!" />

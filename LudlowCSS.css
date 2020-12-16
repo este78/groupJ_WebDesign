@@ -1,4 +1,4 @@
-/*MENU CSS CODE========================================================================================================================================================================================================================================*/
+/*MENU CSS CODE adapted from tutorial   https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ================================================================================================================================================================*/
 *{
 	margin: 0;
 	padding: 0; 
@@ -39,7 +39,7 @@
 	border: none;
 	background-color: rgba(245, 245, 245, 0.7);
 	opacity: 0.3;
-	border-bottom: 1px solid darkgreen;
+	border-bottom: 1px solid rgb(5,119,61);
 	font-size:20px;
 }
 
@@ -47,7 +47,7 @@
 	font-size: 27px;
 	background-color: rgba(245, 245, 245, 0.7);
 	opacity: 0.3;
-	color: darkgreen;
+	color: rgb(5,119,61);
 	border: none;
 }
 
@@ -98,7 +98,7 @@
 	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
 	position: relative;
 }
-/*Carousel ==============================================================================================================================================================================================================================================*/
+/*Carousel  ==============================================================================================================================================================================================================================================*/
 /*========================================================================================================================================================================================================================================================*/
 #carousel{
 	position: absolute;
@@ -129,7 +129,7 @@
 .video-player{
 	float: right;
 	width: 40%;
-	border: 3px solid darkgreen;
+	border: 3px solid rgb(5,119,61);
 	margin: 40px;
 }
 
@@ -176,7 +176,7 @@
 .map iframe{
 	width: 400px;
 	height: 300px;
-	border: 1px solid darkgreen;
+	border: 1px solid rgb(5,119,61);
 }
 .map h3{
 	font-size: 200%;
@@ -200,44 +200,84 @@
 	margin-top: 3%;
 	margin-bottom: 1%;
 	width: 50%;
-	
 }
 
 .sub-bottom-links-title strong{
-	color: darkgreen;
+	color: rgb(5,119,61);
 	font-size: 25px;
-	border-bottom: 1px solid darkgreen;
+	border-bottom: 1px solid rgb(5,119,61);
 }
 
-.sub-bottom-links-title ul, li{
-	color: black;
-	font-size: 15px;
-	display: block; /*displays all the elements of the list one next to the other in the same line*/
-    margin: 2% 0 0 0 ; /* Defines margin top of the Menu Bar */
+.sub-bottom-links-title ul{
+   margin: auto; /*  */
 	list-style: none; /* It gets rid of the bullet points */
+	display: flex;
+	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+   justify-content: center; /* justifies the elements. So the items are at both extremes of the page */
+}
+.sub-bottom-links-title li{
+	padding: 2px;
 }
 
 .sub-bottom-links-title a{
-	color:black;
-	font-size: 17px;
-	font-weight: 300;
+	
 }
-
+.fa{
+	padding: 20px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+}
+.fa-facebook{
+	background: #3B5998;
+	color: white;
+}
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+/* Instagram*/
+.fa-instagram {
+  background: #E1306C;
+  color: white;
+}
+.blog{
+	margin:auto;
+	padding: 20px;
+	font-size: 12px;
+	width: 100px;
+	height: 70px;
+	display: block;
+	color: white;	
+}
+.blog-tips{
+	background: navy;
+}
+.blog-insp{
+	background: violet;
+}
+.blog-calc{
+	background: darkorange;
+}
+.blog-shopB{
+	background: darkgreen;
+}
 .sub-bottom-links-title a:hover{
     text-decoration: none; /* It gets rid with the decoration when hovered */
 	color: darkorange; /* Changes the colour when Buttons are hovered */
 }
 
 .footer p{
-    background-color: darkgreen; /* Footes Background Colour */
-    border: 1px solid darkgreen; /* Sets the Footer border */
+    background-color: rgb(5,119,61); /* Footes Background Colour */
+    border: 1px solid rgb(5,119,61); /* Sets the Footer border */
     text-align: center; /* Align the Footer's paragraph in the centre */
     color: whitesmoke; /* Sets the colour of the letters */   
 }
 
-
-
-/*Responsive=================================================================================================================================================================================================================================================*/
+/*Responsive, partially adapted from tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ==============================================================================================================================================================*/
 @media screen and (max-width: 1024px) {
 	.icon{
 		display: block;
@@ -255,7 +295,7 @@
 	.search input{
 		border: none;
 		background: rgba(255, 255, 255, 0.431);
-		border-bottom: 1px solid darkgreen;
+		border-bottom: 1px solid rgb(5,119,61);
 		font-size:14px;
 	}
 	
@@ -314,5 +354,12 @@
 		margin: auto;
 		width: 90%;
 	}
-
+	.sub-bottom-links-title ul{
+		display: block;
+	}
+	.blog{
+		padding: 10px;
+		font-size: 0.8em;
+		height: 50%;
+	}
 }
