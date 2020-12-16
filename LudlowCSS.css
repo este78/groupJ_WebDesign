@@ -156,12 +156,13 @@
 }
 /*Aligns  goolge review box*/
 .snipets {
+	margin:1%;
 	display:block;
 	text-align:center;
 }
 .snipets ul{
 	display: flex;
-	align-items: baseline;
+	align-items: flex-start;
 	justify-content: space-around;
 }
 /*Google Map============================================================================================================================================================================================================================================*/
