@@ -219,9 +219,6 @@
 	padding: 2px;
 }
 
-.sub-bottom-links-title a{
-	
-}
 .fa{
 	padding: 20px;
 	font-size: 30px;
@@ -265,9 +262,14 @@
 .blog-shopB{
 	background: darkgreen;
 }
-.sub-bottom-links-title a:hover{
-    text-decoration: none; /* It gets rid with the decoration when hovered */
+
+.sub-bottom-links-title a:hover{   
+	text-decoration: none; /* It gets rid with the decoration when hovered */
 	color: darkorange; /* Changes the colour when Buttons are hovered */
+}
+.sub-bottom-links-title a:active{
+	text-decoration: none; /* It gets rid with the decoration when hovered */
+	color: red; /* Changes the colour when Buttons are hovered */
 }
 
 .footer p{
