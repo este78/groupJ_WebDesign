@@ -122,7 +122,7 @@
 }
 .item .carousel-caption{
 	color: black;
-	background-color: rgba(245, 245, 245, 0.2);
+	background-color: rgba(245, 245, 245, 0.3);
 }
 
 /*Video============================================================================================================================================================================================================================================*/
@@ -130,7 +130,7 @@
 	float: right;
 	width: 40%;
 	border: 3px solid darkgreen;
-	margin: 5px;
+	margin: 40px;
 }
 
 /*About Text=======================================================================================================================================================================================================================================*/
@@ -156,6 +156,7 @@
 }
 /*Aligns  goolge review box*/
 .snipets {
+	padding-top: 5%;
 	margin:1%;
 	display:block;
 	text-align:center;
@@ -167,7 +168,7 @@
 }
 /*Google Map============================================================================================================================================================================================================================================*/
 .map{
-	padding-top: 10%;
+	padding-top: 5%;
 	width: 100%;
 	text-align:center;
 	margin: 0.5%;
@@ -190,9 +191,9 @@
 	margin-right:10%;
 	/*box-shadow: 0px 0px 10px #888888b9;*/
 	text-align:center;
-    display: flex;
+   display: flex;
 	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
-    justify-content: space-evenly; /* justifies the elements. So the items are at both extremes of the page */
+   justify-content: space-evenly; /* justifies the elements. So the items are at both extremes of the page */
 }
 
 .section-sub-bottom-links{
@@ -307,6 +308,7 @@
 	.video-player{
 		float: none;
 		width: 100%;
+		margin:auto;
 	}
 	.map iframe{
 		margin: auto;
