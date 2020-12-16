@@ -56,16 +56,17 @@
 	align-items: center;		/*aligns the two elements (logo, menu list) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
 	justify-content: space-between;  /*justify the elements so the items are at both extremes of the page*/
 }
-.navBar .menu-list{
-	display: inline-flex; /*displays all the elements of the list one next to the other in the same line*/
+.navBar .menu-list {
+
 	margin-top: 100px;
 	margin-right: 26px;
 } 
-.menu-list li{
-	list-style: none; /*getsrid of  the bullet points*/
+
+.menu-list p{
+	display: inline; /*displays all the elements of the list one next to the other in the same line*/
 }
 
-.menu-list li a{
+.menu-list a{
 	color: rgb(5,119,61);
 	font-size: 18px;
 	font-weight: 500;
@@ -73,7 +74,8 @@
 	text-decoration: none; /*gets rid of the link's underline*/
 }
 
-.menu-list li a:hover{
+.menu-list a:hover{
+	text-decoration: none; /*gets rid of the link's underline*/
 	color: darkorange;
 }
 
@@ -291,20 +293,20 @@
 	}
 	.search{
 		position: fixed;
-		right: 18%;
-		top: 10px;
+		right: 13%;
+		top: -10px;
 	}
 	
 	.search input{
 		border: none;
 		background: rgba(255, 255, 255, 0.431);
 		border-bottom: 1px solid rgb(5,119,61);
-		font-size:14px;
+		font-size:12px;
 	}
 	
 	.search button{
 		font-size: 17px;
-		background: rgba(255, 255, 255, 0.431);
+		background: rgba(255, 255, 255, 0);
 		color: rgb(5,119,61);
 		border: none;
 	}
@@ -315,10 +317,10 @@
 	}
 	.navBar .menu-list{
 		position: fixed;
-		top: 0;  /*aligns  menu  with the top left corner of the screen*/
-		left: -100%; /*hides the  box off-screen*/
+		top: -7%;  /*aligns  menu  with the top left corner of the screen*/
+		left: -90%; /*hides the  box off-screen*/
 		height: 100vh;
-		width: 100%;
+		width: 90%;
 		max-width: 400px; /*max widht of the "shrunk" menu's screen*/
 		background: rgba(255, 255, 255, 0.9);
 		display: block; /*menu elements show one above the other instean on the same line*/
@@ -330,10 +332,15 @@
 	.navBar .menu-list.active{
 		left: 0%;
 	}
-	.navBar .menu-list li{
-		margin-top: 45px; /*spacing between the elements in the menu_list*/
+
+	.menu-list p{
+		display: block; /*displays all the elements of the list one next to the other in the same line*/
+		margin-top: 5%;
+		padding-bottom: 10%;
 	}
-	.navBar .menu-list li a{
+
+	.navBar .menu-list a{
+		margin-top: 45px; /*spacing between the elements in the menu_list*/
 		font-size: 24px;
 	}	
 	/*Carousel mobile*/
