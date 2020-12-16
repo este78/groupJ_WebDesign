@@ -128,189 +128,187 @@
 /*===========================================================================================================*/
 
 
-            /* container*/
-        
-        .body-content {
-            height: 300vh;
-            padding-top: 150px;
-            background-color: whitesmoke;
-        }
-        
-        .cook-items {
-            display: flex;
-            /*add space between the menu cook items*/
-            justify-content: space-evenly;
-            /*align text cook items to center*/
-            text-align: center;
-            /*cook items background color*/
-            background-color: rgba(0, 100, 0, 1);
-            /*cook items border color*/
-            border: 2px solid darkgreen;
-            /*cook items width*/
-            width: 100%;
-        }
-        /*style cook iteme menu*/
-        
-        .cook-items a {
-            /*set color to whitesmoke*/
-            color: whitesmoke;
-            /*take off text decoration*/
-            text-decoration: none;
-        }
-        /*set space cook item menu*/
-        
-        .catagory {
-            margin: 0 -20% 0;
-        }
-        /*main header cooker catagory*/
-        
-        .item_details {
-            margin: 0 -20% 0;
-            font-size: 18px;
-            /* cook Items menu set color to whitesmoke  */
-            color: whitesmoke;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        /*Dropdown catagory*/
-        
-        .dropdown-catagory {
-            display: none;
-            position: absolute;
-            background-color: #ffffff;
-            width: 170px;
-            z-index: 1;
-            border-radius: 5px;
-        }
-        /*Dropdown catagory a*/
-        
-        .dropdown-catagory a {
-            /* drop down menu set color to black  */
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            cursor: pointer;
-        }
-        
-        .dropdown-catagory a:hover {
-            /*dropdown hover color*/
-            background-color: #fcf9f9;
-            /*dropdown no border*/
-            border: none;
-        }
-        /*dropdown catagory display block*/
-        
-        .catagory:hover .dropdown-catagory {
-            display: block;
-        }
-        /*product details*/
-        
-        .products {
-            display: flex;
-            /*display as a row*/
-            align-items: center;
-            flex-direction: row;
-            overflow: hidden;
-            /*set content center*/
-            justify-content: center;
-            flex-wrap: wrap;
-            /*Adding marigin top and left and right*/
-            margin: 2% 20%;
-            /*Setting height*/
-            height: 100%;
-        }
-        /*style product*/
-        
-        .filterDiv {
-            /*flex: 1 15%;*/
-            border: 2px solid rgb(184, 183, 183);
-            border-radius: 10px;
-            height: 210px;
-            width: 210px;
-            margin: 20px;
-            cursor: pointer;
-            display: none;
-            color: rgb(29, 27, 27);
-            font-weight: bold;
-            /* Hidden by default */
-        }
-        /* Style the buttons product */
-        /*.btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: #f1f1f1;
-    cursor: pointer;
-}*/
-        /*edit size image product details*/
-        
-        .product_image {
-            width: 200px;
-            height: 200px;
-        }
-        /*edit a product*/
-        
-        .products p a {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-weight: bold;
-            color: black;
-            text-decoration: none;
-        }
-        /* Add color on mouse-over to price */
-        
-        .shop-item-price a:hover {
-            text-decoration: none;
-            background-color: rgb(252, 249, 249);
-        }
-        /* Add margin on shop detail button*/
-        
-        .filterDiv button,
-        p,
-        img {
-            margin: 7px;
-            font-weight: bold;
-        }
-        /*style button*/
-        
-        .btn {
-            /*set text center*/
-            text-align: center;
-            /*vertical align middle*/
-            vertical-align: middle;
-            /*add padding*/
-            padding: .67em .67em;
-            /*cursor point*/
-            cursor: pointer;
-        }
-        /*style cart*/
-        
-        .btn-primary {
-            color: white;
-            background-color: #56CCF2;
-            border: none;
-            border-radius: .3em;
-            font-weight: bold;
-        }
-        /*style cart hover*/
-        
-        .btn-primary :hover {
-            background-color: #2D9CDB;
-            cursor: pointer;
-        }
-        
-        @media screen and (max-width: 1000px) {
-            /*style cook iteme menu*/
-            .cook-items {
-                display: block;
-                height: 50vh;
-                position: relative;
-            }
-            .dropdown-catagory {
-                left: 20%;
-                right: 20%;
-            }
-
+                                /* container*/
+                    
+                    .body-content {
+                        box-sizing: border-box;
+                        height: 300vh;
+                        padding-top: 150px;
+                        background-color: whitesmoke;
+                    }
+                    
+                    .cook-items {
+                        display: flex;
+                        /*add space between the menu cook items*/
+                        justify-content: space-evenly;
+                        /*align text cook items to center*/
+                        text-align: center;
+                        /*cook items background color*/
+                        background-color: rgba(0, 100, 0, 1);
+                        /*cook items border color*/
+                        border: 2px solid darkgreen;
+                        /*cook items width*/
+                        width: 100%;
+                    }
+                    /*style cook iteme menu*/
+                    
+                    .cook-items a {
+                        /*set color to whitesmoke*/
+                        color: whitesmoke;
+                        /*take off text decoration*/
+                        text-decoration: none;
+                    }
+                    /*set space cook item menu*/
+                    
+                    .catagory {
+                        margin: 0 -20% 0;
+                    }
+                    /*main header cooker catagory*/
+                    
+                    .item_details {
+                        margin: 0 -20% 0;
+                        font-size: 18px;
+                        /* cook Items menu set color to whitesmoke  */
+                        color: whitesmoke;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                    /*Dropdown catagory*/
+                    
+                    .dropdown-catagory {
+                        display: none;
+                        position: absolute;
+                        background-color: #ffffff;
+                        width: 170px;
+                        z-index: 1;
+                        border-radius: 5px;
+                    }
+                    /*Dropdown catagory a*/
+                    
+                    .dropdown-catagory a {
+                        /* drop down menu set color to black  */
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                        cursor: pointer;
+                    }
+                    
+                    .dropdown-catagory a:hover {
+                        /*dropdown hover color*/
+                        background-color: #fcf9f9;
+                        /*dropdown no border*/
+                        border: none;
+                    }
+                    /*dropdown catagory display block*/
+                    
+                    .catagory:hover .dropdown-catagory {
+                        display: block;
+                    }
+                    /*product details*/
+                    
+                    .products {
+                        width: 95%;
+                        overflow: hidden;
+                        margin-left: 50px;
+                        padding: 20px;
+                    }
+                    /*style product*/
+                    
+                    .filterDiv {
+                        /*flex: 1 15%;*/
+                        float: left;
+                        max-width: 1200px;
+                        border: 2px solid rgb(184, 183, 183);
+                        border-radius: 10px;
+                        height: 15%;
+                        width: 15%;
+                        margin: 40px 40px 40px 40px;
+                        cursor: pointer;
+                        display: none;
+                        color: rgb(29, 27, 27);
+                        font-weight: bold;
+                        text-align: center;
+                        /* Hidden by default */
+                    }
+                    
+                    .filterDiv p,
+                    button {
+                        position: baseline;
+                    }
+                    /*edit size image product details*/
+                    
+                    .product_image {
+                        width: 95%;
+                        height: 80%;
+                    }
+                    /*edit a product*/
+                    
+                    .products p a {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-weight: bold;
+                        color: black;
+                        text-decoration: none;
+                    }
+                    /* Add color on mouse-over to price */
+                    
+                    .shop-item-price a:hover {
+                        text-decoration: none;
+                        background-color: rgb(252, 249, 249);
+                    }
+                    /* Add margin on shop detail button*/
+                    
+                    .filterDiv button,
+                    p,
+                    img {
+                        margin: 7px;
+                        font-weight: bold;
+                    }
+                    /*style button*/
+                    
+                    .btn {
+                        /*set text center*/
+                        text-align: center;
+                        /*vertical align middle*/
+                        vertical-align: middle;
+                        /*add padding*/
+                        padding: .67em .67em;
+                        /*cursor point*/
+                        cursor: pointer;
+                    }
+                    /*style cart*/
+                    
+                    .btn-primary {
+                        color: white;
+                        background-color: #56CCF2;
+                        border: none;
+                        border-radius: .3em;
+                        font-weight: bold;
+                    }
+                    /*style cart hover*/
+                    
+                    .btn-primary :hover {
+                        background-color: #2D9CDB;
+                        cursor: pointer;
+                    }
+                    
+                    @media screen and (max-width: 1200px) {
+                        /*style cook iteme menu*/
+                        .cook-items {
+                            display: block;
+                            height: 50vh;
+                            position: relative;
+                        }
+                        .dropdown-catagory {
+                            left: 20%;
+                            right: 20%;
+                        }
+                        .filterDiv p,
+                        button {
+                            max-width: 80px;
+                            margin: 20px;
+                        }
+                    }
 /*checkout*/
 
 .checkout_content {
