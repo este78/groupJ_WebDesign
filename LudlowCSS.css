@@ -76,6 +76,19 @@
 .menu-list li a:hover{
 	color: darkorange;
 }
+
+.icon{
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+	display: none;
+}
+
+.icon.off-btn{
+	position: absolute;  /**/
+	right: 30px;   /**/
+	top: 20px;     /*location of the "X" in the shrunk down menu*/
+}
 /*Background Image and box styling behind the carousel*/
 .header{
 	height: 100vh; /*stablishes the height of the the box*/
@@ -123,7 +136,7 @@
 /*About Text=======================================================================================================================================================================================================================================*/
 
 .reviews{
-	padding: 40px 0; /*creates a separation this box from the one before it*/
+	padding-top: 50px ; /*creates a separation this box from the one before it*/
 	overflow: hidden;
 	margin: 0.5%;
 }
@@ -142,19 +155,9 @@
 	font-size: 1.3em;
 }
 
-.icon{
-	color: #fff;
-	font-size: 20px;
-	cursor: pointer;
-	display: none;
+.snipets ul{
+	display:flex;
 }
-
-.icon.off-btn{
-	position: absolute;  /**/
-	right: 30px;   /**/
-	top: 20px;     /*location of the "X" in the shrunk down menu*/
-}
-
 /*Google Map============================================================================================================================================================================================================================================*/
 .map{
 	padding-top: 10%;
@@ -288,6 +291,10 @@
 	}
 	.item img{
 	width:100%;
+	}
+	/*Review images*/
+	.snipets ul{
+		display: block;
 	}
 	/*Video mobile*/
 	.video-player{
