@@ -154,9 +154,15 @@
 	text-align: justify; /*justifies text */
 	font-size: 1.3em;
 }
-
+/*Aligns  goolge review box*/
+.snipets {
+	display:block;
+	text-align:center;
+}
 .snipets ul{
-	display:flex;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-around;
 }
 /*Google Map============================================================================================================================================================================================================================================*/
 .map{
