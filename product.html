@@ -67,14 +67,7 @@
 				</div>
 			</div>
 		</nav>
-		
-		<!--Script needs to be here to avoid null error. Code  from tutorial: https://youtu.be/UHSeFxZIuv8. It cannot be called before the object is loaded  -->
-		<script>	
-			const navBar = document.querySelector(".navBar");
-			window.onscroll = () =>{
-				this.scrollY > 20 ?  navBar.classList.add("sticky") : navBar.classList.remove("sticky");  //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
-			}
-		</script>
+
     <!--dropdown menu-->
     <div class="body-content-product">
         <div class="cook-items">
@@ -1023,6 +1016,14 @@
 				</a>
 			</p>
 	   </footer>
+	   		
+		<!--Script needs to be here to avoid null error. Code  from tutorial: https://youtu.be/UHSeFxZIuv8. It cannot be called before the object is loaded  -->
+		<script>	
+			const navBar = document.querySelector(".navBar");
+			window.onscroll = () =>{
+				this.scrollY > 20 ?  navBar.classList.add("sticky") : navBar.classList.remove("sticky");  //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
+			}
+		</script>
 </body>
 
 </html>

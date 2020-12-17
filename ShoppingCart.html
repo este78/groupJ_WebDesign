@@ -12,11 +12,12 @@
     <title>Checkout example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
+	  <link rel="stylesheet" href="./groupCss.css">
     <link href="./ShoppingCart.css" rel="stylesheet">
-    <link rel="stylesheet" href="./ContactCSS.css">
     <link rel="stylesheet" href="main.js">
     <!-- Custom styles for this template -->
     <link href="form-validation.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -40,7 +41,7 @@
                     <i class="fas fa-times"></i>
                 </div>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./Catalogue.html">Products</a></li>
+                <li><a href="./product.html">Products</a></li>
                 <li><a href="./ShoppingCart.html">Shopping Cart<span class="price"><i class="fa fa-shopping-cart" style="color:green" ></i></span></a></li>
                 <li><a href="./FAQ.html">FAQ</a></li>
                 <li><a href="./Contact.html">Contact</a></li>
@@ -51,14 +52,6 @@
             </div>
         </div>
     </nav>
-
-    <!--Script needs to be here to avoid null error . It cannot be called before the object is loaded  -->
-    <script>
-        const navBar = document.querySelector(".navBar");
-        window.onscroll = () => {
-            this.scrollY > 20 ? navBar.classList.add("sticky") : navBar.classList.remove("sticky"); //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
-        }
-    </script>
 
     <!--Checkout starts-->
     <section class="checkout-row">
@@ -199,7 +192,12 @@
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap.min.js"></script>
     <script src="../../../../assets/js/vendor/holder.min.js"></script>
+	    <!--Script needs to be here to avoid null error . It cannot be called before the object is loaded  -->
     <script>
+        const navBar = document.querySelector(".navBar");
+        window.onscroll = () => {
+            this.scrollY > 20 ? navBar.classList.add("sticky") : navBar.classList.remove("sticky"); //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
+        }
     </script>
 </body>
 
