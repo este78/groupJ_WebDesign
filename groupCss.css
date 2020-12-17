@@ -87,7 +87,7 @@
 	text-decoration: none; /*gets rid of the link's underline*/
 	color: red;
 }
-
+/*Three bars icon menu for samll/mobile devices, hidden by default*/
 .icon{
 	color: #fff;
 	font-size: 20px;
@@ -198,11 +198,8 @@
 
 /*Footer*/
 .section-bottom-links{
-	
-	/*background-color: rgba(0, 100, 0, 0.068);*/
 	margin-left:10%;
 	margin-right:10%;
-	/*box-shadow: 0px 0px 10px #888888b9;*/
 	text-align:center;
    display: flex;
 	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
@@ -239,6 +236,7 @@
 	text-align: center;
 	text-decoration: none;
 	border-radius: 50%;
+	cursor: pointer;
 }
 .fa-facebook{
 	background: #3B5998;
@@ -249,11 +247,12 @@
   background: #55ACEE;
   color: white;
 }
-/* Instagram*/
+/*LinkedIn*/
 .fa-linkedin {
   background: #007bb5;
   color: white;
 }
+/*blog */
 .blog{
 	margin:auto;
 	padding: 20px;
@@ -262,6 +261,7 @@
 	height: 70px;
 	display: block;
 	color: white;	
+	cursor: pointer;
 }
 .blog-tips{
 	background: navy;
@@ -388,7 +388,6 @@
 	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
 	background-position: center;
 	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
-	/*margin:0% 10% 0% 10%; Background Margin */
 	padding: 40px 0; /*creates a separation this box from the one before it*/
 }
 .body-content-div{
@@ -461,8 +460,7 @@
 /* Send Button Style and positioning */
 .message-btn{
 	font-size: 20px;
-	width: 50%;
-	
+	width: 50%;	
 	border: none;
 	border-radius: 5px;
 	padding: 5px;
@@ -505,14 +503,13 @@
 }
 
 /*Samsom code=products====================================================================================================================================================================================================================================*/
-<<<<<<< HEAD
 .body-content-product {
 	box-sizing: border-box;
 	height: 1800vh;
 	padding-top: 150px;
 	background-color: whitesmoke;
 }
-                                    
+
 .cook-items {
 	display: flex;
 	/*add space between the menu cook items*/
@@ -646,13 +643,11 @@
 	text-decoration: none;
 }
 /* Add color on mouse-over to price */
-                                    
 .shop-item-price a:hover {
 	text-decoration: none;
 	background-color: rgb(252, 249, 249);
 }
 /* Add margin on shop detail button*/
-
 .filterDiv button, p, image {
 	margin: 10px;
 }
@@ -662,7 +657,6 @@
 	border: 2px solid rgb(184, 183, 183);
 }
 /*style button*/
-
 .btn {
 	/*set text center*/
 	text-align: center;
@@ -781,9 +775,7 @@ button {
 }
 /* Add margin on shop detail button*/
 
-.filterDiv button,
-p,
-image {
+.filterDiv button, p, image {
     margin: 10px;
 }
 
