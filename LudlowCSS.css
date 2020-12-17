@@ -110,7 +110,7 @@
 	width: 80%;
 }
 .carousel-inner{
-	border: 5px solid white;
+	border: 10px solid rgb(5,119,61);
 	background-color: rgba(245, 245, 245, 0.7);
 }
 .carousel-indicators{
@@ -118,6 +118,7 @@
 }
 /*Centers the picute in the middle of the carousel*/
 .item img{
+	padding: 10px;
 	margin: auto;
 	width:100%;
 	min-width: 585px;
