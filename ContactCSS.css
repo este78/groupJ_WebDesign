@@ -38,7 +38,7 @@
 }
 
 .body-content-div-from-table tr, td{
-	padding: 2px;
+	padding: 5px;
 	width:70%;
 }
 
@@ -47,8 +47,38 @@
 }
 
 .body-content-div-from-table input, textarea{
+	font-family:Arial, Helvetica, sans-serif;
+	padding-left: 5px;
+	margin-bottom: 10px;;
+	height:30px;
 	width:100%;
 }
+
+.body-content-div-from-table textarea{
+	font-family:Arial, Helvetica, sans-serif;
+	padding-top: 5px;
+	padding-left: 5px;
+	height:30px;
+	width:100%;
+}
+
+.input-table-Fname.error,.input-table-phone.error,.input-table-email.error,.textArea.error{
+	border: 1px solid gray;
+	box-shadow: 0px 0px 10px #c80f0fc9;
+
+}
+
+.error{
+	position: relative;
+	text-align: left;
+	font-size: 12px;
+	color: red;
+	padding: 0;
+	margin:0;
+	top:10px;
+}
+
+
 
 /* Send Button Style and positioning */
 .message-btn{
@@ -108,7 +138,7 @@
 
 @media screen and (max-width:1024px) {
 	.body-content{
-		height: 150vh;
+		height: 170vh;
 	}
 	.body-content-div{
 		background-color: whitesmoke;
@@ -124,6 +154,10 @@
 
 	.body-content-div-from-table{
 		margin-left: 0%;		
+	}
+
+	.body-content-div-from-table input, textarea{
+		font-size: 11px;
 	}
 
 	.notform{
