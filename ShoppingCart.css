@@ -15,22 +15,25 @@ body {
 }
 
 
-/*setting checkout-row*/
+/*setting checkout-detail*/
 
-.checkout-row {
+.checkout-detail {
     display: -ms-flexbox;
     display: flex;
     width: 950px;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 15px;
-    margin-top: 150px;
-    justify-content: center;
     align-items: center;
 }
 
+
+/*setting wrapper*/
+
 .wrapper {
     display: flex;
+    /*set content center*/
+    justify-content: center;
+    /*set margin*/
+    margin: 150px;
+    /*set width*/
     width: 100%;
 }
 
@@ -45,7 +48,9 @@ body {
 /*persenal detail box*/
 
 .personalDetail {
+    /*set margin*/
     margin: 20px;
+    /*set width*/
     width: 650px;
 }
 
