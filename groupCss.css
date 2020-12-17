@@ -283,6 +283,218 @@
     color: whitesmoke; /* Sets the colour of the letters */   
 }
 
+/*Jose Carlos =FAQ================================================================================================================================*/
+/* Created by Jose Carlos Kuzolitz Garcia - x20164840 */
+
+/* Places de body under the Menu */
+.body-content{
+	height: 120vh; /*stablishes the height of the the box*/
+	background-color: whitesmoke; /* Background Colour */
+	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
+	background-position: center;
+	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
+	padding-top: 5%; /*creates a separation this box from the one before it*/
+	display: flex;
+}
+
+.faq-logo{
+	position: absolute;
+	margin-left: 70%;
+	margin-top: 8.5%;
+	height: 150px;
+	width:150px;
+}
+
+/* Side Navegation Options Positioning and Style*/
+.side-content{
+	height: 45%; /* Height Size */
+	width: 15%; /* Widt Size */
+	margin-top: 15%; /* Top margin */
+	margin-left: 20%; /* Left margin */
+	font-size: 18px; /* Font size */
+	font-weight: 500; /*Font Weight*/
+	border-right: 2px solid darkgreen; /* right border of the side nav*/
+}
+
+.side-content p, a{
+	margin-top: 10%; /* Top margin setup */
+	color: darkgreen; /*Font Color*/
+}
+
+.side-content p, a:hover{
+	text-decoration: none; /* It gets rid with the Text Decoration */
+	color: darkorange; /* Button becomes orange when hoverred */
+}
+
+.main-content{
+	height:45%;
+	width: 42%;
+	margin-top: 15%;
+	margin-left: 2%;
+}
+
+.btn-collapsible{
+	background-color: whitesmoke;
+	color: darkgreen;
+	cursor: pointer;
+	padding: 20px 5px 10px;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid darkgreen;
+	text-align: left;
+	outline: none;
+	font-size: 18px;
+}
+
+.opt-span{
+	display:flex;
+	font-size: 25px;
+	margin-left: 95%;
+	margin-top: -4%;
+}
+
+.active, .btn-collapsible:hover {
+	background-color: rgba(0, 100, 0, 0.294);
+}
+
+.collapsible-content{
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
+	background-color: #f1f1f1;
+}
+
+.ADS{
+	border: 1px solid black;
+	background-color: whitesmoke;
+	width:100%;
+	height: 40%;
+}
+
+/*Jose Carlos =Contact========================================================*/
+/* Places de body under the Menu */
+.body-content-contact{
+	height: 120vh; /*stablishes the height of the the box*/
+	background-color: whitesmoke; /* Background Colour */
+	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
+	background-position: center;
+	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
+	/*margin:0% 10% 0% 10%; Background Margin */
+	padding: 40px 0; /*creates a separation this box from the one before it*/
+}
+.body-content-div{
+	display: flex;
+	align-items: center;
+	padding-top: 10%;
+}
+
+/* Form Positioning */
+.body-content-div-form{
+	margin:5% 5% 5% 5%;
+	text-align: justify; /*justifies text */
+	height: 80%;
+	width: 100%;
+}
+
+.notform{
+	width: 60%;
+	margin-top: 0%;
+	margin-right:15%;
+}
+
+/* Table positioning and Style */
+.body-content-div-from-table{
+	margin-left: 32%;
+	
+}
+
+.body-content-div-from-table tr, td{
+	padding: 5px;
+	width:70%;
+}
+
+.form-label{
+	font-weight: bold;
+}
+
+.body-content-div-from-table input, textarea{
+	font-family:Arial, Helvetica, sans-serif;
+	padding-left: 5px;
+	margin-bottom: 10px;;
+	height:30px;
+	width:100%;
+}
+
+.body-content-div-from-table textarea{
+	font-family:Arial, Helvetica, sans-serif;
+	padding-top: 5px;
+	padding-left: 5px;
+	height:30px;
+	width:100%;
+}
+
+.input-table-Fname.error,.input-table-phone.error,.input-table-email.error,.textArea.error{
+	border: 1px solid gray;
+	box-shadow: 0px 0px 10px #c80f0fc9;
+
+}
+
+.error{
+	position: relative;
+	text-align: left;
+	font-size: 12px;
+	color: red;
+	padding: 0;
+	margin:0;
+	top:10px;
+}
+
+/* Send Button Style and positioning */
+.message-btn{
+	font-size: 20px;
+	width: 50%;
+	
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: rgba(0, 100, 0, 0.561);
+	color: whitesmoke;
+	text-align: center;
+}
+
+/* Send Button Style when hovered */
+.message-btn:hover{
+    text-decoration: none; /* It gets rid with the decoration when hovered */
+	background-color: darkgreen; /* Changes the colour when Buttons are hovered */
+}
+
+/*Contact Details Style and Positioning */
+.contact-details{	
+	width: 80%;
+}
+
+.contact-details label{
+	font-weight: bold;
+}
+
+.contact-details h4{
+	border-bottom: 1px solid black;
+	font-weight: bold;
+	margin-bottom: 6%;
+}
+
+/*Map position and style */
+.map{
+	padding-top: 0%;
+	margin-top: 5%;
+	width:80%;
+	box-shadow: 0px 0px 10px #888888b9;
+}
+
+.map iframe{
+	width: 100%;
+}
+
 /*Responsive, partially adapted from tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ==============================================================================================================================================================*/
 @media screen and (max-width: 1024px) {
 	.icon{
@@ -361,7 +573,7 @@
 		width: 100%;
 		margin:auto;
 	}
-	.map iframe{
+	.map-index iframe{
 		margin: auto;
 		width: 90%;
 	}
@@ -372,5 +584,63 @@
 		padding: 10px;
 		font-size: 0.8em;
 		height: 50%;
+	}
+	/*jose carlos=FAQ============================================================*/
+		.body-content{
+		height: 80vh;
+		padding-top: 5%;
+	}
+
+	.faq-logo{
+		height: 80px;
+		width: 80px;
+	}
+
+	.side-content{
+		display: none;
+	}
+
+	.main-content{
+		height: 50%;
+		width: 90%;
+		margin-top: 15%;
+		margin-left: 5%;
+		border: none;
+	}
+
+	.ADS{
+		display: none;
+	}
+	/*Jose Carlos= Contact=========================================================*/
+	.body-content-contact{
+		height: 170vh;
+	}
+	.body-content-div{
+		background-color: whitesmoke;
+		text-align: center;	
+		display: block;
+	}
+
+	.body-content-div-form{
+		margin-top:1%;
+		margin-left: 5%;
+		width: 90%;
+	}
+
+	.body-content-div-from-table{
+		margin-left: 0%;		
+	}
+
+	.body-content-div-from-table input, textarea{
+		font-size: 11px;
+	}
+
+	.notform{
+		margin-top: 15%;
+		margin-left: 14%;
+		padding-bottom: 15%;
+		width: 90%;
+		text-align: center;
+		background-color: whitesmoke;
 	}
 }
