@@ -643,52 +643,48 @@
 }
 /* Add color on mouse-over to price */
                                     
-                                    .shop-item-price a:hover {
-                                        text-decoration: none;
-                                        background-color: rgb(252, 249, 249);
-                                    }
-                                    /* Add margin on shop detail button*/
-                                    
-                                    .filterDiv button,
-                                    p,
-                                    image {
-                                        margin: 10px;
-                                    }
-                                    
-                                    .filterDiv img {
-										font-weight: bold;
-												border: 2px solid rgb(184, 183, 183);
-                              }
-                                    /*style button*/
-                                    
-                                    .btn {
-                                        /*set text center*/
-                                        text-align: center;
-                                        /*vertical align middle*/
-                                        vertical-align: middle;
-                                        /*add padding*/
-                                        padding: .67em .67em;
-                                        /*cursor point*/
-                                        cursor: pointer;
-                                    }
-                                    /*style cart*/
-                                    
-                                    .btn-primary {
-                                        color: white;
-                                        background-color: #56CCF2;
-                                        border: none;
-                                        border-radius: .3em;
-                                        font-weight: bold;
-                                    }
-                                    /*style cart hover*/
-                                    
-                                    .btn-primary :hover {
-                                        background-color: #2D9CDB;
-                                        cursor: pointer;
-                                    }
-=======
-    margin: 0 -20% 0;
+.shop-item-price a:hover {
+	text-decoration: none;
+	background-color: rgb(252, 249, 249);
 }
+/* Add margin on shop detail button*/
+
+.filterDiv button, p, image {
+	margin: 10px;
+}
+
+.filterDiv img {
+	font-weight: bold;
+	border: 2px solid rgb(184, 183, 183);
+}
+/*style button*/
+
+.btn {
+	/*set text center*/
+	text-align: center;
+	/*vertical align middle*/
+	vertical-align: middle;
+	/*add padding*/
+	padding: .67em .67em;
+	/*cursor point*/
+	cursor: pointer;
+}
+/*style cart*/
+
+.btn-primary {
+	color: white;
+	background-color: #56CCF2;
+	border: none;
+	border-radius: .3em;
+	font-weight: bold;
+}
+/*style cart hover*/
+
+.btn-primary :hover {
+	background-color: #2D9CDB;
+	cursor: pointer;
+}
+
 /*main header cooker catagory*/
 >>>>>>> 580ba907930d32b46bcb93ea8209252c3b0aabe0
 
@@ -990,8 +986,5 @@ image {
 	.filterDiv p, button {
 		max-width: 80px;
 		margin: 20px;
-	}
-	.col-1{
-		width: 100%;
 	}
 }
