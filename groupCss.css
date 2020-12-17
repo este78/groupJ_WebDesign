@@ -1,40 +1,44 @@
+
 /*MENU CSS CODE adapted from tutorial   https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ================================================================================================================================================================*/
+	/*General outlook for the whole page*/
 *{
 	margin: 0;
 	padding: 0; 
 	box-sizing: border-box;
 	font-family: 'Helvetica Neue', Helvetica;
 }
-.content{
-	max-width: 1250px;
-	margin: auto;	
-	padding: 0px 30px;
-}
+/*Navigation menu(logo, search bar, menu), it sticks to the top of the screen at all times*/
 .navBar{
 	position: fixed;
 	background: rgba(255, 255, 255, 0.7);
 	z-index: 5; /*displays the element on top of any other box that ocupies the same "line" on the screen*/
 	width: 100%;
 	padding: 0 0;
-	transition: all 0.3s ease;
+	transition: all 0.3s ease; /*slow down the animation of the menu when scrolling the screen*/
 }
-
+/*when the screen scrolls past certain point the stuling of the menu also changes, background becomes opaque */
 .navBar.sticky{
 	padding: 8px 0;
 	background: rgba(255, 255, 255, 1); /*sets up opacity in the background of the menu but not the text.*/
 }
-
+/*I may resize the logo as part of optimisation*/
 .navBar .logo img{
 	width: 75%;
 	height: 75%;
 }
-
+/*menu bar general styling, the class  includes the logo and menu but NOT the search bar*/
+.content{
+	max-width: 1250px;
+	margin: auto;	
+	padding: 0px 30px;
+}
+/*search button general position*/
 .search{
 	position: fixed;
 	right: 20%;
 	top: 10px;
 }
-
+/*search input styling */
 .search input{
 	border: none;
 	background-color: rgba(245, 245, 245, 0.7);
@@ -42,7 +46,7 @@
 	border-bottom: 1px solid rgb(5,119,61);
 	font-size:20px;
 }
-
+/* */
 .search button{
 	font-size: 27px;
 	background-color: rgba(245, 245, 245, 0.7);
@@ -50,33 +54,38 @@
 	color: rgb(5,119,61);
 	border: none;
 }
-
+/*handles the alignment of the menu, except the search bar*/
 .navBar .content{
 	display: flex;
 	align-items: center;		/*aligns the two elements (logo, menu list) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
 	justify-content: space-between;  /*justify the elements so the items are at both extremes of the page*/
 }
+/*navigation options are displayed at the bottom and right of the container*/  /*====================================MODIFIED 17/12/2020==================================================*/
 .navBar .menu-list {
-
-	margin-top: 100px;
-	margin-right: 26px;
+	/*margin-top: 100px;
+	margin-right: 26px;*/
+	position: absolute;
+	bottom: 1px;
+	right:10px;
 } 
-
+/*displays all the links in the navigation menu  one next to the other in the same line*/
 .menu-list p{
-	display: inline; /*displays all the elements of the list one next to the other in the same line*/
+	display: inline; 
 }
-
+/*styling of the links in the navigation menu*/
 .menu-list a{
 	color: rgb(5,119,61);
 	font-size: 18px;
-	font-weight: 500;
 	margin-left: 25px; /*creates space between the list's elements*/
 	text-decoration: none; /*gets rid of the link's underline*/
 }
-
 .menu-list a:hover{
 	text-decoration: none; /*gets rid of the link's underline*/
 	color: darkorange;
+}
+.menu-list a:active{
+	text-decoration: none; /*gets rid of the link's underline*/
+	color: red;
 }
 
 .icon{

@@ -2,56 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <title>Checkout example for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-	  <link rel="stylesheet" href="./groupCss.css">
-    <link href="./ShoppingCart.css" rel="stylesheet">
-    <link rel="stylesheet" href="main.js">
-    <!-- Custom styles for this template -->
-    <link href="form-validation.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+    
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>Checkout example for Bootstrap</title>
+	<link rel="icon" type="image/png" href="img/LudlowHCfavicon.jpg">
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="groupCss.css">
+	<link rel="stylesheet" href="./ShoppingCart.css">
+	<link rel="stylesheet" href="main.js">
+	<!-- Custom styles for this template -->
+	<link href="form-validation.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--Script for the navigation menu -->
+	<script src="Ludlow_JS.js"></script>
 </head>
 
 <body>
-    <!--Menu===========================================================================================================================================================================================================================================-->
-
-    <nav class="navBar">
-        <div class="search">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-        <div class="content">
-            <div class="logo">
-                <a href="#"><img src="img/logo.png" alt="logo"></a>
-            </div>
-            <!-- Search button-- -->
-            <ul class="menu-list">
-                <div class="icon off-btn">
-                    <!--"X"icon in -->
-                    <i class="fas fa-times"></i>
-                </div>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./product.html">Products</a></li>
-                <li><a href="./ShoppingCart.html">Shopping Cart<span class="price"><i class="fa fa-shopping-cart" ></i></span></a></li>
-                <li><a href="./FAQ.html">FAQ</a></li>
-                <li><a href="./Contact.html">Contact</a></li>
-            </ul>
-
-            <div class="icon menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+ <!--Menu: Adapted  from a youtube tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ================================================================================================================================================-->
+       <nav class="navBar">
+			<div class="search">
+				<form  action="/action_page.php">
+					<input type="text" placeholder="Search..." name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<div class="content">
+				<div class="logo"><a href="./index.html"><img src="img/logo.png" alt="logo"></a></div>
+				<!-- Search button -->
+				<div class= "menu-list">
+					<div class="icon off-btn">  <!--"X"icon in -->
+						<i class="fas fa-times"></i>
+					</div>
+					<div class="menu-options">
+						<a href="./index.html">Home</a>
+						<p></p>
+						<a href="./product.html">Products</a>
+						<p></p>
+						<a href="./ShoppingCart.html">Shopping Cart</a>
+						<p></p>
+						<a href="./FAQ.html">FAQ</a>
+						<p></p>
+						<a href="./Contact.html">Contact</a>
+					</div>	
+				</div>
+				<div class="icon menu-btn">
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+		</nav>
 
     <!--Checkout starts-->
     <section class="checkout-row">
