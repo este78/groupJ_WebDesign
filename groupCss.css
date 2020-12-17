@@ -11,15 +11,15 @@
 .navBar{
 	position: fixed;
 	background: rgba(255, 255, 255, 0.7);
-	z-index: 5; /*displays the element on top of any other box that ocupies the same "line" on the screen*/
+	z-index: 5; 							/*displays the element on top of any other box that ocupies the same "line" on the screen*/
 	width: 100%;
 	padding: 0 0;
-	transition: all 0.3s ease; /*slow down the animation of the menu when scrolling the screen*/
+	transition: all 0.3s ease; 	/*slow down the animation of the menu when scrolling the screen*/
 }
 /*when the screen scrolls past certain point the stuling of the menu also changes, background becomes opaque */
 .navBar.sticky{
 	padding: 8px 0;
-	background: rgba(255, 255, 255, 1); /*sets up opacity in the background of the menu but not the text.*/
+	background: rgba(255, 255, 255, 1); 	/*sets up opacity in the background of the menu but not the text.*/
 }
 /*I may resize the logo as part of optimisation*/
 .navBar .logo img{
