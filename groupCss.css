@@ -516,8 +516,8 @@
 	border: 2px solid darkgreen;
 	/*cook items width*/
 	width: 100%;
-=======
-	.body-content-product {
+}
+.body-content-product {
     box-sizing: border-box;
     height: 1800vh;
     padding-top: 150px;
@@ -536,27 +536,22 @@
     border: 2px solid darkgreen;
     /*cook items width*/
     width: 100%;
->>>>>>> 580ba907930d32b46bcb93ea8209252c3b0aabe0
 }
 /*style cook iteme menu*/
 
 .cook-items a {
-<<<<<<< HEAD
 	/*set color to whitesmoke*/
 	color: whitesmoke;
 	/*take off text decoration*/
 	text-decoration: none;
-=======
     /*set color to whitesmoke*/
     color: whitesmoke;
     /*take off text decoration*/
     text-decoration: none;
->>>>>>> 580ba907930d32b46bcb93ea8209252c3b0aabe0
 }
 /*set space cook item menu*/
 
 .catagory {
-<<<<<<< HEAD
 	margin: 0 -20% 0;
 }
 /*main header cooker catagory*/
@@ -686,7 +681,6 @@
 }
 
 /*main header cooker catagory*/
->>>>>>> 580ba907930d32b46bcb93ea8209252c3b0aabe0
 
 .item_details {
     margin: 0 -20% 0;
@@ -988,3 +982,4 @@ image {
 		margin: 20px;
 	}
 }
+
