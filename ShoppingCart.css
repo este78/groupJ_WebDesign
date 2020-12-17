@@ -32,7 +32,7 @@ body {
     /*set content center*/
     justify-content: center;
     /*set margin*/
-    margin: 150px;
+    margin-top: 150px;
     /*set width*/
     width: 100%;
 }
@@ -111,7 +111,7 @@ input[type=text] {
 /*set lebel*/
 
 label {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: block;
 }
 
