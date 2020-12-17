@@ -168,6 +168,16 @@
                         background-color: whitesmoke;
                     }
                     
+                    .product-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        padding: 20px;
+                        min-width: 1000px;
+                    }
+                    
                     .cook-items {
                         display: flex;
                         /*add space between the menu cook items*/
