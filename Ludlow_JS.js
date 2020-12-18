@@ -35,6 +35,7 @@ $(function(){
 			},
 			/* Just accepts numbers max 10 length (not required) */
 			phone:{
+				required:true,
 				digits: true,
 			},
 			/* Email field is required and it inspects whether it has the standard layout or not */
@@ -55,7 +56,8 @@ $(function(){
 			},
 			
 			phone:{
-				digits: 'Only numbers.',
+				required: 'Please, what is your phone number?',
+				digits: 'Only numbers, please.'
 			},
 
 			email:{
@@ -72,13 +74,3 @@ $(function(){
 	});
 
 });
-
-/*--------------------------------------------------------------*/
-
-let carts = document.querySelectorAll('.add-cart');
-
-for (let i = 0; i < carts.length; i++) {
-    carts[i].addEventListener('click', () => {
-        console.log("added to cart");
-    })
-}

@@ -1,303 +1,396 @@
+/* Created by Esteban Araujo-Fervenza - x20170416
+                Jose Carlos Kuzolitz Garcia - x20164840
+                Samsom	Mihreteab - x */
 
-/*MENU CSS CODE adapted from tutorial   https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ================================================================================================================================================================*/
-	/*General outlook for the whole page*/
+/*General outlook for the whole page*/
 *{
 	margin: 0;
 	padding: 0; 
 	box-sizing: border-box;
 	font-family: 'Helvetica Neue', Helvetica;
 }
-/*Navigation menu(logo, search bar, menu), it sticks to the top of the screen at all times*/
+
+/***************************************************************************************/
+/* Navegation Menu - Created by Esteban Araujo-fervenza and Jose Carlos Kuzolitz Garcia*/
+/**** Adapted from tutorial   https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s *******/
+/***************************************************************************************/  
+	
+
+/*Navigation menu (it sticks to the top of the screen at all times) */
 .navBar{
-	position: fixed;
-	background: rgba(255, 255, 255, 0.7);
-	z-index: 5; 							/*displays the element on top of any other box that ocupies the same "line" on the screen*/
-	width: 100%;
-	padding: 0 0;
-	transition: all 0.3s ease; 	/*slow down the animation of the menu when scrolling the screen*/
+
+	position: fixed; /*Established the element in a fixed position*/
+	background-color: rgba(255, 255, 255, 0.7); /* Background Colour */
+	z-index: 5; /*displays the element on top of any other box that ocupies the same "line" on the screen*/
+	width: 100%; /* Sets the default Width */
+	padding: 0 0; /* Sets Padding */
+	transition: all 0.3s ease; 	/* Slow down the animation of the menu when scrolling the screen */
 }
 /*when the screen scrolls past certain point the stuling of the menu also changes, background becomes opaque */
 .navBar.sticky{
-	padding: 8px 0;
-	background: rgba(255, 255, 255, 1); 	/*sets up opacity in the background of the menu but not the text.*/
+	padding: 8px 0; /* Sets Padding */
+	background: rgba(255, 255, 255, 1); /*Sets up the background colour and its opacity in the background of the menu but not the text.*/
 }
-/*I may resize the logo as part of optimisation*/
-.navBar .logo img{
-	width: 75%;
-	height: 75%;
-}
-/*menu bar general styling, the class  includes the logo and menu but NOT the search bar*/
+
+/*Content Container, which has the Logo, Menu Buttons and Search Bar*/
 .content{
-	max-width: 1250px;
-	margin: auto;	
-	padding: 0px 30px;
+	max-width: 80%; /* Sets the max-width for the container */
+	margin-left: 10%; /* Sets some margin-left */
 }
-/*search button general position*/
+
+/*Search Bar and Button Container positioning and sizening*/
 .search{
-	position: fixed;
-	right: 20%;
-	top: 10px;
+	position: absolute; /* Sets the container to accepts to be placed at an Absolute position */
+	text-align: right; /* Align the items on the Right */
+	margin-top: -7%; /* Margin Top Setup */
+	margin-left: 44%; /* Margin Left Setup */
+	width:35%; /* Sets width of the Container */
+	
 }
-/*search input styling */
+/*Search Input styling */
 .search input{
-	border: none;
-	background-color: rgba(245, 245, 245, 0.7);
-	opacity: 0.3;
-	border-bottom: 1px solid rgb(5,119,61);
-	font-size:20px;
+	border: none; /* Gets rid with the default border */
+	background-color:  rgba(255, 255, 255, 0.1); /* Sets the background colour */
+	border-bottom: 1px solid rgb(5,119,61); /* Sets a green bottom border */ 
+	font-size:18px; /* Sets the font size */
 }
-/* */
+
+/* Search Button Styling */
 .search button{
-	font-size: 27px;
-	background-color: rgba(245, 245, 245, 0.7);
-	opacity: 0.3;
-	color: rgb(5,119,61);
-	border: none;
+	font-size: 27px; /* Sets the Icon Size*/
+	background-color:  rgba(255, 255, 255, 0.1); /* Sets the background colour */
+	color: rgb(5,119,61); /* Colour of the icon */
+	border: none; /* Gets rid with the default border */
 }
+
 /*handles the alignment of the menu, except the search bar*/
 .navBar .content{
-	display: flex;
-	align-items: center;		/*aligns the two elements (logo, menu list) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
+	display: flex; /* Sets display as flex for this container */
+	align-items: center;	/*aligns the two elements (logo, menu list) in the center of the page(horizontally and vertically), one next to the other in the same line*/
 	justify-content: space-between;  /*justify the elements so the items are at both extremes of the page*/
 }
-/*navigation options are displayed at the bottom and right of the container*/  /*====================================MODIFIED 17/12/2020==================================================*/
+
+/*navigation options are displayed at the bottom and right of the container*/ 
 .navBar .menu-list {
-	/*margin-top: 100px;
-	margin-right: 26px;*/
-	position: absolute;
-	bottom: 1px;
-	right:10px;
+	text-align: right; /* Text Align to the right */
+	margin-top: 8%; /* Margin Top set */
+	margin-right: 1%; /* Sets Margin Right */
+	width: 80%; /* Sets the container width */
+	position: relative; /* Sets the container with a relative position */
 } 
 /*displays all the links in the navigation menu  one next to the other in the same line*/
-.menu-list p{
-	display: inline; 
+.menu-options p{
+	display: inline; /* Sets to display items inline */
 }
 /*styling of the links in the navigation menu*/
-.menu-list a{
-	color: rgb(5,119,61);
-	font-size: 18px;
-	margin-left: 25px; /*creates space between the list's elements*/
+.menu-options a{
+	color: rgb(8,119,61); /* Font Colour */
+	font-size: 22px; /* Font Size */
+	margin-left: 5%; /*creates space between the list's elements*/
 	text-decoration: none; /*gets rid of the link's underline*/
 }
-.menu-list a:hover{
+
+.menu-options a:hover{
 	text-decoration: none; /*gets rid of the link's underline*/
-	color: darkorange;
+	color: darkorange; /* Font Colour changes when item is hovered */
 }
-.menu-list a:active{
+
+.menu-options a:active{
 	text-decoration: none; /*gets rid of the link's underline*/
 	color: red;
 }
-/*Three bars icon menu for samll/mobile devices, hidden by default*/
+
+/*"X" Button for samll/mobile devices (It is shown when the 3 bars button is pressed*/
 .icon{
-	color: #fff;
-	font-size: 20px;
-	cursor: pointer;
-	display: none;
+	color: #fff; /* Font Colour */
+	font-size: 20px; /* Font Size */
+	cursor: pointer; /* Cursor icon changes to pointer when the element is hovered */
+	display: none; /* Does not display the element when the page in maximized views. It is displayed just on Mobile Versions */
 }
 
+/*"X" Button for samll/mobile devices (It is shown when the 3 bars button is pressed*/
 .icon.off-btn{
-	position: absolute;  /**/
-	right: 30px;   /**/
-	top: 20px;     /*location of the "X" in the shrunk down menu*/
+	position: absolute;  /* Sets the element to get an absolute position */
+	right: 30px;   /* Right positioning */
+	top: 20px;     /* Top Positioing - location of the "X" in the shrunk down menu*/
 }
+
 /*Background Image and box styling behind the carousel*/
 .header{
-	height: 100vh; /*stablishes the height of the the box*/
+	height: 150vh; /*stablishes the height of the the box*/
 	background: url("img/storeFront.jpg") no-repeat; /*places image of store front as a background*/
 	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
 	background-position: center;
 	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
 	position: relative;
 }
-/*Carousel  ==============================================================================================================================================================================================================================================*/
-/*========================================================================================================================================================================================================================================================*/
+
+#plainHeader{
+	height: 150vh; /*stablishes the height of the the box*/
+	background-color: whitesmoke;
+	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
+	background-position: center; /* Centralise the Background */
+	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
+	position: relative; /* Sets the position as relative */
+}
+
+/***************************************************************************************/
+/****************** Carousel - Created by Esteban Araujo-fervenza **********************/
+/***************************************************************************************/
+
 #carousel{
-	position: absolute;
-	top: 30%;
-	right: 10%;
-	left: 10%;
-	width: 80%;
+    position: absolute; /* Sets its position as Absolute */
+    top: 15%; /* Top positionig */
+    right: 10%; /* Right positionig */
+    left: 10%; /* Left positionig */
+    width: 80%; /* Width size */
 }
+
+/* Carousel's Image Container */
 .carousel-inner{
-	border: 10px solid rgb(5,119,61);
-	background-color: rgba(245, 245, 245, 0.7);
+    border: 10px solid rgb(5,119,61); /* Border Colour and sizening */
+	background-color: rgba(245, 245, 245, 0.7); /* Background colour setup */
+	margin-top: 10%;
+    position: relative; /* Sets it to the Relative position */
 }
+
+/* Carousel Indicators Setup */
 .carousel-indicators{
-	z-index:1; /*indicators sit above the images*/
+    z-index:1; /*Indicators sit above the images pointing to each side (left/right)*/
 }
-/*Centers the picute in the middle of the carousel*/
+/*Centers the picture in the middle of the carousel*/
+.item{
+    position: absolute; /* Sets the container as absolute */
+    left: 20; /* Left Positioning */
+    right: 0; /* Right Positioning */
+    top: 0px; /* Top Positioning */
+    bottom: 5; /* Bottom Positioning */
+}
+
+/* Carousel Image Setup */
 .item img{
-	padding: 10px;
-	margin: auto;
-	width:100%;
-	min-width: 585px;
+    padding: 10px; /* Images Padding */
+    width:100%; /* Images Width setup */
+    min-width: 585px; /* Min width acceptible */
+    margin: auto; /* Margin set as automatic */
 }
+
+/* Carousel Caption Setup */
 .item .carousel-caption{
-	color: black;
-	background-color: rgba(245, 245, 245, 0.3);
+    color: black; /* Colour Setup */
+    background-color: rgba(245, 245, 245, 0.3); /* Background colour with a bit of opacity */
+    max-width: 500px; /* max acceptible width */
+    margin: auto; /* Margin set as auto */
 }
 
-/*Video============================================================================================================================================================================================================================================*/
+/***************************************************************************************/
+/********************* Video - Created by Esteban Araujo-fervenza **********************/
+/***************************************************************************************/
+
+/* Video styling and positioning */
 .video-player{
-	float: right;
-	width: 40%;
-	border: 3px solid rgb(5,119,61);
-	margin: 40px;
+	float: right; /* Item has been set to float on the right side of the page */
+	width: 40%; /* Width of the Item */
+	border: 3px solid rgb(5,119,61); /* 3 Pixels solid border */
+	margin: 40px; /* Maring of 40 pixels set */
 }
 
-/*About Text=======================================================================================================================================================================================================================================*/
+/***************************************************************************************/
+/********** About Text (Written Content) - Created by Esteban Araujo-fervenza **********/
+/***************************************************************************************/
 
+/* Container review */
 .reviews{
-	padding-top: 50px ; /*creates a separation this box from the one before it*/
-	overflow: hidden;
-	margin: 0.5%;
+	padding-top: 50px ; /* Sets a padding of 50px */
+	overflow: hidden; /* The overflow is hidden, in order to hide some transposition style */
+	margin: 0.5%; /* Sets a margin of 5% */
 }
+
+/* Content Title Styling */
 .reviews .about{
-	font-size: 35px;
-	font-weight: 700;
-	color: rgb(5,119,61);
+	font-size: 35px; /* Font Size */
+	font-weight: 700; /* Font Weight setup */
+	color: rgb(5,119,61); /* Font Colour */
 }
+
+/* Content link with the tah A Styling */
 .reviews a{
-	font-style: bold;
-	color: rgb(5,119,61);
+	font-style: bold; /* Bold Style */
+	color: rgb(5,119,61); /* Font Colour */
 }
+
+/* Content Paragraph styling */
 .reviews p{
-	padding-top: 20px; /*separation between paragraphs inside this box*/
-	text-align: justify; /*justifies text */
-	font-size: 1.3em;
+	padding-top: 20px; /* Padding used to give some distance between the paragraphs*/
+	text-align: justify; /* Justifies text */
+	font-size: 1.3em; /* Font Size */
 }
+
+/***************************************************************************************/
+/**************** Google Reviews  - Created by Esteban Araujo-fervenza *****************/
+/***************************************************************************************/
+
 /*Aligns  goolge review box*/
 .snipets {
-	padding-top: 5%;
-	margin:1%;
-	display:block;
-	text-align:center;
+	padding-top: 5%; /* Top Padding set */
+	margin:1%; /* Margin setup */
+	display:block; /* Display the items in a block */
+	text-align:center; /* Align the items in the center of the page */
 }
+/* Unordered list setup*/
 .snipets ul{
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-around;
+	display: flex; /* Sets it to display as a flex*/
+	align-items: flex-start; /* Aligns the items on the top */
+	justify-content: space-around; /* Justifies with space around the elements */
 }
-/*Google Map============================================================================================================================================================================================================================================*/
+
+/***************************************************************************************/
+/****************** Google Maps - Created by Esteban Araujo-fervenza *******************/
+/***************************************************************************************/
+
+/* Map sizing and positioning*/
 .map-index{
-	padding-top: 5%;
-	width: 100%;
-	text-align:center;
-	margin: 0.5%;
+	padding-top: 5%; /* Sets a padding on the top of 5%*/
+	width: 100%; /* Sets the width of 100%*/
+	text-align:center; /* Alings the text in the center*/
+	margin: 0.5%; /* Sets a maring all around the item of 0.5% */
 }
+
+/* Iframe styling and sizing */
 .map-index iframe{
-	width: 400px;
-	height: 300px;
-	border: 1px solid rgb(5,119,61);
+	width: 400px; /* Width setup */
+	height: 300px; /* Height setup */ 
+	border: 1px solid rgb(5,119,61); /* Sets a 1 pixel solid border */
 }
+
+/* Map's Title Styling */
 .map-index h3{
-	font-size: 200%;
-	color: rgb(5,119,61);
-	font-weight: 700;
+	font-size: 200%; /* Font size */
+	color: rgb(5,119,61); /* Font Colour */
+	font-weight: 700; /* Font Weight */
 }
 
-/*Footer*/
+/***************************************************************************************/
+/**** Footer - Created by Esteban Araujo-fervenza and  Jose Carlos Kuzolitz Garcia *****/
+/***************************************************************************************/
+
+/*Footer Main Container*/
 .section-bottom-links{
-	margin-left:10%;
-	margin-right:10%;
-	text-align:center;
-   display: flex;
-	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
-   justify-content: space-evenly; /* justifies the elements. So the items are at both extremes of the page */
+	margin-left:10%; /* Left Margin setup */
+	margin-right:10%; /* Right Margin setup */
+	text-align:center; /* Aligns text in the center */
+   	display: flex; /* Sets container to display as flexible */
+	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the center of the page(horizontally and vertically), one next to the other in the same line*/
+   	justify-content: space-evenly; /* justifies the elements. So the items are at both extremes of the page */
 }
 
+/* Sub Containers Setup */
 .section-sub-bottom-links{
-	margin-top: 3%;
-	margin-bottom: 1%;
-	width: 50%;
+	margin-top: 3%; /* Marging top set in 3% */
+	margin-bottom: 1%; /* Bottom margin set in 1% */
+	width: 50%; /* Width set in 50% ( It splits the space equally between the 3 containers) */
 }
 
+/* Title Styling*/
 .sub-bottom-links-title strong{
-	color: rgb(5,119,61);
-	font-size: 25px;
-	border-bottom: 1px solid rgb(5,119,61);
+	color: rgb(5,119,61); /* Font Colour */
+	font-size: 25px; /* Font Size */
+	border-bottom: 1px solid rgb(5,119,61); /* Border at the bottom */
 }
 
+/* Unordered list setup */
 .sub-bottom-links-title ul{
-   margin: auto; /*  */
+	margin: auto; /* Maring is set automatically */
 	list-style: none; /* It gets rid of the bullet points */
-	display: flex;
-	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
-   justify-content: center; /* justifies the elements. So the items are at both extremes of the page */
-}
-.sub-bottom-links-title li{
-	padding: 2px;
+	display: flex; /* Sets it to display as flexible */
+	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the center of the page(horizontally and vertically), one next to the other in the same line*/
+	justify-content: center; /* Justifies the elements. So the items are at both extremes of the page */
 }
 
-.fa{
-	padding: 20px;
-	font-size: 30px;
-	width: 50px;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 50%;
-	cursor: pointer;
+/* Unordered list's items */
+.sub-bottom-links-title li{
+	padding: 2px; /* Sets a padding of 2px in order to create space between the items in the unordered list */
 }
+
+/* Social Media icons Pre-setup*/
+.fa{
+	padding: 20px; /* Sets a Padding of 20px */
+	font-size: 30px; /* Font Size */
+	width: 50px; /* Width of 50px */
+	text-align: center; /* Align Text in the center */ 
+	text-decoration: none; /* It gets rid with the bullet points and whatsoever*/
+	border-radius: 50%; /* Sets the border radius as 50% to create a circle */
+	cursor: pointer; /* When the item is hovered the mouse icon changes to the pointer icon */
+}
+
+/*Facebook*/
 .fa-facebook{
-	background: #3B5998;
-	color: white;
+	background: #3B5998; /* Background Colour*/
+	color: white; /* Font Colour */
 }
 /* Twitter */
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+  background: #55ACEE; /* Background Colour*/
+  color: white; /* Font Colour */
 }
 /*LinkedIn*/
 .fa-linkedin {
-  background: #007bb5;
-  color: white;
+  background: #007bb5; /* Background Colour*/
+  color: white; /* Font Colour */
 }
-/*blog */
+/*Our Blog Container Setup */
 .blog{
-	margin:auto;
-	padding: 20px;
-	font-size: 12px;
-	width: 100px;
-	height: 70px;
-	display: block;
-	color: white;	
-	cursor: pointer;
-}
-.blog-tips{
-	background: navy;
-}
-.blog-insp{
-	background: violet;
-}
-.blog-calc{
-	background: skyblue;
-}
-.blog-shopB{
-	background: limegreen;
+	margin:auto; /* Sets margin automatically */
+	padding: 20px; /* Sets padding of 20px all around the container */
+	font-size: 12px; /* Font size */
+	width: 100px; /* Sets Width of the container */
+	height: 70px; /* Sets Height of 70 pixels*/
+	display: block; /* Sets the container to display in block */
+	color: white; /* Font Colour */
+	cursor: pointer; /* /* When the item is hovered the mouse icon changes to the pointer icon */
 }
 
+.blog-tips{
+	background: navy; /* Background Colour*/
+}
+.blog-insp{
+	background: violet; /* Background Colour*/
+}
+.blog-calc{
+	background: skyblue; /* Background Colour*/
+}
+.blog-shopB{
+	background: limegreen; /* Background Colour*/
+}
+
+/* Changes the decoration when a item is hovered */
 .sub-bottom-links-title a:hover{   
 	text-decoration: none; /* It gets rid with the decoration when hovered */
 	color: darkorange; /* Changes the colour when Buttons are hovered */
 }
+
+/* Changes the decoration when a item is clicked */
 .sub-bottom-links-title a:active{
 	text-decoration: none; /* It gets rid with the decoration when hovered */
 	color: red; /* Changes the colour when Buttons are hovered */
 }
 
+/* Copyright Styling */
 .footer p{
     background-color: rgb(5,119,61); /* Footes Background Colour */
     border: 1px solid rgb(5,119,61); /* Sets the Footer border */
-    text-align: center; /* Align the Footer's paragraph in the centre */
+    text-align: center; /* Align the Footer's paragraph in the center */
     color: whitesmoke; /* Sets the colour of the letters */   
 }
 
-/*Jose Carlos =FAQ================================================================================================================================*/
-/* Created by Jose Carlos Kuzolitz Garcia - x20164840 */
+
+/***************************************************************************************/
+/**************** FAQ - Created by Jose Carlos Kuzolitz Garcia *************************/
+/***************************************************************************************/
 
 /* Places de body under the Menu */
 .body-content{
-	height: 120vh; /*stablishes the height of the the box*/
+	height: 125vh; /*stablishes the height of the the box*/
 	background-color: whitesmoke; /* Background Colour */
 	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
 	background-position: center;
@@ -307,166 +400,164 @@
 }
 
 .faq-logo{
-	position: absolute;
-	margin-left: 70%;
-	margin-top: 8.5%;
-	height: 150px;
-	width:150px;
+	position: absolute; /* Sets logo to an Absolute Position */
+	margin-left: 75%; /* Sets margin left of 75% which positions the logo on the right side */
+	margin-top: 8.5%; /* Sets margin top of 8.5% which positions the logo on the top */
+	height: 150px; /* Size the height of the logo */
+	width:150px; /* Sizes the width of the logo */
 }
 
 /* Side Navegation Options Positioning and Style*/
 .side-content{
-	height: 45%; /* Height Size */
+	height: 70%; /* Height Size */
 	width: 15%; /* Widt Size */
 	margin-top: 15%; /* Top margin */
-	margin-left: 20%; /* Left margin */
+	margin-left: 15%; /* Left margin */
 	font-size: 18px; /* Font size */
 	font-weight: 500; /*Font Weight*/
-	border-right: 2px solid darkgreen; /* right border of the side nav*/
+	border-right: 0.5px solid darkgreen; /* right border of the side nav*/
 }
 
-.side-content p, a{
-	margin-top: 10%; /* Top margin setup */
+/* Styles the options on the Side Menu */
+.side-content-opt-a, .side-content-opt-p{
+	margin-top: 15%; /* Top margin setup */
 	color: darkgreen; /*Font Color*/
 }
 
+/* Changes the style of the Side Container's options */
 .side-content p, a:hover{
 	text-decoration: none; /* It gets rid with the Text Decoration */
 	color: darkorange; /* Button becomes orange when hoverred */
 }
 
+/* Collapsile container setup */
 .main-content{
-	height:45%;
-	width: 42%;
-	margin-top: 15%;
-	margin-left: 2%;
+	height:45%; /* Defines the height of the container */
+	width: 42%; /* Defines the width of the container */
+	margin-top: 15%; /* Sets the top margin */
+	margin-left: 2%; /* Sets the left margin */
 }
 
+/* Collapsile Buttons Setup */
 .btn-collapsible{
-	background-color: whitesmoke;
-	color: darkgreen;
-	cursor: pointer;
-	padding: 20px 5px 10px;
-	width: 100%;
-	border: none;
-	border-bottom: 1px solid darkgreen;
-	text-align: left;
-	outline: none;
-	font-size: 18px;
+	background-color: whitesmoke; /* Background Colour */
+	color: darkgreen; /* Font Colour */
+	cursor: pointer; /* Changes the icon to a pointer icon when the icon is hovered */
+	padding: 20px 5px 10px; /* Padding settings */
+	width: 100%; /* Width Setup */
+	border: none; /* Gets rid with the border setup */
+	border-bottom: 1px solid darkgreen; /* Border bottom setup */
+	text-align: left; /* Sets the text to be aligned on the left */
+	outline: none; /* Gets rid of the outside line which can be displayed */
+	font-size: 18px; /* Font Size */
 }
 
+/* Span Option Setup */
 .opt-span{
-	display:flex;
-	font-size: 25px;
-	margin-left: 95%;
-	margin-top: -4%;
+	display:flex; /* Display is set as flexible */
+	font-size: 25px; /* Font Size */
+	margin-left: 95%; /* Sets margin left */
+	margin-top: -4%; /* Sets margin top */
 }
 
+/* Changes the button style when it is hovered */
 .active, .btn-collapsible:hover {
-	background-color: rgba(0, 100, 0, 0.294);
+	background-color: rgba(0, 100, 0, 0.294); /* background colour */
 }
 
+/* Hidden Collapsile Content style */
 .collapsible-content{
-	padding: 0 18px;
-	display: none;
-	overflow: hidden;
-	background-color: #f1f1f1;
+	padding: 0 18px; /* Padding setting (top, left and right)*/
+	display: none; /* It hides the content */
+	overflow: hidden; /* If ther is any overflow between elemente, this option hides it */
+	background-color: #f1f1f1; /* background colour */
 }
 
-.ADS{
-	border: 1px solid black;
-	background-color: whitesmoke;
-	width:100%;
-	height: 40%;
-}
 
-/*Jose Carlos =Contact========================================================*/
+/***************************************************************************************/
+/**************** Contact - Created by Jose Carlos Kuzolitz Garcia *********************/
+/***************************************************************************************/
+
 /* Places de body under the Menu */
-.body-content-contact{
-	height: 120vh; /*stablishes the height of the the box*/
+#plainHeader{
+	height: 130vh; /*stablishes the height of the the box*/
 	background-color: whitesmoke; /* Background Colour */
 	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
-	background-position: center;
-	background-attachment: fixed; /*keeps picture in place allowing other elements to slide over it*/
 	padding: 40px 0; /*creates a separation this box from the one before it*/
 }
+
+/* Main container setup */
 .body-content-div{
-	display: flex;
-	align-items: center;
-	padding-top: 10%;
+	display: flex; /* Sets container to display item in the flexible mode */
+	margin-top: 10%; /* Sets a margin of 10%, it positions the container just after the Menu */
+	padding-top: 5%; /* Sets a top padding of 5% related to the container border */
+	padding-bottom: 5%; /* Sets a bottom padding of 5% related to the container border */
 }
 
 /* Form Positioning */
 .body-content-div-form{
-	margin:5% 5% 5% 5%;
-	text-align: justify; /*justifies text */
-	height: 80%;
-	width: 100%;
-}
-
-.notform{
-	width: 60%;
-	margin-top: 0%;
-	margin-right:15%;
+	margin: 0% 5% -5% 5%; /* Sets margin all aroung the Form */
+	width: 100%; /* Sets width of 100% */
 }
 
 /* Table positioning and Style */
 .body-content-div-from-table{
-	margin-left: 32%;
+	margin-left: 15%; /* Sets margin on the table's left hand */
+	width: 85%; /* Sets a width of 85% */
+	border-collapse: separate; /* Sets the td's to accept a separation (This adds a space between the Name and Phone Number cells */
+	border-spacing: 10px 15px; /* Sets the size of the space between the cells */
+}
+
+/* Message Label*/
+.form-label{
+	font-weight: bold; /* Sets the font weight */
+}
+
+/* Table TR and TD styling */
+.body-content-div-from-table tr, td{
+	width:57%; /* Sets a width of 65% */
+}
+
+/* Input and Text Area Setup */
+.body-content-div-from-table input, textarea{
+	font-family:Arial, Helvetica, sans-serif; /* Defines a font family */
+	padding-left: 2%; /* Sets a padding-left of 2% */
+	margin-bottom: 0px; /* Sets a margin at the bottom of each cell of 15 pixels*/
+	height:38px; /* Sets the height of the fields */
+	width:100%; /* Sets the width that the fields */
 	
 }
 
-.body-content-div-from-table tr, td{
-	padding: 5px;
-	width:70%;
-}
-
-.form-label{
-	font-weight: bold;
-}
-
-.body-content-div-from-table input, textarea{
-	font-family:Arial, Helvetica, sans-serif;
-	padding-left: 5px;
-	margin-bottom: 10px;;
-	height:30px;
-	width:100%;
-}
-
+/* Sets the position of the text into the Text Area */
 .body-content-div-from-table textarea{
-	font-family:Arial, Helvetica, sans-serif;
-	padding-top: 5px;
-	padding-left: 5px;
-	height:30px;
-	width:100%;
+	padding-top: 5px; /* Sets a top padding */
+	padding-left: 5px; /* Sets a left padding */
 }
 
+/* Changes the Fields style when they haven't been filled out properly */
 .input-table-Fname.error,.input-table-phone.error,.input-table-email.error,.textArea.error{
-	border: 1px solid gray;
-	box-shadow: 0px 0px 10px #c80f0fc9;
-
+	border: none; /* Gets rid with the border */
+	box-shadow: 0px 0px 10px #c80f0fc9; /* Sets a red shadow around the fields */
 }
 
+/* Style and positioning of the messages that are displayed when the fields haven't been filled out properly */
 .error{
-	position: relative;
-	text-align: left;
-	font-size: 12px;
-	color: red;
-	padding: 0;
-	margin:0;
-	top:10px;
+	position: flex; /* Set to be in a relative position */
+	text-align: left; /* Text Aligen to the left */
+	font-family:Arial, Helvetica, sans-serif; /* Defines a font family */
+	font-size: 13px; /* Font size */
+	color: #c80f0f; /* Font Colour */
 }
 
 /* Send Button Style and positioning */
 .message-btn{
-	font-size: 20px;
-	width: 50%;	
-	border: none;
-	border-radius: 5px;
-	padding: 5px;
-	background-color: rgba(0, 100, 0, 0.561);
-	color: whitesmoke;
-	text-align: center;
+	font-size: 20px; /* Font Size */
+	border: none; /* Gets rid with the border */
+	border-radius: 5px; /* Sets a border radius of 5px */
+	padding: 5px; /* Sets a Padding of 5 pixels */
+	background-color: rgba(0, 100, 0, 0.561); /* Background colour */
+	color: whitesmoke; /* Font Colour */
+	text-align: center; /* Align in the center */
 }
 
 /* Send Button Style when hovered */
@@ -475,32 +566,52 @@
 	background-color: darkgreen; /* Changes the colour when Buttons are hovered */
 }
 
+/* Contact Details Container Positioning */
+.contactDetails{
+	margin-right:8%; /* Sets a margin right of 15% */
+	width: 60%; /* Sets a width of 60% */
+}
+
 /*Contact Details Style and Positioning */
 .contact-details{	
-	width: 80%;
+	width: 80%; /* Sets the width of the sub container */
 }
 
-.contact-details label{
-	font-weight: bold;
-}
-
+/* Title Style (Contact Details) */
 .contact-details h4{
-	border-bottom: 1px solid black;
-	font-weight: bold;
-	margin-bottom: 6%;
+	border-bottom: 1px solid black; /* Sets a bottom border */
+	font-weight: bold; /* Font Weight */
+	margin-bottom: 6%; /* Sets a bottom margin of 6% */
+}
+
+/* h4 Bold words styles */
+.contact-details label{
+	font-weight: bold; /* Sets the Font Weight */
 }
 
 /*Map position and style */
 .map{
-	padding-top: 0%;
-	margin-top: 5%;
-	width:80%;
-	box-shadow: 0px 0px 10px #888888b9;
+	padding-top: 0%; /* Sets top padding of 0% (to make sure no padding is added by another container */
+	margin-top: 5%; /* Sets a margin top of 5% */ 
+	width:80%; /* Sets 80% of Width */
+	box-shadow: 0px 0px 10px #888888b9; /* Sets a shadow around the map container */
 }
 
+/* Iframe sizing */
 .map iframe{
-	width: 100%;
+	width: 100%; /* Sets 100% of width (It needs to be added in order to make sure that the whole frame is displayed)
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /*Samsom code=products====================================================================================================================================================================================================================================*/
 .body-content-product {
@@ -811,176 +922,6 @@ button {
     cursor: pointer;
 }
 
-/*Responsive, partially adapted from tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ==============================================================================================================================================================*/
-@media screen and (max-width: 1024px) {
-	.icon{
-		display: block;
-		color: rgb(5,119,61);
-	}
-	.icon.hide{
-		display: none;
-	}
-	.search{
-		position: fixed;
-		right: 13%;
-		top: -10px;
-	}
-	
-	.search input{
-		border: none;
-		background: rgba(255, 255, 255, 0.431);
-		border-bottom: 1px solid rgb(5,119,61);
-		font-size:12px;
-	}
-	
-	.search button{
-		font-size: 17px;
-		background: rgba(255, 255, 255, 0);
-		color: rgb(5,119,61);
-		border: none;
-	}
 
-	.navBar .logo img{
-		width: 25%;
-		height: 25%;
-	}
-	.navBar .menu-list{
-		position: fixed;
-		top: 7%;  /*aligns  menu  with the top left corner of the screen*/
-		left: -90%; /*hides the  box off-screen*/
-		height: 100vh;
-		width: 90%;
-		max-width: 400px; /*max widht of the "shrunk" menu's screen*/
-		background: rgba(255, 255, 255, 0.9);
-		display: block; /*menu elements show one above the other instean on the same line*/
-		padding: 40px 0; /*spacing between the elements of the lmenu_ist an the navBar box*/
-		text-align: center;
-		z-index: 2;    /*displays above all other elements*/
-		transition: all 0.3s ease; /*creates delay between the js instruction and the display modification*/
-	}
-	.navBar .menu-list.active{
-		left: 0%;
-	}
 
-	.menu-list p{
-		display: block; /*displays all the elements of the list one next to the other in the same line*/
-		margin-top: 5%;
-		padding-bottom: 10%;
-	}
-
-	.navBar .menu-list a{
-		margin-top: 45px; /*spacing between the elements in the menu_list*/
-		font-size: 24px;
-	}	
-	/*Carousel mobile*/
-	.item{
-	padding-left: 0%;
-	}
-	.item img{
-	width:100%;
-	}
-	/*Review images*/
-	.snipets ul{
-		display: block;
-	}
-	/*Video mobile*/
-	.video-player{
-		float: none;
-		width: 100%;
-		margin:auto;
-	}
-	.map-index iframe{
-		margin: auto;
-		width: 90%;
-	}
-	.sub-bottom-links-title ul{
-		display: block;
-	}
-	.blog{
-		padding: 10px;
-		font-size: 0.8em;
-		height: 50%;
-	}
-	/*jose carlos=FAQ============================================================*/
-		.body-content{
-		height: 80vh;
-		padding-top: 5%;
-	}
-
-	.faq-logo{
-		height: 80px;
-		width: 80px;
-	}
-
-	.side-content{
-		display: none;
-	}
-
-	.main-content{
-		height: 50%;
-		width: 90%;
-		margin-top: 15%;
-		margin-left: 5%;
-		border: none;
-	}
-
-	.ADS{
-		display: none;
-	}
-	/*Jose Carlos= Contact=========================================================*/
-	.body-content-contact{
-		height: 170vh;
-	}
-	.body-content-div{
-		background-color: whitesmoke;
-		text-align: center;	
-		display: block;
-	}
-
-	.body-content-div-form{
-		margin-top:1%;
-		margin-left: 5%;
-		width:100%;
-	}
-
-	.body-content-div-from-table{
-		margin-left: 0%;		
-	}
-
-	.body-content-div-from-table input, textarea{
-		font-size: 11px;
-	}
-
-	.notform{
-		margin-top: 15%;
-		margin-left: 14%;
-		padding-bottom: 15%;
-		width: 90%;
-		text-align: center;
-		background-color: whitesmoke;
-	}
-	/*Samsom= Products=============================================================================================================================================================*/
-	 /*style cook iteme menu*/
-	.cook-items {
-		display: block;
-		height: 30vh;
-		position: relative;
-	}
-	.dropdown-catagory {
-		left: 1%;
-		right: 50%;
-		width: 30%; 
-		padding:2px;
-	}
-	.product-container {
-		display: block;
-		overflow: hidden;
-		padding: 22px;
-		width:80%;
-	}
-	.filterDiv p, button {
-		max-width: 80px;
-		margin: 20px;
-	}
-}
 

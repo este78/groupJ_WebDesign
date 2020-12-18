@@ -1,111 +1,145 @@
-<!-- Created by 
-Esteban Araujo-Fervenza - x20170416
-Jose Carlos Kuzolitz Garcia - x20164840
-Samsom	Mihreteab - x  
--->
+<!-- Created by Esteban Araujo-Fervenza - x20170416
+                Jose Carlos Kuzolitz Garcia - x20164840
+                Samsom	Mihreteab - x  -->
 
 <!-- Indicates this is HTML5-->
 <!DOCTYPE html>
 
-<!-- Defines Language -->
+<!-- Defines Language-->
 <html lang="en">
     
     <head>
 
 		<!--Defines the char format-->
-      <meta charset="utf-8">
-		<!--Tab Title and favicon-->
-		<title> Ludlow Homecare</title> 	  
+		<meta charset="utf-8">
+
+		<!-- Tab Style (Name and Icon) -->
+		<title>Ludlow Homecare</title>
 		<link rel="icon" type="image/png" href="img/LudlowHCfavicon.jpg">
 		
+		<!-- Search Engine Optimisation -->
 		<meta name="description" content="">
-		<meta name="author" content="">	  
-	  
+		<meta name="author" content="">
+
+        <!--Allow ViewPort Visualization-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-       <!--Java Script Functions Links -->
-	   <script src="Ludlow_JS.js"></script>
-		<script src="https://kit.fontawesome.com/a076d05399.js"></script>											 		<!--Taken from https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s. *Menu functionality*-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>				<!--JQuery addon -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	<!--  from w3 schools. Carousel scripting-->
-		
-
-		<!-- Homebrew CSS -->
+		<!--css file link-->
 		<link href="groupCss.css" rel="stylesheet">
-		<!--W3 Schools bootstrap for the carousel, css and js -->
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	<!--FAcilitates the social media buttons -->	
+		<link href="MobileView.css" rel="stylesheet">
+
+		<!--Java Script Functions Link-->
+		<script src="Ludlow_JS.js"></script>
+		
+		<!-- Font Awesome Library --> 
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>  <!-- from w3schools -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<!-- Bootstrap CSS and JS links (Used by Carousel) --> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	  <!-- from w3 schools. Carousel scripting -->
+		
 		
     </head>
 
+    <!-- Body of the Website structure -->
     <body>
-		<!--Menu: Adapted  from a youtube tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ================================================================================================================================================-->
-       <nav class="navBar">
-			<div class="search">
-				<form  action="/action_page.php">
-					<input type="text" placeholder="Search..." name="search">
-					<button type="submit"><i class="fa fa-search"></i></button>
-				</form>
-			</div>
-			<div class="content">
-				<div class="logo"><a href="./index.html"><img src="img/logo.png" alt="logo"></a></div>
-				<!-- Search button -->
-				<div class= "menu-list">
-					<div class="icon off-btn">  <!--"X"icon in -->
-						<i class="fas fa-times"></i>
-					</div>
-					<div class="menu-options">
-						<a href="./index.html">Home</a>
-						<p></p>
-						<a href="./product.html">Products</a>
-						<p></p>
-						<a href="./ShoppingCart.html">Shopping Cart</a>
-						<p></p>
-						<a href="./FAQ.html">FAQ</a>
-						<p></p>
-						<a href="./Contact.html">Contact</a>
-					</div>	
+	
+		<!-- Menu: Adapted  from a youtube tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s -->
+        <nav class="navBar">
+
+			<!-- Logo (Top Left)-->
+            <div class="content">
+                <div class="logo"><a href="./index.html"><img src="img/logo.png" alt="logo"></a></div>
+				
+						<!-- Search Bar setup -->
+						<div class="search">
+						<!-- Search bar is place into a form in order to process data and it is easier when styling -->
+						<form  action="/action_page.php">
+						<!-- Search Bar Input -->
+						<input type="text" placeholder="Search..." name="search">
+						<!-- Search Bar Button -->
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
 				</div>
+
+
+				<!-- 3 Lines Button (It shows up just on Mobile View) -->
 				<div class="icon menu-btn">
-					<i class="fas fa-bars"></i>
+                    <i class="fas fa-bars"></i>
+                </div>
+			
+                <div class= "menu-list" id="menu-list">
+				   
+					<!-- "x" Button (It shows up just on Mobile View) -->
+					<div class="icon off-btn"> 
+						<!--"X" icon (Font Awesome Library) --> 
+                        <i class="fas fa-times"></i>
+					</div>
+					
+					<!-- Menu Buttons -->
+                    <div class="menu-options">
+                        <a href="./index.html">Home</a>
+                        <p></p>
+                        <a href="./product.html">Products</a>
+						<p></p>
+						<!-- Trolly icon (Font Awesome Library) -->
+                        <a href="./ShoppingCart.html">Shopping Cart<span class="price"><i class="fa fa-shopping-cart" style="color:green" ></i></span></a>
+                        <p></p>
+                        <a href="./FAQ.html">FAQ</a>
+                        <p></p>
+                        <a href="./Contact.html">Contact</a>
+                    </div>	
 				</div>
+           
 			</div>
-		</nav>
+        </nav>
 		
-<!-- Carousel , Code adapted from W3 Schools  =======================================================================================================================================================================================================   -->		
-		<div class="header">
+<!-------------------------------------------------------------------------------------------------
+----------------------------------------------- Carousel ------------------------------------------
+-------- Based on W3Schools (https://www.w3schools.com/bootstrap/bootstrap_carousel.asp) ----------
+--------------------------------------------------------------------------------------------------->
+
+	<div class="header">
 			<div id="carousel" class="container">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			
 					<!--  Indicators: the little dots which indicates which slide it's on show -->
 					<ol class="carousel-indicators">
 						<li data-target="#myCarousel" data-slide-to="0" class = "active"></li>
 						<li data-target="#myCarousel" data-slide-to="1" ></li>
 						<li data-target="#myCarousel" data-slide-to="2" ></li>
 					</ol>
+			
 					<!--  Wrappen for slides: the box for the actual pictures -->
 					<div class="carousel-inner">
 						<div class= "item active"> 
 							<a href="#" ><img src="img/kitchen1.jpg" alt="kitchen image" style="width:50%">
 							<div class="carousel-caption">
-							  <h3>Kitchen &amp; Bathroom</h3>
-							  <p>Design your dream kitchen</p>
+								<!-- Saying at the bottom of the images -->
+							  	<h3>Kitchen &amp; Bathroom</h3>
+							  	<p>Design your dream kitchen</p>
 							</div></a>
 						</div>
-						<div class= "item">
+						<div class="item">
 							<img src="img/garden1.jpg" alt="garden dept image" style="width:50%">
 							<div class="carousel-caption">
-							  <h3>A Large Collection Of Plants</h3>
-							  <p>We Can Help You With Your Garden Design</p>
+								<!-- Saying at the bottom of the images -->	
+							  	<h3>A Large Collection Of Plants</h3>
+								<p>We Can Help You With Your Garden Design</p>
 							</div>
 						</div>
 						<div class= "item">
 							<img src="img/diy.jpg" alt="map image" style="width:50%">
 							<div class="carousel-caption">
-							  <h3>DIY Supplies For Your Home</h3>
-							  <p></p>
+								<!-- Saying at the bottom of the images -->	
+								<h3>DIY Supplies For Your Home</h3>
+							  	<p></p>
 							</div>
 						</div>
 					</div>
+			
 					<!--  Arrow Controls to transit the carousel-->
 					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left"></span>
@@ -118,12 +152,18 @@ Samsom	Mihreteab - x
 				</div>
 			</div>
 		</div>
-<!-- Reviews==================================================================================================================================================================================================================================================-->
+		
+		
+<!--------------------------------------------------------------------------------------------------
+------------------------------- LudLow Video and Google Maps andReviews ----------------------------
+--------------------------------------------------------------------------------------------------->		
 		<div class="reviews" >
 			<div class="content">
+			
 			<!-- Video and text from Ludlow Homecare website, we were given permission to use  their content for the college project -->
 			<video class="video-player" controls controlsList="nodownload"> <source src="https://ludlowhomecare.co.uk/wp-content/uploads/2019/10/Ludlow-Homecare-Ltd.mp4" type="video/mp4" > Your browser does not support the video tag.</video>
-				
+			
+			<!-- Text -->
 			<div class="about">A Reputable Home Decor Store In Ludlow </div>
 				<p>Established in 1982, Ludlow Homecare Ltd has grown into a one-stop shop for all your house and garden needs, from a handful of screws to a fully designed new fitted kitchen. We can provide you with plants, trees, shrubs, seeds, pots, composts, treatments, fencing, timber, hoses, lawnmowers, blowers, hedge trimmers and everything else for your garden. Our experienced team of friendly staff can help you find what you need.</p>
 				<p>In addition, we also offer free delivery on all orders over £50</p>
@@ -131,6 +171,8 @@ Samsom	Mihreteab - x
 				<p>We will design and plan all your kitchen and bathroom requirements, from selecting a tap to providing a fully computerised visual image of how your new kitchen or bathroom will look.</p>
 				<p>We offer Free Delivery for all our kitchens, bathrooms and built-in appliances with orders over £50. <a href="./Contact.html"><b>Get in touch</b></a> with us now to find out more about our products.</p>
 			</div>
+
+			<!-- Google Reviews -->
 			<div class="snipets">
 				<a href="https://ludlowhomecare.co.uk/google-reviews/"> <img width="340" height="160" src="https://ludlowhomecare.co.uk/wp-content/uploads/2020/09/google-reviews.png"  alt="Google Reviews Logo" /> </a>
 				<ul>
@@ -140,74 +182,94 @@ Samsom	Mihreteab - x
 					<li><a href="https://ludlowhomecare.co.uk/google-reviews/"><img src="./img/review4.png" alt="customer review" /></a></li>
 				</ul>
 			</div>
+
+			<!-- Google Maps -->
 			<div class="map-index">
 				<h3>Come visit our Store: </h3>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2414.164912097155!2d-2.718658652714522!3d52.36380375342915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sie!4v1607711675131!5m2!1sen!2sie" ></iframe>
 			</div>
 		</div>
+
 		
-<!-- Footer -->		
+<!--------------------------------------------------------------------------------------------
+--------------------------------------------- Footer -----------------------------------------
+---------------------------------------------------------------------------------------------->
+		
 		<div class="section-bottom-links">
-		
+				
 			<div class="section-sub-bottom-links">
-				   <div class="sub-section-bottom-links">
-					   <div class="sub-bottom-links-title">
-							   <strong>
-								   <span>Contact Us</span>
-							   </strong>
-							   <ul>
-								   <li><a class = "find-us" href="./Contact.html">Find us here</a></li>
-								   <li><p>Ludford Bridge Ind Est, Temeside, Ludlow SY8 1PE, UK</p></li>
-							   </ul>
-					   </div>
-				   </div>
+				<div class="sub-section-bottom-links">
+					<div class="sub-bottom-links-title">
+							<!-- Contact Us Title -->
+							<strong>
+								<span>Contact Us</span>
+							</strong>
+							<!-- Contact Us Link (Placed into an Unorderd List) -->
+							<ul>
+								<li><a class = "find-us" href="./Contact.html">Find us here</a></li>
+								<li><p>Ludford Bridge Ind Est, Temeside, Ludlow SY8 1PE, UK</p></li>
+							</ul>
+					</div>
+				</div>
 			</div>
-			   <div class="section-sub-bottom-links">
-				   <div class="sub-section-bottom-links">
-					   <div class="sub-bottom-links-title">
-						   <strong>
-							   <span>Social Media</span>
-						   </strong>
-						   <ul>
-							   <li><a href="https://www.facebook.com/LHomecareLtd/" class="fa fa-facebook"></a></li>
-								<li><a href="https://www.linkedin.com/company/ludlow-homecare-limited/about/" class="fa fa-linkedin"></a></li>
-								<li><a href="https://twitter.com/LudlowHomecare" class="fa fa-twitter"></a></li>
-						   </ul>
-					   </div>
-				   </div>
-			   </div>
-			   <div class="section-sub-bottom-links">
-				   <div class="sub-section-bottom-links">
-					   <div class="sub-bottom-links-title">
-						   <strong>
-							   <span>Our Blogs</span>
-						   </strong>
-						   <ul>
-							   <li><a class="blog blog-tips" href="#">Tips & Advice</a></li>
-							   <li><a class="blog blog-insp" href="#">Inspiration</a></li>
-							   <li><a class="blog blog-calc" href="#">Calculators</a></li>
-							   <li><a class="blog blog-shopB" href="#">Shop Brands</a></li>
-						   </ul>
-					   </div>
-				   </div>
-			   </div>   
-	   </div>
-	   <footer class="footer">
-			<!--W3 Validator gave us this badge when it found no errors in our CSS code for this page-->
-		   <p>Copyright &copy; Ludlow Homecare &nbsp; <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+			<div class="section-sub-bottom-links">
+				<div class="sub-section-bottom-links">
+					<div class="sub-bottom-links-title">
+						<!-- Social Media Title -->
+						<strong>
+							<span>Social Media</span>
+						</strong>
+						<!-- Social Medias Links (Placed into an Unorderd List) -->
+						<ul>
+							<li><a href="https://www.facebook.com/LHomecareLtd/" class="fa fa-facebook"></a></li>
+							<li><a href="https://www.linkedin.com/company/ludlow-homecare-limited/about/" class="fa fa-linkedin"></a></li>
+							<li><a href="https://twitter.com/LudlowHomecare" class="fa fa-twitter"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="section-sub-bottom-links">
+				<div class="sub-section-bottom-links">
+					<div class="sub-bottom-links-title">
+						<!-- Our Blogs Title -->
+						<strong>
+							<span>Our Blogs</span>
+						</strong>
+						<!-- Our Blogs Links (Placed into an Unorderd List) -->
+						<ul>
+							<li><a class="blog blog-tips" href="#">Tips & Advice</a></li>
+							<li><a class="blog blog-insp" href="#">Inspiration</a></li>
+							<li><a class="blog blog-calc" href="#">Calculators</a></li>
+							<li><a class="blog blog-shopB" href="#">Shop Brands</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>   
+		</div>
+		
+		<footer class="footer">
+		<!-- Copyright and W3C validation -->
+		<!--W3 Validator gave us this badge when it found no errors in our CSS code for this page-->
+		<p>Copyright &copy; Ludlow Homecare &nbsp; <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
 						src="http://jigsaw.w3.org/css-validator/images/vcss"
 						alt="Valid CSS!" />
 				</a>
 			</p>
-	   </footer>
+		</footer>
 		
-		<!--Script needs to be here to avoid null error. Code  from tutorial: https://youtu.be/UHSeFxZIuv8. It cannot be called before the object is loaded  -->
+<!--------------------------------------------------------------------------------------------------
+---------------------------------------- Top NavBar Menu Script ------------------------------------
+--Script needs to be here to avoid null error. Code  from tutorial: https://youtu.be/UHSeFxZIuv8.--- 
+----------------------------- It cannot be called before the object is loaded ----------------------
+--------------------------------------------------------------------------------------------------->
+		
 		<script>	
 			const navBar = document.querySelector(".navBar");
 			window.onscroll = () =>{
-				this.scrollY > 20 ?  navBar.classList.add("sticky") : navBar.classList.remove("sticky");  //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
+				 //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style
+				this.scrollY > 20 ?  navBar.classList.add("sticky") : navBar.classList.remove("sticky"); 	
 			}
-		</script>	  
-    </body>
+		</script>
 		
+    </body>
 </html>
