@@ -300,16 +300,30 @@
 
 /* Unordered list setup */
 .sub-bottom-links-title ul{
-	margin: auto; /* Maring is set automatically */
 	list-style: none; /* It gets rid of the bullet points */
 	display: flex; /* Sets it to display as flexible */
-	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the center of the page(horizontally and vertically), one next to the other in the same line*/
 	justify-content: center; /* Justifies the elements. So the items are at both extremes of the page */
+	align-items:center;
 }
-
 /* Unordered list's items */
 .sub-bottom-links-title li{
 	padding: 2px; /* Sets a padding of 2px in order to create space between the items in the unordered list */
+}
+.sub-bottom-links-title li a{
+	text-decoration: none; /* Sets a padding of 2px in order to create space between the items in the unordered list */
+}
+
+.find-us{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px; /* Sets Width of the container */
+	height: 70px; /* Sets Height of 70 pixels*/
+	background: darkslategray; /* Background Colour*/
+	font-weight: bold;
+	font-size: 1.1em;
+	cursor: pointer; /* /* When the item is hovered the mouse icon changes to the pointer icon */
+	border: 2px solid darkgreen;
 }
 
 /* Social Media icons Pre-setup*/
@@ -340,38 +354,49 @@
 }
 /*Our Blog Container Setup */
 .blog{
-	margin:auto; /* Sets margin automatically */
-	padding: 20px; /* Sets padding of 20px all around the container */
+	display: flex; /* Sets the container to display in block */
+	align-items: center;
+	justify-content:center;
 	font-size: 12px; /* Font size */
 	width: 100px; /* Sets Width of the container */
 	height: 70px; /* Sets Height of 70 pixels*/
-	display: block; /* Sets the container to display in block */
 	color: white; /* Font Colour */
 	cursor: pointer; /* /* When the item is hovered the mouse icon changes to the pointer icon */
+	border: 2px solid darkgreen;
 }
 
 .blog-tips{
-	background: navy; /* Background Colour*/
+	background: salmon; /* Background Colour*/
+	font-weight:bold;
+	font-size: 1.1em;
 }
+
 .blog-insp{
 	background: violet; /* Background Colour*/
+	font-weight: bold;
+	font-size: 1.1em;
 }
 .blog-calc{
-	background: skyblue; /* Background Colour*/
+	background: lightseagreen; /* Background Colour*/
+	font-weight: bold;
+	font-size: 1.1em;
 }
 .blog-shopB{
-	background: limegreen; /* Background Colour*/
+	background: mediumseagreen; /* Background Colour*/
+	font-weight: bold;
+	font-size: 1.1em;
 }
 
+/* Changes the decoration when a link has been visited*/
+.sub-bottom-links-title a:visited{   
+	color: white; /* Changes the colour when Buttons are hovered */
+}
 /* Changes the decoration when a item is hovered */
 .sub-bottom-links-title a:hover{   
-	text-decoration: none; /* It gets rid with the decoration when hovered */
 	color: darkorange; /* Changes the colour when Buttons are hovered */
 }
-
 /* Changes the decoration when a item is clicked */
 .sub-bottom-links-title a:active{
-	text-decoration: none; /* It gets rid with the decoration when hovered */
 	color: red; /* Changes the colour when Buttons are hovered */
 }
 
