@@ -282,9 +282,9 @@
 	margin-left:10%; /* Left Margin setup */
 	margin-right:10%; /* Right Margin setup */
 	text-align:center; /* Aligns text in the center */
-   	display: flex; /* Sets container to display as flexible */
+   display: flex; /* Sets container to display as flexible */
 	align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the center of the page(horizontally and vertically), one next to the other in the same line*/
-   	justify-content: space-evenly; /* justifies the elements. So the items are at both extremes of the page */
+   justify-content: space-evenly; /* justifies the elements. So the items are at both extremes of the page */
 }
 
 /* Sub Containers Setup */
@@ -295,14 +295,20 @@
 }
 
 /* Title Styling*/
-.sub-bottom-links-title strong{
-	color: rgb(5,119,61); /* Font Colour */
+.sub-bottom-links-title p{
+	margin:1%;
+	display:flex;
+	justify-content:center;
+	color: white; /* Font Colour */
 	font-size: 25px; /* Font Size */
-	border-bottom: 1px solid rgb(5,119,61); /* Border at the bottom */
+	font-weight: bold;
+	border-radius: 10px; /* Border at the bottom */
+	background-color: rgb(5,119,61);
 }
 
 /* Unordered list setup */
 .sub-bottom-links-title ul{
+	padding-top: 2%;
 	list-style: none; /* It gets rid of the bullet points */
 	display: flex; /* Sets it to display as flexible */
 	justify-content: center; /* Justifies the elements. So the items are at both extremes of the page */
@@ -326,12 +332,18 @@
 	font-weight: bold;
 	font-size: 1.1em;
 	cursor: pointer; /* /* When the item is hovered the mouse icon changes to the pointer icon */
-	border: 2px solid darkgreen;
+	border: 2px solid rgb(5,119,61);
 	border-radius: 10px;
 }
-
+#storeaddress{
+	align-items: center;
+	font-size: 12px; /* Font Size */
+	width: 98%; /* Sets Width of the container , 98% because there is a 2% margin on the title*/
+	height: 70px; /* Sets Height of 70 pixels*/
+}
 /* Social Media icons Pre-setup*/
 .fa{
+	margin-top: 15%;
 	padding: 20px; /* Sets a Padding of 20px */
 	font-size: 30px; /* Font Size */
 	width: 50px; /* Width of 50px */
@@ -366,7 +378,7 @@
 	height: 70px; /* Sets Height of 70 pixels*/
 	color: white; /* Font Colour */
 	cursor: pointer; /* /* When the item is hovered the mouse icon changes to the pointer icon */
-	border: 2px solid darkgreen;
+	border: 2px solid rgb(5,119,61);
 	border-radius: 10px;
 }
 

@@ -183,32 +183,16 @@
 		margin-bottom: 1%;
 		width: 50%;
 	}
-
-	.sub-bottom-links-title strong{
-		color: rgb(5,119,61);
-		font-size: 25px;
-		border-bottom: 1px solid rgb(5,119,61);
-	}
-
-	.sub-bottom-links-title ul{
-	margin: auto; /*  */
-		list-style: none; /* It gets rid of the bullet points */
-		display: flex;
-		align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
-	justify-content: center; /* justifies the elements. So the items are at both extremes of the page */
-	}
+	
 	.sub-bottom-links-title li{
 		padding: 2px;
 	}
-
-	.fa{
-		padding: 20px;
-		font-size: 30px;
-		width: 50px;
-		text-align: center;
-		text-decoration: none;
-		border-radius: 50%;
-		cursor: pointer;
+	.find-us{
+		width:100%	
+	}
+	#storeaddress{
+		height:100%;
+		align-items:center;
 	}
 	/*Facebook*/
 	.fa-facebook{
