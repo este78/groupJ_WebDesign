@@ -18,7 +18,6 @@
 
 /*Navigation menu (it sticks to the top of the screen at all times) */
 .navBar{
-
 	position: fixed; /*Established the element in a fixed position*/
 	background-color: rgba(255, 255, 255, 0.7); /* Background Colour */
 	z-index: 5; /*displays the element on top of any other box that ocupies the same "line" on the screen*/
@@ -44,8 +43,7 @@
 	text-align: right; /* Align the items on the Right */
 	margin-top: -7%; /* Margin Top Setup */
 	margin-left: 44%; /* Margin Left Setup */
-	width:35%; /* Sets width of the Container */
-	
+	width:35%; /* Sets width of the Container */	
 }
 /*Search Input styling */
 .search input{
@@ -73,7 +71,7 @@
 /*navigation options are displayed at the bottom and right of the container*/ 
 .navBar .menu-list {
 	text-align: right; /* Text Align to the right */
-	margin-top: 8%; /* Margin Top set */
+	margin-top: 0%; /* Margin Top set */
 	margin-right: 1%; /* Sets Margin Right */
 	width: 80%; /* Sets the container width */
 	position: relative; /* Sets the container with a relative position */
@@ -85,7 +83,7 @@
 /*styling of the links in the navigation menu*/
 .menu-options a{
 	color: rgb(8,119,61); /* Font Colour */
-	font-size: 22px; /* Font Size */
+	font-size: 20px; /* Font Size */
 	margin-left: 5%; /*creates space between the list's elements*/
 	text-decoration: none; /*gets rid of the link's underline*/
 }
@@ -114,6 +112,11 @@
 	right: 30px;   /* Right positioning */
 	top: 20px;     /* Top Positioing - location of the "X" in the shrunk down menu*/
 }
+/*styles the nav menu's shopping cart icon */
+.fa-shopping-cart{
+	color:rgb(5,119,61);
+}
+
 
 /*Background Image and box styling behind the carousel*/
 .header{
@@ -172,10 +175,11 @@
 
 /* Carousel Image Setup */
 .item img{
-    padding: 10px; /* Images Padding */
-    width:100%; /* Images Width setup */
-    min-width: 585px; /* Min width acceptible */
-    margin: auto; /* Margin set as automatic */
+	padding: 10px; /* Images Padding */
+	width:100%; /* Images Width setup */
+	width: 585px; /* Min width acceptible */
+	height: 329px;
+	margin: auto; /* Margin set as automatic */
 }
 
 /* Carousel Caption Setup */
@@ -539,7 +543,7 @@
 /* Form Positioning */
 .body-content-div-form{
 	margin: 0% 5% -5% 5%; /* Sets margin all aroung the Form */
-	width: 100%; /* Sets width of 100% */
+	width: 85%; /* Sets width of 100% */
 }
 
 /* Table positioning and Style */
