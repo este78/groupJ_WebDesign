@@ -109,7 +109,7 @@
 	}
 
 	.item{
-	padding-left: 0%;
+		padding-left: 0%;
 	}
 
 	.item img{
@@ -173,9 +173,9 @@
 		margin-left:10%;
 		margin-right:10%;
 		text-align:center;
-	display: flex;
+		display: flex;
 		align-items: baseline; /*Aligns the elements (logo, menu list and SearchBar) in the centre of the page(horizontally and vertically), one next to the other in the same line*/
-	justify-content: space-evenly; /* justifies the elements. So the items are at both extremes of the page */
+		justify-content: space-evenly; /* justifies the elements. So the items are at both extremes of the page */
 	}
 
 	.section-sub-bottom-links{
@@ -188,72 +188,20 @@
 		padding: 2px;
 	}
 	.find-us{
-		width:100%	
+		width:100%;
 	}
 	#storeaddress{
 		height:100%;
 		align-items:center;
 	}
 	/*Facebook*/
-	.fa-facebook{
-		background: #3B5998;
-		color: white;
+	.fa{
+		margin: auto;
 	}
-	/* Twitter */
-	.fa-twitter {
-	background: #55ACEE;
-	color: white;
-	}
-	/*LinkedIn*/
-	.fa-linkedin {
-	background: #007bb5;
-	color: white;
-	}
-	/*blog */
-	.blog{
-		margin:auto;
-		padding: 20px;
-		font-size: 12px;
-		width: 100px;
-		height: 70px;
-		display: block;
-		color: white;	
-		cursor: pointer;
-	}
-	.blog-tips{
-		background: navy;
-	}
-	.blog-insp{
-		background: violet;
-	}
-	.blog-calc{
-		background: skyblue;
-	}
-	.blog-shopB{
-		background: limegreen;
-	}
-
-	.sub-bottom-links-title a:hover{   
-		text-decoration: none; /* It gets rid with the decoration when hovered */
-		color: darkorange; /* Changes the colour when Buttons are hovered */
-	}
-	.sub-bottom-links-title a:active{
-		text-decoration: none; /* It gets rid with the decoration when hovered */
-		color: red; /* Changes the colour when Buttons are hovered */
-	}
-
-	.footer p{
-		background-color: rgb(5,119,61); /* Footes Background Colour */
-		border: 1px solid rgb(5,119,61); /* Sets the Footer border */
-		text-align: center; /* Align the Footer's paragraph in the centre */
-		color: whitesmoke; /* Sets the colour of the letters */   
-	}
-
 
 	/*jose carlos=FAQ============================================================*/
 	.body-content{
-		height: 80vh;
-		padding-top: 5%;
+		height: 100%;
 	}
 
 	.faq-logo{
@@ -268,20 +216,20 @@
 	.main-content{
 		height: 50%;
 		width: 90%;
-		margin-top: 15%;
-		margin-left: 5%;
 		border: none;
 	}
 
 
 	/*Jose Carlos= Contact=========================================================*/
 	.body-content-contact{
-		height: 170vh;
+		height: 500vh;
 	}
 	.body-content-div{
-		background-color: whitesmoke;
-		text-align: center;	
+		background-color: whitesmoke;	
+		text-align:center;
 		display: block;
+		width: 95%;
+		height:100%;
 	}
 
 	.body-content-div-form{
