@@ -200,6 +200,9 @@
 	}
 
 	/*jose carlos=FAQ============================================================*/
+	#plainHeader{
+		height: 100%;
+	}
 	.body-content{
 		height: 100%;
 	}
@@ -222,38 +225,37 @@
 
 	/*Jose Carlos= Contact=========================================================*/
 	.body-content-contact{
-		height: 500vh;
+
 	}
 	.body-content-div{
 		background-color: whitesmoke;	
 		text-align:center;
 		display: block;
 		width: 95%;
-		height:100%;
 	}
 
 	.body-content-div-form{
-		margin-top:1%;
-		margin-left: 5%;
+		margin: auto;
 		width:100%;
 	}
 
 	.body-content-div-from-table{
-		margin-left: 0%;		
+		margin:auto;	
 	}
-
+	
 	.body-content-div-from-table input, textarea{
 		font-size: 11px;
+		border: 1px solid rgba(169,169,169,0.7);
 	}
 
-	.contactDetails{
-		margin-top: 15%;
-		margin-left: 14%;
-		padding-bottom: 15%;
-		width: 90%;
-		text-align: center;
-		background-color: whitesmoke;
-	}
+   .contactDetails{
+        margin-top: 15%;
+        margin-left: 15%;
+        padding-bottom: 15%;
+        width: 90%;
+        text-align: center;
+        background-color: whitesmoke;
+    }
 	/*Samsom= Products=============================================================================================================================================================*/
 	 /*style cook iteme menu*/
 	.cook-items {
