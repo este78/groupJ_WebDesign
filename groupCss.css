@@ -148,12 +148,15 @@
 
 /* Carousel's Image Container */
 .carousel-inner{
-    border: 10px solid rgb(5,119,61); /* Border Colour and sizening */
+	border: 10px solid rgb(5,119,61); /* Border Colour and sizening */
+	border-radius: 20px; /*rounds the border's corners*/
 	background-color: rgba(245, 245, 245, 0.7); /* Background colour setup */
 	margin-top: 10%;
-    position: relative; /* Sets it to the Relative position */
+	position: relative; /* Sets it to the Relative position */
 }
-
+.carousel-control{
+	border-radius: 20px;
+}
 /* Carousel Indicators Setup */
 .carousel-indicators{
     z-index:1; /*Indicators sit above the images pointing to each side (left/right)*/
@@ -319,11 +322,12 @@
 	justify-content: center;
 	width: 100px; /* Sets Width of the container */
 	height: 70px; /* Sets Height of 70 pixels*/
-	background: darkslategray; /* Background Colour*/
+	background: lightslategray; /* Background Colour*/
 	font-weight: bold;
 	font-size: 1.1em;
 	cursor: pointer; /* /* When the item is hovered the mouse icon changes to the pointer icon */
 	border: 2px solid darkgreen;
+	border-radius: 10px;
 }
 
 /* Social Media icons Pre-setup*/
@@ -363,6 +367,7 @@
 	color: white; /* Font Colour */
 	cursor: pointer; /* /* When the item is hovered the mouse icon changes to the pointer icon */
 	border: 2px solid darkgreen;
+	border-radius: 10px;
 }
 
 .blog-tips{
