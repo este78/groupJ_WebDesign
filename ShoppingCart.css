@@ -22,9 +22,7 @@
 
 .wrapper {
     display: flex;
-    /*set margin*/
-    margin-top: 180px;
-    /*set width*/
+    margin-top: 190px;
     width: 100%;
 }
 
@@ -32,17 +30,19 @@
 /*persenal detail box*/
 
 .personalDetail {
-    /*set margin*/
-    margin: 20px;
+    margin: 20px 5px 30px 20px;
 }
 
 
 /*set cart*/
 
 .cart-holder {
-    max-width: 400px;
-    justify-content: space-around;
-    margin: 0 auto;
+    margin: 20px 0px 30px 5px;
+    background: whitesmoke;
+    border: 1px solid lightgrey;
+    background-color: #f2f2f2;
+    padding-right: 5px;
+    border-radius: 3px;
 }
 
 .cart-holder ion-icon {
@@ -76,7 +76,7 @@
 }
 
 .checkout-quantity {
-    width: 30%;
+    width: 25%;
     border-bottom: 1px solid lightgray;
     display: flex;
     align-items: center;
@@ -106,7 +106,7 @@
 
 .Checkout-container {
     background-color: #f2f2f2;
-    padding: 5px 20px 15px 20px;
+    padding: 5px 5px 15px 20px;
     border: 1px solid lightgrey;
     border-radius: 3px;
 }
@@ -138,9 +138,19 @@ label {
 /*set icon-container*/
 
 .icon-container {
-    margin-bottom: 20px;
-    padding: 7px 0;
+    margin-bottom: 5px;
     font-size: 24px;
+}
+
+.fa {
+    margin-top: 3%;
+    padding: 8px;
+    font-size: 30px;
+    width: 49px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60%;
+    cursor: pointer;
 }
 
 
