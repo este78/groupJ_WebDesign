@@ -732,7 +732,6 @@
 }
 					                   
 .btn {
-	border: 1px solid black;
 	text-align: center; /*set text center*/
 	vertical-align: middle; /*vertical align middle*/
 	padding: .67em .67em; /*add padding*/
@@ -747,7 +746,7 @@
 	border: none; /* Gets rid with the border */
 	border-radius: 7px; /* Sets border radius of 7px*/
 	font-weight: bold; /* Font Weight */
-	margin-top: 8px; /* Sets a top margin of 8px */
+	margin-top: 10px; /* Sets a top margin of 8px */
 }               
 					
 /* Add Cart Button Style when hoovered */  
