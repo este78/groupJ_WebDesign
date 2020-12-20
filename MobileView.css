@@ -308,6 +308,12 @@ padding-top: 5%;
 	.filterDiv img{
 		width: 100%;
 	}
+	/*Shopping Cart*============================================================================================*/
+	.checkout-row{
+		display:block;
+	}
+	.checkout-detail{display:block;height:1000vh;}
+	.cart-holder{margin:auto;margin-top: 5%; width: 100%;display:block;}
 }
 
 @media screen and (max-width: 1024px) {

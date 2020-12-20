@@ -773,3 +773,6 @@
 	border: 2px solid rgb(184, 183, 183); /* Sets the border colour, type and thickness */
 	margin-bottom: 10px; /* Sets a margin bottom ox 10px*/
 }
+/*Experimental Pay Pal*/
+.checkout-row{postion:relative;}
+#smart-button-container{postion: absolute; bottom:0;}
