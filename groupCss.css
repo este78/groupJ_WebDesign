@@ -666,7 +666,7 @@
 	display: flex; /* Sets the Green Menu as Flexible */
 	justify-content: space-evenly; 	/* Adds space between the menu cook items */
 	text-align: center; /* Aligns text cook items to center */
-	background-color: rgba(0, 100, 0, 1);/* Items Menu background color*/
+	background-color: rgb(5, 119, 61);/* Items Menu background color*/
 	padding: 1%; /* Sets Padding to 1% all around the itoem */
 	width: 100%; /* Sets the width in order to be as wide as the main Container */
 }
