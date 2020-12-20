@@ -2,64 +2,67 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<!--Script for the navigation menu -->
-	<script src="Ludlow_JS.js"></script>	
-	<link rel="icon" type="image/png" href="img/LudlowHCfavicon.jpg">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	
-    
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Checkout example for Bootstrap</title>
-	<link rel="icon" type="image/png" href="img/LudlowHCfavicon.jpg">
+    <!--Script for the navigation menu -->
+    <script src="Ludlow_JS.js"></script>
+    <link rel="icon" type="image/png" href="img/LudlowHCfavicon.jpg">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="groupCss.css">
-	<link rel="stylesheet" href="./ShoppingCart.css">
-	<link rel="stylesheet" href="main.js">
-	<!-- Custom styles for this template -->
-	<link href="form-validation.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Checkout example for Bootstrap</title>
+    <link rel="icon" type="image/png" href="img/LudlowHCfavicon.jpg">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="groupCss.css">
+    <link rel="stylesheet" href="./ShoppingCart.css">
+    <link rel="stylesheet" href="main.js">
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
- <!--Menu: Adapted  from a youtube tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ================================================================================================================================================-->
-       <nav class="navBar">
-			<div class="search">
-				<form  action="/action_page.php">
-					<input type="text" placeholder="Search..." name="search">
-					<button type="submit"><i class="fa fa-search"></i></button>
-				</form>
-			</div>
-			<div class="content">
-				<div class="logo"><a href="./index.html"><img src="img/logo.png" alt="logo"></a></div>
-				<!-- Search button -->
-				<div class= "menu-list">
-					<div class="icon off-btn">  <!--"X"icon in -->
-						<i class="fas fa-times"></i>
-					</div>
-					<div class="menu-options">
-						<a href="./index.html">Home</a>
-						<p></p>
-						<a href="./product.html">Products</a>
-						<p></p>
-						<a href="./ShoppingCart.html">Shopping Cart</a>
-						<p></p>
-						<a href="./FAQ.html">FAQ</a>
-						<p></p>
-						<a href="./Contact.html">Contact</a>
-					</div>	
-				</div>
-				<div class="icon menu-btn">
-					<i class="fas fa-bars"></i>
-				</div>
-			</div>
-		</nav>
+    <!--Menu: Adapted  from a youtube tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ================================================================================================================================================-->
+    <nav class="navBar">
+        <div class="search">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="content">
+            <div class="logo">
+                <a href="./index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <!-- Search button -->
+            <div class="menu-list">
+                <div class="icon off-btn">
+                    <!--"X"icon in -->
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="menu-options">
+                    <a href="./index.html">Home</a>
+                    <p></p>
+                    <a href="./product.html">Products</a>
+                    <p></p>
+                    <a href="./ShoppingCart.html">Shopping Cart</a>
+                    <p></p>
+                    <a href="./FAQ.html">FAQ</a>
+                    <p></p>
+                    <a href="./Contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
     <!--Checkout starts-->
     <section class="checkout-row">
@@ -120,89 +123,74 @@
                     <label>
                 <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
               </label>
-                    <input type="submit" value="Continue to checkout" class="btn">
+                    <input type="submit" value="Continue to checkout" class="checkout-btn">
                 </div>
             </div>
-            <div class="cart">
-                <div class="cart-container">
-                    <h4>Cart <span class="price"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-                    <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-                    <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-                    <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-                    <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-                    <hr>
-                    <p>Total <span class="price total"><b>$30</b></span></p>
-                    <hr>
+            <div class="cart-holder">
+                <div class="cart-header">
+                    <h5 class="product-title">PRODUCT<i class="fa fa-shopping-cart"></i></h5>
+                    <h5 class="checkout-price">PRICE</h5>
+                    <h5 class="checkout-quantity">QUANTITY</h5>
+                    <h5 class="checkout-total">TOTAL</h5>
+                </div>
+                <div class="products">
+
                 </div>
             </div>
 
     </section>
     </div>
-  <!--------------------------------------------------------------------------------------------
---------------------------------------------- Footer -----------------------------------------
----------------------------------------------------------------------------------------------->
-		
-		<div class="section-bottom-links">
-				
-			<div class="section-sub-bottom-links">
-				<div class="sub-section-bottom-links">
-					<div class="sub-bottom-links-title">
-							<!-- Contact Us Title -->
-							<p>
-								<span>Contact Us</span>
-							</p>
-							<!-- Contact Us Link (Placed into an Unorderd List) -->
-							<ul>
-								<li><a class = "find-us" href="./Contact.html">Find us here</a></li>
-								<li><p id="storeaddress">Ludford Bridge Ind Est, Temeside, Ludlow SY8 1PE, UK</p></li>
-							</ul>
-					</div>
-				</div>
-			</div>
-			<div class="section-sub-bottom-links">
-				<div class="sub-section-bottom-links">
-					<div class="sub-bottom-links-title">
-						<!-- Social Media Title -->
-						<p>
-							<span>Social Media</span>
-						</p>
-						<!-- Social Medias Links (Placed into an Unorderd List) -->
-						<ul>
-							<li><a href="https://www.facebook.com/LHomecareLtd/" class="fa fa-facebook"></a></li>
-							<li><a href="https://www.linkedin.com/company/ludlow-homecare-limited/about/" class="fa fa-linkedin"></a></li>
-							<li><a href="https://twitter.com/LudlowHomecare" class="fa fa-twitter"></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="section-sub-bottom-links">
-				<div class="sub-section-bottom-links">
-					<div class="sub-bottom-links-title">
-						<!-- Our Blogs Title -->
-						<p>
-							<span>Our Blogs</span>
-						</p>
-						<!-- Our Blogs Links (Placed into an Unorderd List) -->
-						<ul>
-							<li><a class="blog blog-tips" href="#">Tips & Advice</a></li>
-							<li><a class="blog blog-insp" href="#">Inspiration</a></li>
-							<li><a class="blog blog-calc" href="#">Calculators</a></li>
-							<li><a class="blog blog-shopB" href="#">Shop Brands</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>   
-		</div>
-		
-		<footer class="footer">
-		<!-- Copyright and W3C validation -->
-		<!--W3 Validator gave us this badge when it found no errors in our CSS code for this page-->
-		<p>Copyright &copy; Ludlow Homecare &nbsp; <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
-						src="http://jigsaw.w3.org/css-validator/images/vcss"
-						alt="Valid CSS!" />
-				</a>
-			</p>
-		</footer>
+    <!-- Footer -->
+    <div class="section-bottom-links">
+        <div class="section-sub-bottom-links">
+            <div class="sub-section-bottom-links">
+                <div class="sub-bottom-links-title">
+                    <strong>
+								   <span>Contact Us</span>
+							   </strong>
+                    <ul>
+                        <li><a href="#">Test 1</a></li>
+                        <li><a href="#">Test 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section-sub-bottom-links">
+            <div class="sub-section-bottom-links">
+                <div class="sub-bottom-links-title">
+                    <strong>
+							   <span>Social Media</span>
+						   </strong>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section-sub-bottom-links">
+            <div class="sub-section-bottom-links">
+                <div class="sub-bottom-links-title">
+                    <strong>
+							   <span>Social Media</span>
+						   </strong>
+                    <ul>
+                        <li><a href="#">Tips & Advice</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                        <li><a href="#">Calculators</a></li>
+                        <li><a href="#">Shop Brands</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Copyright &copy; Ludlow Homecare &nbsp;
+            <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+            </a>
+        </p>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -214,7 +202,7 @@
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap.min.js"></script>
     <script src="../../../../assets/js/vendor/holder.min.js"></script>
-	    <!--Script needs to be here to avoid null error . It cannot be called before the object is loaded  -->
+    <!--Script needs to be here to avoid null error . It cannot be called before the object is loaded  -->
     <script>
         const navBar = document.querySelector(".navBar");
         window.onscroll = () => {
