@@ -257,7 +257,7 @@
         background-color: whitesmoke;
     }
 	/*Samsom= Products=============================================================================================================================================================*/
-	 /*style cook iteme menu*/
+	 /*style cook items menu*/
 	.cook-items {
 		display: block;
 		height: 25vh;
@@ -267,36 +267,45 @@
 		width:100%;
 		margin:0;
 	}
+	/**/
 	.category{
 		margin:auto;
 	}
-	
+	/*filter menu, no functionality implemented*/
 	.dropdown-category {
 		top:2%;
 		right:2%;
 		left: 50%;
 		width: 40%; 
+		z-index:1;
 	}
-	.dropdown-category p{
-		font-size: 0.4em;
+	/*styles the filter menu items*/
+	.dropdown-category a.opt{
 		margin:auto;
+		padding:10px 0;
+		text-align: center;
+		color: rgb(5,119,61);
 	}
+	
 	.product-container {
 		display: block;
 		overflow: hidden;
 		padding: 22px;
 		width:80%;
+		margin:auto;
 	}
+	
 	.filterDiv{
 		position: relative;
+		margin:auto;
+		width:100%;
 	}
-	.filterDiv p, button {
-		max-width: 120px;
-		margin: 20px;
+	.filterDiv p.product_name{
+		margin:auto;
+		text-align:center;
 	}
 	.filterDiv img{
-		width: 120px;
-		margin: 20px;
+		width: 100%;
 	}
 }
 
