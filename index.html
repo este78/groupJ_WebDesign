@@ -269,6 +269,14 @@
 				this.scrollY > 20 ?  navBar.classList.add("sticky") : navBar.classList.remove("sticky"); 	
 			}
 		</script>
-		
+
+<!--------------------------------------------------------------------------------------------------
+----------------------------------- Shoping Cart and Product Js Script------------------------------
+------------------------------- Script needs to be here to avoid null error ------------------------
+----------------------------- It cannot be called before the object is loaded ----------------------
+--------------------------------------------------------------------------------------------------->
+		<script src="./product.js"></script>
+		<script src="./shoppingCart.js"></script>
+
     </body>
 </html>
