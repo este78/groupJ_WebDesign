@@ -88,4 +88,42 @@ function totalCost(product) {
     console.log("The price is ", product.price);
 }
 
+function totalCost(product) {
+    //console.log("The price is ", product.price);
+    let cartCost = localStorage.getItem('totalCost');
+
+    console.log("My cartCost is", cartCost);
+    console.log(typeof cartCost);
+
+    if (cartCost != null) {
+        cartCost = parseInt(cartCost);
+        localStorage.setItem("totalCost", cartCost + product.price);
+    } else {
+        localStorage.setItem("totalCost", product.price);
+    }
+}
+
+function displayCart() {
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let cartHolder = document.querySelector(".products");
+
+    console.log(cartItems);
+    if (cartItems && cartHolder) {
+        cartHolder.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            cartHolder.innerHTML += `
+            <div class="product">
+                <ion-icon name="close-circle"></ion-icon>
+                <img src="./imag/$({item.tag}).jpg">
+                <span>${item.name}</Span
+            `
+        })
+
+    }
+}
+
+
+
 onLoadNumbers(); /*when ever we run for the first time this will run */
+displayCart();
