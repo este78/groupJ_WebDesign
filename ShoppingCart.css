@@ -1,16 +1,10 @@
 /*set body*/
 
-body {
+.shoppingCart-body {
     font-family: Arial;
     font-size: 17px;
     padding: 8px;
     background-color: whitesmoke;
-}
-
-
-/*seting box-sizing to border box to control width property*/
-
-* {
     box-sizing: border-box;
 }
 
@@ -20,7 +14,7 @@ body {
 .checkout-detail {
     display: -ms-flexbox;
     display: flex;
-    width: 950px;
+    width: 700px;
     align-items: center;
 }
 
@@ -38,13 +32,6 @@ body {
 }
 
 
-/*set width*/
-
-.main {
-    width: 300px;
-}
-
-
 /*persenal detail box*/
 
 .personalDetail {
@@ -57,17 +44,55 @@ body {
 
 /*set cart*/
 
-.cart {
-    /*set height and width*/
-    height: 137px;
-    width: 350px;
-    /*set height*/
-    height: 150px;
-    /*set background*/
-    background-color: rgb(214, 219, 221);
-    padding: 10px;
-    margin-left: 20px;
+.cart-holder {
+    max-width: 400px;
+    justify-content: space-around;
+    margin: 0 auto;
     margin-top: 25px;
+}
+
+.cart-holder ion-icon {
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/**cart header*/
+
+.cart-header {
+    width: 400px;
+    max-width: 500px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgray;
+    margin: 0 auto;
+}
+
+.product-title {
+    width: 45%;
+}
+
+.checkout-price {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.checkout-quantity {
+    width: 30%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.checkout-total {
+    width: 10%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -127,7 +152,7 @@ label {
 
 /*set button*/
 
-.btn {
+.checkout-btn {
     /*set center*/
     justify-content: center;
     /*background color green*/
@@ -137,11 +162,11 @@ label {
     /*set padding*/
     padding: 12px;
     /*set margin*/
-    margin: 10px 0;
+    margin: 0 50px 0 50px;
     /*set border to none*/
     border: none;
     /*border width*/
-    width: 40%;
+    width: 80%;
     /*border radius*/
     border-radius: 3px;
     /*set cursor*/
