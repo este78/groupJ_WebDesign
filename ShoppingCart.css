@@ -15,7 +15,6 @@
     display: -ms-flexbox;
     display: flex;
     width: 700px;
-    align-items: center;
 }
 
 
@@ -23,10 +22,10 @@
 
 .wrapper {
     display: flex;
+    /*set content center*/
+    justify-content: center;
     /*set margin*/
-    margin-top: 180px;
-    /*set width*/
-    width: 100%;
+    margin-top: 150px;
 }
 
 
@@ -35,6 +34,8 @@
 .personalDetail {
     /*set margin*/
     margin: 20px;
+    /*set width*/
+    width: 650px;
 }
 
 
@@ -44,6 +45,7 @@
     max-width: 400px;
     justify-content: space-around;
     margin: 0 auto;
+    margin-top: 25px;
 }
 
 .cart-holder ion-icon {
