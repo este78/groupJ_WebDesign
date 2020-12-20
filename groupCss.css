@@ -645,8 +645,8 @@
 
 /* Iframe sizing */
 .map iframe{
-	width: 100%; /* Sets 100% of width (It needs to be added in order to make sure that the whole frame is displayed)
-}
+	width: 100%;} /* Sets 100% of width (It needs to be added in order to make sure that the whole frame is displayed)
+
 
 
 
