@@ -260,14 +260,26 @@
 	 /*style cook iteme menu*/
 	.cook-items {
 		display: block;
-		height: 30vh;
+		height: 25vh;
+		text-align:left;
 		position: relative;
+		padding: 2%;
+		width:100%;
+		margin:0;
 	}
-	.dropdown-catagory {
-		left: 1%;
-		right: 50%;
-		width: 30%; 
-		padding:2px;
+	.category{
+		margin:auto;
+	}
+	
+	.dropdown-category {
+		top:2%;
+		right:2%;
+		left: 50%;
+		width: 40%; 
+	}
+	.dropdown-category p{
+		font-size: 0.4em;
+		margin:auto;
 	}
 	.product-container {
 		display: block;
@@ -275,8 +287,15 @@
 		padding: 22px;
 		width:80%;
 	}
+	.filterDiv{
+		position: relative;
+	}
 	.filterDiv p, button {
-		max-width: 80px;
+		max-width: 120px;
+		margin: 20px;
+	}
+	.filterDiv img{
+		width: 120px;
 		margin: 20px;
 	}
 }

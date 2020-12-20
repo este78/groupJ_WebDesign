@@ -462,13 +462,13 @@
 	margin-left: 15%; /* Left margin */
 	font-size: 18px; /* Font size */
 	font-weight: 500; /*Font Weight*/
-	border-right: 0.5px solid darkgreen; /* right border of the side nav*/
+	border-right: 0.5px solid rgb(5,119,61); /* right border of the side nav*/
 }
 
 /* Styles the options on the Side Menu */
 .side-content-opt-a, .side-content-opt-p{
 	margin-top: 15%; /* Top margin setup */
-	color: darkgreen; /*Font Color*/
+	color: rgb(5,119,61); /*Font Color*/
 }
 
 /* Changes the style of the Side Container's options */
@@ -488,12 +488,12 @@
 /* Collapsile Buttons Setup */
 .btn-collapsible{
 	background-color: whitesmoke; /* Background Colour */
-	color: darkgreen; /* Font Colour */
+	color: rgb(5,119,61); /* Font Colour */
 	cursor: pointer; /* Changes the icon to a pointer icon when the icon is hovered */
 	padding: 20px 5px 10px; /* Padding settings */
 	width: 100%; /* Width Setup */
 	border: none; /* Gets rid with the border setup */
-	border-bottom: 1px solid darkgreen; /* Border bottom setup */
+	border-bottom: 1px solid rgb(5,119,61); /* Border bottom setup */
 	text-align: left; /* Sets the text to be aligned on the left */
 	outline: none; /* Gets rid of the outside line which can be displayed */
 	font-size: 18px; /* Font Size */
@@ -610,7 +610,7 @@
 /* Send Button Style when hovered */
 .message-btn:hover{
     text-decoration: none; /* It gets rid with the decoration when hovered */
-	background-color: darkgreen; /* Changes the colour when Buttons are hovered */
+	background-color: rgb(5,119,61); /* Changes the colour when Buttons are hovered */
 }
 
 /* Contact Details Container Positioning */
@@ -656,10 +656,9 @@
 
 /* Main Container */
 .body-content-product {
-	display: absolute; /* Sets container to display as absolute */
-    box-sizing: border-box; /* This makes the elements inside to respect the major container width and height when set in 100% */
-    margin-top: 10.5%; /* Sets margin to 10.5% */
-    background-color: whitesmoke; /* Sets the background colour */
+	box-sizing: border-box; /* This makes the elements inside to respect the major container width and height when set in 100% */
+	margin-top: 10.5%; /* Sets margin to 10.5% */
+	background-color: whitesmoke; /* Sets the background colour */
 }
 	   
 /* Green Menu */
