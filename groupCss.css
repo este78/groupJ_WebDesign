@@ -369,7 +369,7 @@
 }
 
 .fa-shopping-cart{
-	color: green; /* Defines the colour of the icon */
+	color: rgb(5,119,61); /* Defines the colour of the icon */
 	font: normal normal normal 20px/1 FontAwesome; /* Font Awesome setup (Works for the trolly icon */
 }
 
@@ -773,6 +773,41 @@
 	border: 2px solid rgb(184, 183, 183); /* Sets the border colour, type and thickness */
 	margin-bottom: 10px; /* Sets a margin bottom ox 10px*/
 }
-/*Experimental Pay Pal*/
+/*Experimental Pay Pal button*/
+/*set checkout container*/
+.checkout-row{
+    display: flex; /* Sets container to display in flexible */
+    width: 100%; /* Sets container's width to 100% */
+	align-items: center;
+    justify-content: space-around; /* Justifies content in the center */
+    margin-top: 10%;
+}
+.Checkout-container {
+    display: flex; /* Sets to display as flexible */
+	flex-wrap: wrap; /*Sets wrap in order to have all sub containers and elements insite it */
+	overflow: hidden; /* Hide the overflow in the container */
+    margin-top: 2.5%; /* Margin top set to 2% */
+    background-color: whitesmoke; /* background colour setup */
+    border: 1px solid darkgreen; /* Sets the border colour */
+    border-radius: 15px; /* Sets the border radius to 15px */
+    height: 90vh;
+}
 .checkout-row{postion:relative;}
-#smart-button-container{postion: absolute; bottom:0;}
+/* Product Cart List */
+.cart-holder {
+    margin: 1% 0% 0% 1%; /* Margin set all around */
+    border: 1px solid lightgrey; /* Sets a border colour */
+    background-color: rgba(0, 0, 0, 0.192); /* Background Colour setup */
+    border-radius: 5px; /* Border Radius Setup */
+    color: rgba(0, 0, 0, 0.548); /* Font Colour */
+    font-size: 20px; /* Font Size */
+    padding: 10px; /* Padding of 10px all around */
+    height: 90vh; /* Sets the Container height*/
+    width: 50%; /* Sets the container width to 28%*/
+}
+/* Cart Header */
+.cart-header {
+    display: flex; /* Sets container to display as flexible (List everything inline */
+	justify-content: space-around;
+}
+#smart-button-container{z-index:0;}
