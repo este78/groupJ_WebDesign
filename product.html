@@ -25,7 +25,7 @@
         
         <!--Google API JQuery link-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
+
         <!-- Font Awesome Library --> 
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,7 +36,7 @@
         
         <!-- css file link -->
         <link href="groupCss.css" rel="stylesheet">
-        <link href="MobileView.css" rel="stylesheet">
+        <link href="MobileView.css" rel="stylesheet">  
 
     </head>
 
@@ -83,7 +83,7 @@
                         <a href="./product.html">Products</a>
 						<p></p>
 						<!-- Trolly icon (Font Awesome Library) -->
-                        <a class="cart" href="./ShoppingCart.html">Shopping Cart <i id="trollyIcon" class="fa fa-shopping-cart"></i><span>0</span></a>
+                        <a class="cart" href="./ShoppingCart.html">Shopping Cart <i class="fa fa-shopping-cart"></i><span>0</span></a>
                         <p></p>
                         <a href="./FAQ.html">FAQ</a>
                         <p></p>
@@ -298,23 +298,28 @@
 		</p>
 		</footer>
 
-
-
-        <!-- from w3schools-->
-        <!--product js file link-->
-        <script src="./product.js"></script>
-
-        <script src="./shoppingCart.js"></script>
-
-        <script src="./Ludlow_JS.js"></script>
-        <!--Script needs to be here to avoid null error. Code  from tutorial: https://youtu.be/UHSeFxZIuv8. It cannot be called before the object is loaded  -->
-        <script>
+<!--------------------------------------------------------------------------------------------------
+---------------------------------------- Top NavBar Menu Script ------------------------------------
+--Script needs to be here to avoid null error. Code  from tutorial: https://youtu.be/UHSeFxZIuv8.--- 
+----------------------------- It cannot be called before the object is loaded ----------------------
+--------------------------------------------------------------------------------------------------->
+		
+        <script>	
             const navBar = document.querySelector(".navBar");
-            window.onscroll = () => {
-                this.scrollY > 20 ? navBar.classList.add("sticky") : navBar.classList.remove("sticky"); //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
+            window.onscroll = () =>{
+                //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style
+                this.scrollY > 20 ?  navBar.classList.add("sticky") : navBar.classList.remove("sticky"); 	
             }
         </script>
 
-    </body>
+<!--------------------------------------------------------------------------------------------------
+----------------------------------- Shoping Cart and Product Js Script------------------------------
+------------------------------- Script needs to be here to avoid null error ------------------------
+----------------------------- It cannot be called before the object is loaded ----------------------
+--------------------------------------------------------------------------------------------------->
+       
+        <script src="./product.js"></script>
+        <script src="./shoppingCart.js"></script>
 
+    </body>
 </html>

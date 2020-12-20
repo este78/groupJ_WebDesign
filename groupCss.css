@@ -368,6 +368,11 @@
   color: white; /* Font Colour */
 }
 
+.fa-shopping-cart{
+	color: green; /* Defines the colour of the icon */
+	font: normal normal normal 20px/1 FontAwesome; /* Font Awesome setup (Works for the trolly icon */
+}
+
 /*Our Blog Container Setup */
 .blog{
 	display: flex; /* Sets the container to display in block */

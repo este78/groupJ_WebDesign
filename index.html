@@ -85,7 +85,7 @@
                         <a href="./product.html">Products</a>
 						<p></p>
 						<!-- Trolly icon (Font Awesome Library) -->
-                        <a href="./ShoppingCart.html">Shopping Cart<span class="price"><i class="fa fa-shopping-cart"></i></span></a>
+                        <a class="cart" href="./ShoppingCart.html">Shopping Cart <i class="fa fa-shopping-cart"></i><span>0</span></a>
                         <p></p>
                         <a href="./FAQ.html">FAQ</a>
                         <p></p>
@@ -256,7 +256,7 @@
 				</a>
 			</p>
 		</footer>
-		
+
 <!--------------------------------------------------------------------------------------------------
 ---------------------------------------- Top NavBar Menu Script ------------------------------------
 --Script needs to be here to avoid null error. Code  from tutorial: https://youtu.be/UHSeFxZIuv8.--- 
@@ -271,5 +271,13 @@
 			}
 		</script>
 		
-    </body>
+<!--------------------------------------------------------------------------------------------------
+----------------------------------- Shoping Cart and Product Js Script------------------------------
+------------------------------- Script needs to be here to avoid null error ------------------------
+----------------------------- It cannot be called before the object is loaded ----------------------
+--------------------------------------------------------------------------------------------------->
+		<script src="./product.js"></script>
+		<script src="./shoppingCart.js"></script>
+
+	</body>
 </html>
