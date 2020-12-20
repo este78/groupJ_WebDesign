@@ -76,6 +76,7 @@
 	width: 80%; /* Sets the container width */
 	position: relative; /* Sets the container with a relative position */
 } 
+
 /*displays all the links in the navigation menu  one next to the other in the same line*/
 .menu-options p{
 	display: inline; /* Sets to display items inline */
@@ -112,11 +113,6 @@
 	right: 30px;   /* Right positioning */
 	top: 20px;     /* Top Positioing - location of the "X" in the shrunk down menu*/
 }
-/*styles the nav menu's shopping cart icon */
-.fa-shopping-cart{
-	color:rgb(5,119,61);
-}
-
 
 /*Background Image and box styling behind the carousel*/
 .header{
@@ -345,12 +341,11 @@
 	width: 98%; /* Sets Width of the container , 98% because there is a 2% margin on the title*/
 	height: 70px; /* Sets Height of 70 pixels*/
 }
+
 /* Social Media icons Pre-setup*/
 .fa{
-	margin-top: 15%;
+	margin-top: 15%; /* Sets a margin top of 15% */
 	padding: 20px; /* Sets a Padding of 20px */
-	font-size: 30px; /* Font Size */
-	width: 50px; /* Width of 50px */
 	text-align: center; /* Align Text in the center */ 
 	text-decoration: none; /* It gets rid with the bullet points and whatsoever*/
 	border-radius: 50%; /* Sets the border radius as 50% to create a circle */
@@ -372,6 +367,7 @@
   background: #007bb5; /* Background Colour*/
   color: white; /* Font Colour */
 }
+
 /*Our Blog Container Setup */
 .blog{
 	display: flex; /* Sets the container to display in block */
@@ -645,326 +641,132 @@
 
 /* Iframe sizing */
 .map iframe{
-	width: 100%;} /* Sets 100% of width (It needs to be added in order to make sure that the whole frame is displayed)
+	width: 100%; /* Sets 100% of width (It needs to be added in order to make sure that the whole frame is displayed) */
+}
 
 
+/***************************************************************************************/
+/********************* Prodcuts - Created by Samsom Mihreteab **************************/
+/***************************************************************************************/
 
-
-
-
-
-
-
-
-
-
-
-/*Samsom code=products====================================================================================================================================================================================================================================*/
+/* Main Container */
 .body-content-product {
-	box-sizing: border-box;
-	height: 1800vh;
-	padding-top: 150px;
-	background-color: whitesmoke;
+	display: absolute; /* Sets container to display as absolute */
+    box-sizing: border-box; /* This makes the elements inside to respect the major container width and height when set in 100% */
+    margin-top: 10.5%; /* Sets margin to 10.5% */
+    background-color: whitesmoke; /* Sets the background colour */
 }
-
+	   
+/* Green Menu */
 .cook-items {
-	display: flex;
-	/*add space between the menu cook items*/
-	justify-content: space-evenly;
-	/*align text cook items to center*/
-	text-align: center;
-	/*cook items background color*/
-	background-color: rgba(0, 100, 0, 1);
-	/*cook items border color*/
-	border: 2px solid darkgreen;
-	/*cook items width*/
-	width: 100%;
+	display: flex; /* Sets the Green Menu as Flexible */
+	justify-content: space-evenly; 	/* Adds space between the menu cook items */
+	text-align: center; /* Aligns text cook items to center */
+	background-color: rgba(0, 100, 0, 1);/* Items Menu background color*/
+	padding: 1%; /* Sets Padding to 1% all around the itoem */
+	width: 100%; /* Sets the width in order to be as wide as the main Container */
 }
-.body-content-product {
-    box-sizing: border-box;
-    height: 1800vh;
-    padding-top: 150px;
-    background-color: whitesmoke;
+		   
+.category {
+	margin: 0 -20% 0; /*set space between the menu options*/
 }
 
-.cook-items {
-    display: flex;
-    /*add space between the menu cook items*/
-    justify-content: space-evenly;
-    /*align text cook items to center*/
-    text-align: center;
-    /*cook items background color*/
-    background-color: rgba(0, 100, 0, 1);
-    /*cook items border color*/
-    border: 2px solid darkgreen;
-    /*cook items width*/
-    width: 100%;
-}
-/*style cook iteme menu*/
-
-.cook-items a {
-	/*set color to whitesmoke*/
-	color: whitesmoke;
-	/*take off text decoration*/
-	text-decoration: none;
-    /*set color to whitesmoke*/
-    color: whitesmoke;
-    /*take off text decoration*/
-    text-decoration: none;
-}
-/*set space cook item menu*/
-
-.catagory {
-	margin: 0 -20% 0;
-}
-/*main header cooker catagory*/
-
+/* Green Menu options Style */
 .item_details {
-	margin: 0 -20% 0;
-	font-size: 18px;
-	/* cook Items menu set color to whitesmoke  */
-	color: whitesmoke;
-	text-decoration: none;
-	cursor: pointer;
+	font-size: 20px; /* Sets font size */
+	color: whitesmoke; /* Sets the font colour */
+	text-decoration: none; /* Gets rid of any text decoration */
+	cursor: pointer; /* Changes the mouse icon to pointer */
 }
+
 /*Dropdown catagory*/
-
-.dropdown-catagory {
-	display: none;
-	position: absolute;
-	background-color: #ffffff;
-	width: 170px;
-	z-index: 1;
-	border-radius: 5px;
-}
-/*Dropdown catagory a*/
-
-.dropdown-catagory a {
-	/* drop down menu set color to black  */
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	cursor: pointer;
+.dropdown-category {
+	display: none; /* It does not allow the items to be shown at the first load */
+	position: absolute; /* Sets the position to absolute */
+	background-color: #ffffff; /* Sets the background colour */
+	width: 14%; /* Sets the width of 14% */
+	border-radius: 6px; /* Sets a border radius of 5px */
 }
 
-.dropdown-catagory a:hover {
-	/*dropdown hover color*/
-	background-color: #fcf9f9;
-	/*dropdown no border*/
-	border: none;
+.dropdown-category .opt {
+	text-decoration: none; /* Gets rid with any text decoration */
+	display: block; /* Sets items to be displayed in blocks */
+	color: black; /* Sets the text colour */
+	font-size: 18px; /* Sets font size */
+	padding: 20px; /* Sets a padding of 20px all around the element*/
+	cursor: pointer; /* Changes the mouse icon to pointer */
+	border-radius: 6px; /* Sets border-radius to 6px */
 }
-/*dropdown catagory display block*/
 
-.catagory:hover .dropdown-catagory {
-	display: block;
+/* Displays the options when any option of the Green Menu is hoovered */
+.category:hover .dropdown-category {
+	display: block; /* Sets the options to be displayed in block */
 }
-/*product product-container*/
+
+/* Changes the Item style when it is hoovered */
+.dropdown-category .opt:hover {
+	background-color: rgba(0, 100, 0, 0.246); /* Sets the background colour when the item is hoverred */
+}
 
 .product-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	padding: 20px;
-	min-width: 1000px;
-}
-/*style product*/
-.filterDiv {
-	border-radius: 10px;
-	width: 15%;
-	margin: 40px 40px 40px 40px;
-	cursor: pointer;
-	color: rgb(29, 27, 27);
-	font-weight: bold;
-	text-align: center;
-	/* Hidden by default */
+	display: flex; /* Sets to display as flexible */
+	flex-wrap: wrap; /*Sets wrap in order to have all sub containers and elements insite it */
+	overflow: hidden; /* Hide the overflow in the container */
+	/* The options below place the itens in the center of the page (CHANGE THEM WHEN IMPLEMENTING THE FILTERS CONTAINER NO THE LEFT SIDE) */
+	margin-left: 20%; /* Sets 15% of left margin */
+	padding-right: 8%; /* Sets padding-right of 15% */
+	width:80%;
 }
 
-.row p, button {
-	position: baseline;
-}
 /*edit size image product details*/
-
+                    
 .product_image {
-	width: 95%;
-	height: 80%;
+	width: 95%; /* Sets the Products Images Widths */
+	height: 55%; /* Sets the Products Images Height */
 }
 /*edit a product*/
-
-.row a {
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-weight: bold;
-	color: black;
-	text-decoration: none;
+                    
+.price {
+	font-size: 25px; /* Sets the Price Font Size */
+    color: rgba(0, 0, 0, 0.589); /* Sets the Price Colour with some opacity to give it this kind of gray */
 }
-/* Add color on mouse-over to price */
-.shop-item-price a:hover {
-	text-decoration: none;
-	background-color: rgb(252, 249, 249);
-}
-/* Add margin on shop detail button*/
-.filterDiv button, p, image {
-	margin: 10px;
-}
-
-.filterDiv img {
-	font-weight: bold;
-	border: 2px solid rgb(184, 183, 183);
-}
-/*style button*/
+					                   
 .btn {
-	/*set text center*/
-	text-align: center;
-	/*vertical align middle*/
-	vertical-align: middle;
-	/*add padding*/
-	padding: .67em .67em;
-	/*cursor point*/
-	cursor: pointer;
+	border: 1px solid black;
+	text-align: center; /*set text center*/
+	vertical-align: middle; /*vertical align middle*/
+	padding: .67em .67em; /*add padding*/
+	cursor: pointer; /*cursor point*/
 }
-/*style cart*/
 
+                       
+/* Add Cart Button Style */                
 .btn-primary {
-	color: white;
-	background-color: #56CCF2;
-	border: none;
-	border-radius: .3em;
-	font-weight: bold;
-}
-/*style cart hover*/
-
+	color: white; /* Font Colour */
+	background-color: #56CCF2; /* Background Colour */
+	border: none; /* Gets rid with the border */
+	border-radius: 7px; /* Sets border radius of 7px*/
+	font-weight: bold; /* Font Weight */
+	margin-top: 8px; /* Sets a top margin of 8px */
+}               
+					
+/* Add Cart Button Style when hoovered */  
 .btn-primary :hover {
-	background-color: #2D9CDB;
-	cursor: pointer;
-}
+	background-color: #2D9CDB; /* Sets a new background colour */
+	cursor: pointer; /* Cursor icon changes to pointer */
+}            
 
-/*main header cooker catagory*/
-
-.item_details {
-    margin: 0 -20% 0;
-    font-size: 18px;
-    /* cook Items menu set color to whitesmoke  */
-    color: whitesmoke;
-    text-decoration: none;
-    cursor: pointer;
-}
-/*Dropdown catagory*/
-
-.dropdown-catagory {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    width: 170px;
-    z-index: 1;
-    border-radius: 5px;
-}
-/*Dropdown catagory a*/
-
-.dropdown-catagory a {
-    /* drop down menu set color to black  */
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-}
-
-.dropdown-catagory a:hover {
-    /*dropdown hover color*/
-    background-color: #fcf9f9;
-    /*dropdown no border*/
-    border: none;
-}
-/*dropdown catagory display block*/
-
-.catagory:hover .dropdown-catagory {
-    display: block;
-}
-/*product product-container*/
-
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 20px;
-    min-width: 1000px;
-}
-/*style product*/
-
+ /*style product*/
+                    
 .filterDiv {
-    border-radius: 10px;
-    width: 15%;
-    margin: 40px 40px 40px 40px;
-    cursor: pointer;
-    color: rgb(29, 27, 27);
-    font-weight: bold;
-    text-align: center;
-    /* Hidden by default */
+    width: 15%; /* Sets width for the products container */
+    margin: 40px; /* Sets margin all around the products container */
+    cursor: pointer; /* Changes the cursor to pointer when hoovered */
+	text-align: center; /* Aligns text to the center */
+	font-weight: bold; /* Font Wieght */
 }
-
-.row p,
-button {
-    position: baseline;
-}
-/*edit size image product details*/
-
-.product_image {
-    width: 95%;
-    height: 80%;
-}
-/*edit a product*/
-
-.row a {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
-/* Add color on mouse-over to price */
-
-.shop-item-price a:hover {
-    text-decoration: none;
-    background-color: rgb(252, 249, 249);
-}
-/* Add margin on shop detail button*/
-
-.filterDiv button, p, image {
-    margin: 10px;
-}
-
+  
 .filterDiv img {
-    font-weight: bold;
-            border: 2px solid rgb(184, 183, 183);
+	border: 2px solid rgb(184, 183, 183); /* Sets the border colour, type and thickness */
+	margin-bottom: 10px; /* Sets a margin bottom ox 10px*/
 }
-/*style button*/
-
-.btn {
-    /*set text center*/
-    text-align: center;
-    /*vertical align middle*/
-    vertical-align: middle;
-    /*add padding*/
-    padding: .67em .67em;
-    /*cursor point*/
-    cursor: pointer;
-}
-/*style cart*/
-
-.btn-primary {
-    color: white;
-    background-color: #56CCF2;
-    border: none;
-    border-radius: .3em;
-    font-weight: bold;
-}
-/*style cart hover*/
-
-.btn-primary :hover {
-    background-color: #2D9CDB;
-    cursor: pointer;
-}
-

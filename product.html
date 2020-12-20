@@ -1,138 +1,162 @@
+<!-- Created by Esteban Araujo-Fervenza - x20170416
+                Jose Carlos Kuzolitz Garcia - x20164840
+                Samsom	Mihreteab - x  -->
+
+<!-- Indicates this is HTML5-->
 <!DOCTYPE html>
 
 <!-- Defines Language-->
 <html lang="en">
 
-<head>
-    <!--Defines the char format-->
-    <meta charset="utf-8">
+    <head>
+        <!--Defines the char format-->
+        <meta charset="utf-8">
 
-    <!--Tab Title and icon-->
-    <title>Ludlow Homecare</title>
-    <link rel="icon" type="image/png" href="img/LudlowHCfavicon.jpg">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <!--Tab Title and icon-->
+        <title>Ludlow Homecare</title>
+        <link rel="icon" type="image/png" href="img/LudlowHCfavicon.jpg">
+        
+        <!-- Search Engine Optimisation -->
+		<meta name="description" content="This is a College Project. It's not the official website. You can access the official website on https://ludlowhomecare.co.uk/">
+		<meta name="author" content="This is a College Project. It's not the official website. You can access the official website on https://ludlowhomecare.co.uk/">
 
-    <!--Allow ViewPort Visualization, the scale of the website when it load up-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Java Script Functions Link-->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--Java Script Functions Link-->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--Google API JQuery link-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--Bootstrap link, script and stylesheet-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!--Allow ViewPort Visualization, the scale of the website when it load up-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Google API JQuery link-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!-- Font Awesome Library --> 
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!--Bootstrap link, script and stylesheet-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+        <!-- css file link -->
+        <link href="groupCss.css" rel="stylesheet">
+        <link href="MobileView.css" rel="stylesheet">
 
-    <!--<link rel="stylesheet" href="product.css">-->
-    <link href="groupCss.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- social media buttons font from w3schools-->
-
-
-
-
-
-
-</head>
+    </head>
 
 
-<!-- Body of the Website structure-->
+    <!-- Body of the Website structure -->
+    <body>
+	
+		<!-- Menu: Adapted  from a youtube tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s -->
+        <nav class="navBar">
 
-<body>
-    <!--Menu: Adapted  from a youtube tutorial: https://www.youtube.com/watch?v=UHSeFxZIuv8&t=981s   ================================================================================================================================================-->
+			<!-- Logo (Top Left)-->
+            <div class="content">
+                <div class="logo"><a href="./index.html"><img src="img/logo.png" alt="logo"></a></div>
+				
+						<!-- Search Bar setup -->
+						<div class="search">
+						<!-- Search bar is place into a form in order to process data and it is easier when styling -->
+						<form  action="/action_page.php">
+						<!-- Search Bar Input -->
+						<input type="text" placeholder="Search..." name="search">
+						<!-- Search Bar Button -->
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
 
-    <nav class="navBar">
-        <div class="search">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-        <div class="content">
-            <div class="logo">
-                <a href="./index.html"><img src="img/logo.png" alt="logo"></a>
-            </div>
-            <!-- Search button -->
-            <div class="menu-list">
-                <div class="icon off-btn">
-                    <!--"X"icon in -->
-                    <i class="fas fa-times"></i>
+
+				<!-- 3 Lines Button (It shows up just on Mobile View) -->
+				<div class="icon menu-btn">
+                    <i class="fas fa-bars"></i>
                 </div>
-                <div class="menu-options">
-                    <a href="./index.html">Home</a>
-                    <p></p>
-                    <a href="./product.html">Products</a>
-                    <p></p>
-                    <a class="cart" href="./ShoppingCart.html">
-                        Shopping Cart <i class="fa fa-shopping-cart"></i><span>0</span></a>
-                    <p></p>
-                    <a href="./FAQ.html">FAQ</a>
-                    <p></p>
-                    <a href="./Contact.html">Contact</a>
-                </div>
-            </div>
-            <div class="icon menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+			
+                <div class= "menu-list" id="menu-list">
+				   
+					<!-- "x" Button (It shows up just on Mobile View) -->
+					<div class="icon off-btn"> 
+						<!--"X" icon (Font Awesome Library) --> 
+                        <i class="fas fa-times"></i>
+					</div>
+					
+					<!-- Menu Buttons -->
+                    <div class="menu-options">
+                        <a href="./index.html">Home</a>
+                        <p></p>
+                        <a href="./product.html">Products</a>
+						<p></p>
+						<!-- Trolly icon (Font Awesome Library) -->
+                        <a class="cart" href="./ShoppingCart.html">Shopping Cart <i id="trollyIcon" class="fa fa-shopping-cart"></i><span>0</span></a>
+                        <p></p>
+                        <a href="./FAQ.html">FAQ</a>
+                        <p></p>
+                        <a href="./Contact.html">Contact</a>
+                    </div>	
+				</div>
+           
+			</div>
+        </nav>
+
+
+<!--------------------------------------------------------------------------------------------------
+----------------------------------------- Side Menu, Collapsible -----------------------------------
+--------------------------------------------------------------------------------------------------->
+	  
+<div id="plainHeader">
+
+
     <!--https://www.w3schools.com/-->
     <!--dropdown menu-->
     <div class="body-content-product">
         <div class="cook-items">
-            <div class="catagory cookwares">
+            <div class="category cookwares">
                 <a href="#" class="cookware item_details">COOKWARE</a>
-                <div class="dropdown-catagory ">
-                    <a href="#" class="Show all" onclick="filterSelection('all')"> Show all</a>
-                    <a class="Casseroles & Dutch Ovens" onclick="filterSelection('Casseroles & Dutch Ovens')"> Casseroles & Dutch Ovens</a>
-                    <a class="Frying pans" onclick="filterSelection('Frying pans')"> Frying pans</a>
-                    <a class="Skillets & Griddles" onclick="filterSelection('Skillets & Griddles')"> Skillets & Griddles</a>
-                    <a class="Roasting Pans & Dishes" onclick="filterSelection('Roasting Pans & Dishes')"> Roasting Pans & Dishes</a>
+                <div class="dropdown-category ">
+                    <a class="opt Show all" onclick="filterSelection('all')"> Show all</a>
+                    <a class="opt Casseroles & Dutch Ovens" onclick="filterSelection('Casseroles & Dutch Ovens')"> Casseroles & Dutch Ovens</a>
+                    <a class="opt Frying pans" onclick="filterSelection('Frying pans')"> Frying pans</a>
+                    <a class="opt Skillets & Griddles" onclick="filterSelection('Skillets & Griddles')"> Skillets & Griddles</a>
+                    <a class="opt Roasting Pans & Dishes" onclick="filterSelection('Roasting Pans & Dishes')"> Roasting Pans & Dishes</a>
                 </div>
             </div>
-            <div class="catagory kitchenwares">
+            <div class="category kitchenwares">
                 <a href="#" class="kitchenware item_details">KITCHENWARE</a>
-                <div class="dropdown-catagory ">
-                    <a class="Aprons & Tea Towels" onclick="filterSelection('Aprons & Tea Towels')">Aprons & Tea Towels</a>
-                    <a href="#" class="Brushes & Cleaning Tools" onclick="filterSelection('Brushes & Cleaning Tools')">Brushes & Cleaning Tools</a>
-                    <a href="#" class="Frying pans" onclick="filterSelection('Frying pans')">Frying pans</a>
-                    <a href="#" class="Strainers & Colanders" onclick="filterSelection('Strainers & Colanders')">Strainers & Colanders</a>
-                    <a href="#" class="Spoons, Ladles, Spatulas & Whisks" onclick="filterSelection('Spoons, Ladles, Spatulas & Whisks')">Spoons, Ladles, Spatulas & Whisks</a>
-                    <a href="#" class="Timers & Scales" onclick="filterSelection('Timers & Scales')">Timers & Scales</a>
+                <div class="dropdown-category ">
+                    <a href="#" class="opt Aprons & Tea Towels" onclick="filterSelection('Aprons & Tea Towels')">Aprons & Tea Towels</a>
+                    <a href="#" class="opt Brushes & Cleaning Tools" onclick="filterSelection('Brushes & Cleaning Tools')">Brushes & Cleaning Tools</a>
+                    <a href="#" class="opt Frying pans" onclick="filterSelection('Frying pans')">Frying pans</a>
+                    <a href="#" class="opt Strainers & Colanders" onclick="filterSelection('Strainers & Colanders')">Strainers & Colanders</a>
+                    <a href="#" class="opt Spoons, Ladles, Spatulas & Whisks" onclick="filterSelection('Spoons, Ladles, Spatulas & Whisks')">Spoons, Ladles, Spatulas & Whisks</a>
+                    <a href="#" class="opt Timers & Scales" onclick="filterSelection('Timers & Scales')">Timers & Scales</a>
                 </div>
             </div>
-            <div class="catagory tablewares ">
+            <div class="category tablewares ">
                 <a class="tableware item_details">TABLEWARE</a>
-                <div class="dropdown-catagory ">
-                    <a href="#" class="Butter Knifes & Dishes" onclick="filterSelection('Butter Knifes & Dishes')">Butter Knifes & Dishes</a>
-                    <a href="#" class="Coffee & Tea Accessories" onclick="filterSelection('Coffee & Tea Accessories')">Coffee & Tea Accessories</a>
-                    <a href="#" class="DinnerWare" onclick="filterSelection('DinnerWare')">DinnerWare</a>
-                    <a href="#" class="Salt & Pepper Mills" onclick="filterSelection('Salt & Pepper Mills')">Salt & Pepper Mills</a>
-                    <a href="#" class="Serving Trays & Dishes" onclick="filterSelection('Serving Trays & Dishes')">Serving Trays & Dishes</a>
+                <div class="dropdown-category ">
+                    <a href="#" class="opt Butter Knifes & Dishes" onclick="filterSelection('Butter Knifes & Dishes')">Butter Knifes & Dishes</a>
+                    <a href="#" class="opt Coffee & Tea Accessories" onclick="filterSelection('Coffee & Tea Accessories')">Coffee & Tea Accessories</a>
+                    <a href="#" class="opt DinnerWare" onclick="filterSelection('DinnerWare')">DinnerWare</a>
+                    <a href="#" class="opt Salt & Pepper Mills" onclick="filterSelection('Salt & Pepper Mills')">Salt & Pepper Mills</a>
+                    <a href="#" class="opt Serving Trays & Dishes" onclick="filterSelection('Serving Trays & Dishes')">Serving Trays & Dishes</a>
                 </div>
             </div>
-            <div class="catagory bakewares ">
+            <div class="category bakewares ">
                 <a class="bakeware item_details">BAKEWARE</a>
-                <div class="dropdown-catagory ">
-                    <a href="#" class="Baking Tools" onclick="filterSelection('Baking Tools')">Baking Tools</a>
-                    <a href="#" class="Baking Trays" onclick="filterSelection('Baking Trays')">Baking Trays</a>
-                    <a href="#" class="Cake Decorating" onclick="filterSelection('Cake Decorating')">Cake Decorating</a>
-                    <a href="#" class="Loaf Tins" onclick="filterSelection('Loaf Tins')">Loaf Tins</a>
-                    <a href="#" class="Rolling Rins & Mixing Bowls" onclick="filterSelection('Rolling Rins & Mixing Bowls')">Rolling Rins & Mixing Bowls</a>
+                <div class="dropdown-category ">
+                    <a href="#" class="opt Baking Tools" onclick="filterSelection('Baking Tools')">Baking Tools</a>
+                    <a href="#" class="opt Baking Trays" onclick="filterSelection('Baking Trays')">Baking Trays</a>
+                    <a href="#" class="opt Cake Decorating" onclick="filterSelection('Cake Decorating')">Cake Decorating</a>
+                    <a href="#" class="opt Loaf Tins" onclick="filterSelection('Loaf Tins')">Loaf Tins</a>
+                    <a href="#" class="opt Rolling Rins & Mixing Bowls" onclick="filterSelection('Rolling Rins & Mixing Bowls')">Rolling Rins & Mixing Bowls</a>
                 </div>
             </div>
-            <div class="catagory knifes ">
+            <div class="category knifes ">
                 <a class="knife item_details">KNIVES</a>
-                <div class="dropdown-catagory ">
-                    <a href="#" class="Bread Knifes" onclick="filterSelection('Bread Knifes')">Bread Knifes</a>
-                    <a href="#" class="Carving Knifes" onclick="filterSelection('Carving Knifes')">Carving Knifes</a>
-                    <a href="#" class="Cheese Knives" onclick="filterSelection('Cheese Knives')">Cheese Knives</a>
-                    <a href="#" class="Cleavers" onclick="filterSelection('Cleavers')">Cleavers</a>
-                    <a href="#" class="Steak Knives" onclick="filterSelection('Steak Knives')">Steak Knives</a>
-                    <a href="#" class="Utility Knives" onclick="filterSelection('Utility Knives')">Utility Knives</a>
-                    <a href="#" class="Knife Sets" onclick="filterSelection('Knife Sets')">Knife Sets</a>
+                <div class="dropdown-category ">
+                    <a href="#" class="opt Bread Knifes" onclick="filterSelection('Bread Knifes')">Bread Knifes</a>
+                    <a href="#" class="opt Carving Knifes" onclick="filterSelection('Carving Knifes')">Carving Knifes</a>
+                    <a href="#" class="opt Cheese Knives" onclick="filterSelection('Cheese Knives')">Cheese Knives</a>
+                    <a href="#" class="opt Cleavers" onclick="filterSelection('Cleavers')">Cleavers</a>
+                    <a href="#" class="opt Steak Knives" onclick="filterSelection('Steak Knives')">Steak Knives</a>
+                    <a href="#" class="opt Utility Knives" onclick="filterSelection('Utility Knives')">Utility Knives</a>
+                    <a href="#" class="opt Knife Sets" onclick="filterSelection('Knife Sets')">Knife Sets</a>
                 </div>
             </div>
         </div>
@@ -142,913 +166,155 @@
             <div class="product-container">
                 <div class="filterDiv row  Casseroles & Dutch Ovens">
                     <div class="col-1">
-                        <img class="product_image" src="img/LodgeDutchOven_580x.jpg" alt="">
+                        <a href="img/LodgeDutchOven_580x.jpg"><img class="product_image" src="img/LodgeDutchOven_580x.jpg" alt=""></a>
                         <p class="pruduct_name" name="Lodge Cast Iron Lid & Loop Handle">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</p>
-                        <p class="shop-item-price"><a href="#">£155.00</a></p>
+                        <p class="shop-item-price"><span href="#" class="price">£155.00</span></p>
                         <button class="add-cart btn btn-primary " type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="filterDiv row   Casseroles & Dutch Ovens">
                     <div class="col-1">
-                        <img class="product_image" src="img/Dexam_ChausseurTagine_1024x1024.png" alt="">
-                        <p class="pruduct_name" name="Tagine Red Cast Iron Base">Tagine Red Cast Iron Base</p>
-                        <p class="shop-item-price"><a href="#">£45.00</a></p>
+                        <a href="img/Dexam_ChausseurTagine_1024x1024.png"><img class="product_image" src="img/Dexam_ChausseurTagine_1024x1024.png" alt=""></a>
+                        <p class="pruduct_name" name="Tagine Red Cast Iron Base">Optimal Tagine Red Cast Iron Base</p>
+                        <p class="shop-item-price"><span href="#" class="price">£45.00</span></p>
                         <button class="add-cart btn btn-primary " type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="filterDiv row  Casseroles & Dutch Ovens">
-                    <a href="#"><img class="product_image" src="img/lid_22f970a2-5d03-4f8c-aa38-1841cb63040b_1024x1024.png" alt=""></a>
-                    <p class="pruduct_name" name="Ilsa Mussel Pot - Enameled Carbon Steel & Porcelain Lid">Ilsa Mussel Pot - Enameled Carbon Steel & Porcelain Lid - 24cm</p>
-                    <p class="shop-item-price"><a href="#">£25.00</a></p>
-                    <button class="add-cart btn btn-primary " type="button">ADD TO CART</button>
+                    <div class="col-1">
+                        <a href="img/lid_22f970a2-5d03-4f8c-aa38-1841cb63040b_1024x1024.png"><img class="product_image" src="img/lid_22f970a2-5d03-4f8c-aa38-1841cb63040b_1024x1024.png" alt=""></a>
+                        <p class="pruduct_name" name="Ilsa Mussel Pot - Enameled Carbon Steel & Porcelain Lid">Ilsa Mussel Pot -  Porcelain Lid - 24cm</p>
+                        <p class="shop-item-price"><span href="#" class="price">£25.00</span></p>
+                        <button class="add-cart btn btn-primary " type="button">ADD TO CART</button>
+                    </div>
                 </div>
                 <div class="filterDiv row Casseroles & Dutch Ovens">
                     <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Le_Pentole_Casserole_with_Lid_24cm_Website_1024x1024.jpg" alt=""></a>
+                        <a href="img/Le_Pentole_Casserole_with_Lid_24cm_Website_1024x1024.jpg"><img class="product_image" src="img/Le_Pentole_Casserole_with_Lid_24cm_Website_1024x1024.jpg" alt=""></a>
                         <p class="pruduct_name" name="De Buyer PrimAppety Stockpot">De Buyer Prim'Appety Stockpot 24cm</p>
-                        <p class="shop-item-price"><a href="#">£165.00</a></p>
+                        <p class="shop-item-price"><span href="#" class="price">£165.00</span></p>
                         <button class="add-cart btn btn-primary " type="button">ADD TO CART</button>
                     </div>
                 </div>
-                <div class="filterDiv row  Casseroles & Dutch Ovens">
+                <div class="filterDiv row Frying pans">
                     <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/MusselsPOST_1024x1024.png" alt=""></a>
-                        <p class="pruduct_name" name="De Buyer Prim'Appety Stockpot">De Buyer Prim'Appety Stockpot 24cm</p>
-                        <p class="shop-item-price"><a href="#">£30.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Frying pans-->
-                <div class="filterDiv row  Casseroles & Dutch Ovens">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/primappetystockpot_1024x1024.jpg" alt=""></a>
-                        <p class="pruduct_name">Lodge Cast Iron Lid & Loop Handle - 4.7 Litre</p>
-                        <p class="shop-item-price"><a href="#">£120.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
+                        <a href="img/Fryingpans2.png"><img class="product_image" src="img/Fryingpans2.png" alt=""></a>
+                        <p class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</p>
+                        <p class="shop-item-price"><span href="#" class="price">£66.00</span></p>
+                        <button class="add-cart btn btn-primary " type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="filterDiv row Frying pans">
                     <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Fryingpans_1.jpg" alt=""></a>
+                        <a href="img/Fryingpans3.png"><img class="product_image" src="img/Fryingpans3.png" alt=""></a>
                         <p class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</p>
-                        <p class="shop-item-price"><a href="#">£48.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
+                        <p class="shop-item-price"><span href="#" class="price">£45.00</span></p>
+                        <button class="add-cart btn btn-primary " type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="filterDiv row Frying pans">
                     <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Fryingpans2.png" alt=""></a>
+                        <a href="img/Fryingpans4.png"><img class="product_image" src="img/Fryingpans4.png" alt=""></a>
                         <p class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</p>
-                        <p class="shop-item-price"><a href="#">£66.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
+                        <p class="shop-item-price"><span href="#" class="price">£54.00</span></p>
+                        <button class="add-cart btn btn-primary " type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="filterDiv row Frying pans">
                     <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Fryingpans3.png" alt=""></a>
+                        <a href="img/Fryingpans6.jpg"><img class="product_image" src="img/Fryingpans6.jpg" alt=""></a>
                         <p class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</p>
-                        <p class="shop-item-price"><a href="#">£45.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row Frying pans">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Fryingpans4.png" alt=""></a>
-                        <p class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</p>
-                        <p class="shop-item-price"><a href="#">£54.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row Frying pans">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Fryingpans6.jpg" alt=""></a>
-                        <p class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</p>
-                        <p class="shop-item-price"><a href="#">£55.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row Frying pans">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Fryingpans7.jpg" alt=""></a>
-                        <p class="pruduct_name">De Buyer Non Stick Frypan 32cm - Blue</p>
-                        <p class="shop-item-price"><a href="#">£65.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Strainers & Colanders-->
-                <div class="filterDiv row  Strainers & Colanders">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Strainers & Colanders/Strainers & Colanders1.jpg" alt=""></a>
-                        <p class="pruduct_name">Le Pentole Spaghetti Colander 24cm</p>
-                        <p class="shop-item-price"><a href="#">£98.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row Strainers & Colanders">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Strainers & Colanders/Strainers & Colanders2.png" alt=""></a>
-                        <p class="pruduct_name">De Buyer Stainless Steel Sieve with 4 Gradients 21cm</p>
-                        <p class="shop-item-price"><a href="#">£37.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row Strainers & Colanders">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Strainers & Colanders/Strainers & Colanders3.png" alt=""></a>
-                        <p class="pruduct_name">De Buyer Stainless Steel Sieve with 4 Gradients 21cm</p>
-                        <p class="shop-item-price"><a href="#">£34.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row Strainers & Colanders">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Strainers & Colanders/Strainers & Colanders4.png" alt=""></a>
-                        <p class="pruduct_name">Ilsa Stainless Steel Sugar Shaker with Mesh</p>
-                        <p class="shop-item-price"><a href="#">£25.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Skillets & Griddles-->
-                <div class="filterDiv row Skillets & Griddles">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Skillets & Griddles/Skillets & Griddles1_.jpg" alt=""></a>
-                        <p class="pruduct_name">Mauviel's M'Cook Range</p>
-                        <p class="shop-item-price"><a href="#">£150.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Skillets & Griddles">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Skillets & Griddles/Skillets & Griddles2.png" alt=""></a>
-                        <p class="pruduct_name">M'Cook 5-Ply Non-Stick Fry Pan 28cm</p>
-                        <p class="shop-item-price"><a href="#">£75.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Skillets & Griddles">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Skillets & Griddles/Skillets & Griddles3.jpg" alt=""></a>
-                        <p class="pruduct_name">Non Stick Frypan 24cm RED</p>
-                        <p class="shop-item-price"><a href="#">£95.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
+                        <p class="shop-item-price"><span href="#" class="price">£55.00</span></p>
+                        <button class="add-cart btn btn-primary " type="button">ADD TO CART</button>
                     </div>
                 </div>
 
-                <div class="filterDiv row  Skillets & Griddles">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Skillets & Griddles/Skillets & Griddles3.jpg" alt=""></a>
-                        <p class="pruduct_name">Non Stick Frypan 24cm RED</p>
-                        <p class="shop-item-price"><a href="#">£95.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Aprons & Tea Towels-->
-                <div class="filterDiv row  Aprons & Tea Towels">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/apron-red-butchers-stripe/apron-red-butchers-stripe1.jpg" alt=""></a>
-                        <p class="pruduct_name">Butcher Stripe Apron Red</p>
-                        <p class="shop-item-price"><a href="#">£38.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Aprons & Tea Towels">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/apron-red-butchers-stripe/apron-red-butchers-stripe2.jpg" alt=""></a>
-                        <p class="pruduct_name">Butchers Apron Navy</p>
-                        <p class="shop-item-price"><a href="#">£30.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Aprons & Tea Towels">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/apron-red-butchers-stripe/apron-red-butchers-stripe3.jpg" alt=""></a>
-                        <p class="pruduct_name">Glass Towel 100% Linen</p>
-                        <p class="shop-item-price"><a href="#">£9.5.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Roasting Pans & Dishes-->
-                <div class="filterDiv row  Roasting Pans & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Roasting Pans & Dishes/Roasting Pans & Dishes1.png" alt=""></a>
-                        <p class="pruduct_name">De Buyer Copper Preserving Pan with Cast Iron Handles 9Litres - 38cm</p>
-                        <p class="shop-item-price"><a href="#">£130.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Roasting Pans & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Roasting Pans & Dishes/Roasting Pans & Dishes2.jpg" alt=""></a>
-                        <p class="pruduct_name">De Buyer Copper Preserving Pan with Cast Iron Handles 9Litres - 38cm</p>
-                        <p class="shop-item-price"><a href="#">£130.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Roasting Pans & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Roasting Pans & Dishes/Roasting Pans & Dishes3.jpg" alt=""></a>
-                        <p class="pruduct_name">De Buyer Copper Preserving Pan with Cast Iron Handles 9Litres - 38cm</p>
-                        <p class="shop-item-price"><a href="#">£130.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Roasting Pans & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Roasting Pans & Dishes/Roasting Pans & Dishes4.jpg" alt=""></a>
-                        <p class="pruduct_name">De Buyer Copper Preserving Pan with Cast Iron Handles 9Litres - 38cm</p>
-                        <p class="shop-item-price"><a href="#">£130.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Roasting Pans & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Roasting Pans & Dishes/Roasting Pans & Dishes5.jpg" alt=""></a>
-                        <p class="pruduct_name">De Buyer Copper Preserving Pan with Cast Iron Handles 9Litres - 38cm</p>
-                        <p class="shop-item-price"><a href="#">£130.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Spoons, Ladles, Spatulas & Whisks-->
-                <div class="filterDiv row  Spoons, Ladles, Spatulas & Whisks">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/apron-red-butchers-stripe/apron-red-butchers-stripe1.jpg" alt=""></a>
-                        <p class="pruduct_name">Butcher Stripe Apron Red</p>
-                        <p class="shop-item-price"><a href="#">£38.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Spoons, Ladles, Spatulas & Whisks">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/apron-red-butchers-stripe/apron-red-butchers-stripe2.jpg" alt=""></a>
-                        <p class="pruduct_name">Butchers Apron Navy</p>
-                        <p class="shop-item-price"><a href="#">£30.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Spoons, Ladles, Spatulas & Whisks">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/apron-red-butchers-stripe/apron-red-butchers-stripe3.jpg" alt=""></a>
-                        <p class="pruduct_name">Glass Towel 100% Linen</p>
-                        <p class="shop-item-price"><a href="#">£9.5.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Timers & Scales-->
-                <div class="filterDiv row  Timers & Scales">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Timers & Scales/Timers & Scales1.jpg" alt=""></a>
-                        <p class="pruduct_name">Terraillon Tradition Scales Black</p>
-                        <p class="shop-item-price"><a href="#">£27.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Timers & Scales">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Timers & Scales/Timers & Scales2.jpg" alt=""></a>
-                        <p class="pruduct_name">Terraillon Ultra Slim Stainless Steel Scale</p>
-                        <p class="shop-item-price"><a href="#">£36.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Timers & Scales">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Timers & Scales/Timers & Scales3.png" alt=""></a>
-                        <p class="pruduct_name">Terraillon Tradition Scales Black</p>
-                        <p class="shop-item-price"><a href="#">£9.5.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Timers & Scales">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Timers & Scales/Timers & Scales3.png" alt=""></a>
-                        <p class="pruduct_name">Gefu Digital radio roast thermometer HANDI</p>
-                        <p class="shop-item-price"><a href="#">£47.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Timers & Scales">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Timers & Scales/Timers & Scales5.png" alt=""></a>
-                        <p class="pruduct_name">Gefu Digital timer CONTARE</p>
-                        <p class="shop-item-price"><a href="#">£11.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Brushes & Cleaning Tools-->
-                <div class="filterDiv row  Brushes & Cleaning Tools">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Brushes & Cleaning Tools/Brushes & Cleaning Tools1.png" alt=""></a>
-                        <p class="pruduct_name">Wire brush for scrubbing down your BBQ</p>
-                        <p class="shop-item-price"><a href="#">£20.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Brushes & Cleaning Tools">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Brushes & Cleaning Tools/Brushes & Cleaning Tools2.jpg" alt=""></a>
-                        <p class="pruduct_name">Floor Cloth 60x80cm</p>
-                        <p class="shop-item-price"><a href="#">£7.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Brushes & Cleaning Tools">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Brushes & Cleaning Tools/Brushes & Cleaning Tools2.jpg" alt=""></a>
-                        <p class="pruduct_name">Floor Cloth 60x80cm</p>
-                        <p class="shop-item-price"><a href="#">£7.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Brushes & Cleaning Tools">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Brushes & Cleaning Tools/Brushes & Cleaning Tools3.jpg" alt=""></a>
-                        <p class="pruduct_name">Redecker Dish Brush Coconut Fibre</p>
-                        <p class="shop-item-price"><a href="#">£10.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Butter Knifes & Dishes-->
-                <div class="filterDiv row  Butter Knifes & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Butter Knifes & Dishes/Butter Knifes & Dishes1.jpg" alt=""></a>
-                        <p class="pruduct_name">Spreading Knife Blue</p>
-                        <p class="shop-item-price"><a href="#">£8.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Butter Knifes & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Butter Knifes & Dishes/Butter Knifes & Dishes2.jpg" alt=""></a>
-                        <p class="pruduct_name">Faceted Butter Tray with Cover</p>
-                        <p class="shop-item-price"><a href="#">£43.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Butter Knifes & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Butter Knifes & Dishes/Butter Knifes & Dishes5.jpg" alt=""></a>
-                        <p class="pruduct_name">Butter Dish & Knife Olivewood</p>
-                        <p class="shop-item-price"><a href="#">£42.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Butter Knifes & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Butter Knifes & Dishes/Butter Knifes & Dishes3.jpg" alt=""></a>
-                        <p class="pruduct_name">Rig Tig Butter Box - White</p>
-                        <p class="shop-item-price"><a href="#">£33.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Butter Knifes & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Butter Knifes & Dishes/Butter Knifes & Dishes4.jpg" alt=""></a>
-                        <p class="pruduct_name">Butter Tray & Cover Small</p>
-                        <p class="shop-item-price"><a href="#">£32.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Coffee & Tea Accessories-->
-                <div class="filterDiv row  Coffee & Tea Accessories">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Coffee & Tea Accessories/Coffee & Tea Accessories1.jpg" alt=""></a>
-                        <p class="pruduct_name">Bialetti Moka Espresso Maker 2 Cup</p>
-                        <p class="shop-item-price"><a href="#">£33.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Coffee & Tea Accessories">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Coffee & Tea Accessories/Coffee & Tea Accessories2.png" alt=""></a>
-                        <p class="pruduct_name">Dreamfarm Grindenstein Used Coffee Box</p>
-                        <p class="shop-item-price"><a href="#">£33.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Coffee & Tea Accessories">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Coffee & Tea Accessories/Coffee & Tea Accessories3.jpg" alt=""></a>
-                        <p class="pruduct_name">Ad Hoc Mrs Bean Coffee Grinder</p>
-                        <p class="shop-item-price"><a href="#">£61.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Coffee & Tea Accessories">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Coffee & Tea Accessories/Coffee & Tea Accessories4.jpg" alt=""></a>
-                        <p class="pruduct_name">Pillivuyt Porcelain Cow Creamer</p>
-                        <p class="shop-item-price"><a href="#">£26.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Coffee & Tea Accessories">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Coffee & Tea Accessories/Coffee & Tea Accessories5.jpg" alt=""></a>
-                        <p class="pruduct_name">M'Tradition Copper Coffee Pot</p>
-                        <p class="shop-item-price"><a href="#">£33.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--DinnerWare-->
-                <div class="filterDiv row  DinnerWare">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/DinnerWare/DinnerWare1.jpg" alt=""></a>
-                        <p class="pruduct_name">Berard Artisan Salt Keeper Olive Wood 10cm</p>
-                        <p class="shop-item-price"><a href="#">£23.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  DinnerWare">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/DinnerWare/DinnerWare2.jpg" alt=""></a>
-                        <p class="pruduct_name">Berard Artisan Honey Dipper Olive Wood 15cm</p>
-                        <p class="shop-item-price"><a href="#">£43.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  DinnerWare">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/DinnerWare/DinnerWare3.jpg" alt=""></a>
-                        <p class="pruduct_name">Berard Artisan Salt Keeper Olive Wood 10cm</p>
-                        <p class="shop-item-price"><a href="#">£34.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  DinnerWare">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/DinnerWare/DinnerWare4.jpg" alt=""></a>
-                        <p class="pruduct_name">Berard Artisan Olivewood Bowl (8cm)</p>
-                        <p class="shop-item-price"><a href="#">£53.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  DinnerWare">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Coffee & Tea Accessories/Coffee & Tea Accessories5.jpg" alt=""></a>
-                        <p class="pruduct_name">Berard Artisan Salt Keeper Olive Wood 10cm</p>
-                        <p class="shop-item-price"><a href="#">£53.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Salt & Pepper Mills-->
-                <div class="filterDiv row  Ad Hoc Pepmatik Electric Mills">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Salt & Pepper Mills_not/Salt & Pepper Mills.jpg" alt=""></a>
-                        <p class="pruduct_name">Berard Artisan Salt Keeper Olive Wood 10cm</p>
-                        <p class="shop-item-price"><a href="#">£105.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Salt & Pepper Mills">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Salt & Pepper Mills_not/Salt & Pepper Mills2.jpg" alt=""></a>
-                        <p class="pruduct_name">Peugeot Pepper Mill - Chocolate 12cm</p>
-                        <p class="shop-item-price"><a href="#">£36.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Salt & Pepper Mills">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Salt & Pepper Mills_not/Salt & Pepper Mills3.jpg" alt=""></a>
-                        <p class="pruduct_name">Salt&Pepper Mill Set Black&White 10cm</p>
-                        <p class="shop-item-price"><a href="#">£39.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Salt & Pepper Mills">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Salt & Pepper Mills_not/Salt & Pepper Mills4.jpg" alt=""></a>
-                        <p class="pruduct_name">Salt&Pepper Mill Set Acrylic 12cm</p>
-                        <p class="shop-item-price"><a href="#">£43.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Salt & Pepper Mills">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Salt & Pepper Mills_not/Salt & Pepper Mills5.png" alt=""></a>
-                        <p class="pruduct_name">Berard Artisan Salt Keeper Olive Wood 10cm</p>
-                        <p class="shop-item-price"><a href="#">£33.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Serving Trays & Dishes-->
-                <div class="filterDiv row  Serving Trays & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes1.jpg" alt=""></a>
-                        <p class="pruduct_name">Marble Black Serving Tray 30cm</p>
-                        <p class="shop-item-price"><a href="#">£31.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Serving Trays & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes2.jpg" alt=""></a>
-                        <p class="pruduct_name">Norr Tray 35x21cm</p>
-                        <p class="shop-item-price"><a href="#">£36.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Serving Trays & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes3.jpg" alt=""></a>
-                        <p class="pruduct_name">Cake Stand 33cm</p>
-                        <p class="shop-item-price"><a href="#">£87.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Serving Trays & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes4.jpg" alt=""></a>
-                        <p class="pruduct_name">Salad Bowl No12</p>
-                        <p class="shop-item-price"><a href="#">£114.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Serving Trays & Dishes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes5.jpg" alt=""></a>
-                        <p class="pruduct_name">Cutting Board 'Racine' Olive Wood</p>
-                        <p class="shop-item-price"><a href="#">£101.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Baking Tools-->
-                <div class="filterDiv row  Baking Tools">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Tools_not/Baking Tools1.png" alt=""></a>
-                        <p class="pruduct_name">De Buyer Professional Chef's Torch</p>
-                        <p class="shop-item-price"><a href="#">£45.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Baking Tools">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Tools_not/Baking Tools2.jpg" alt=""></a>
-                        <p class="pruduct_name">Round Cooling Tray 28cm</p>
-                        <p class="shop-item-price"><a href="#">£16.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Baking Tools">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes5.jpg" alt=""></a>
-                        <p class="pruduct_name">Marcato Pasta Wheel Cutter- Red</p>
-                        <p class="shop-item-price"><a href="#">£35.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Baking Trays-->
-                <div class="filterDiv row  Baking Trays">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Trays_not/Baking Trays1.jpg" alt=""></a>
-                        <p class="pruduct_name">Silicon Baking Mat</p>
-                        <p class="shop-item-price"><a href="#">£25.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Baking Trays">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Trays_not/Baking Trays2.png" alt=""></a>
-                        <p class="pruduct_name">KuchenProfi Baking Tray Extendable - 36cm</p>
-                        <p class="shop-item-price"><a href="#">£22.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Baking Trays">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Trays_not/Baking Trays3.jpg" alt=""></a>
-                        <p class="pruduct_name">Silicon Baking Mat</p>
-                        <p class="shop-item-price"><a href="#">£25.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Cake Decorating -->
-                <div class="filterDiv row  Cake Decorating">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Cake Decorating/Cake Decorating1.png" alt=""></a>
-                        <p class="pruduct_name">Silicon Baking Mat</p>
-                        <p class="shop-item-price"><a href="#">£25.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Cake Decorating">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Cake Decorating/Cake Decorating2.png" alt=""></a>
-                        <p class="pruduct_name">De Buyer Stainless Steel Sieve with 4 Gradients 21cm</p>
-                        <p class="shop-item-price"><a href="#">£39.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Cake Decorating">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Cake Decorating/Cake Decorating3.jpg" alt=""></a>
-                        <p class="pruduct_name">Master Series 3mm Fine</p>
-                        <p class="shop-item-price"><a href="#">£42.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Loaf Tins -->
-                <div class="filterDiv row  Loaf Tins">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Loaf Tins/Loaf Tins1.jpg" alt=""></a>
-                        <p class="pruduct_name">Perforated Crispy Bread Pan 27X10.5cm</p>
-                        <p class="shop-item-price"><a href="#">£35.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Loaf Tins">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Loaf Tins/Loaf Tins2.jpg" alt=""></a>
-                        <p class="pruduct_name">Gobel Non Stick Round Bread Pan 27cm</p>
-                        <p class="shop-item-price"><a href="#">£19.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Loaf Tins">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Loaf Tins/Loaf Tins6.jpg" alt=""></a>
-                        <p class="pruduct_name">Perforated Crispy Bread Pan 27X10.5cm</p>
-                        <p class="shop-item-price"><a href="#">£35.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Rolling Rins & Mixing Bowls-->
-                <div class="filterDiv row  Rolling Rins & Mixing Bowls">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Trays_not/Baking Trays1.jpg" alt=""></a>
-                        <p class="pruduct_name">Silicon Baking Mat</p>
-                        <p class="shop-item-price"><a href="#">£25.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Rolling Rins & Mixing Bowls">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Trays_not/Baking Trays2.png" alt=""></a>
-                        <p class="pruduct_name">KuchenProfi Baking Tray Extendable - 36cm</p>
-                        <p class="shop-item-price"><a href="#">£22.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Rolling Rins & Mixing Bowls">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Trays_not/Baking Trays3.jpg" alt=""></a>
-                        <p class="pruduct_name">Silicon Baking Mat</p>
-                        <p class="shop-item-price"><a href="#">£25.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Bread Knifes-->
-                <div class="filterDiv row  Bread Knifes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Tools_not/Baking Tools1.png" alt=""></a>
-                        <p class="pruduct_name">De Buyer Professional Chef's Torch</p>
-                        <p class="shop-item-price"><a href="#">£45.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Bread Knifes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Tools_not/Baking Tools2.jpg" alt=""></a>
-                        <p class="pruduct_name">Round Cooling Tray 28cm</p>
-                        <p class="shop-item-price"><a href="#">£16.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Bread Knifes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes5.jpg" alt=""></a>
-                        <p class="pruduct_name">Marcato Pasta Wheel Cutter- Red</p>
-                        <p class="shop-item-price"><a href="#">£35.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Carving Knifes -->
-                <div class="filterDiv row  Carving Knifes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes3.jpg" alt=""></a>
-                        <p class="pruduct_name">Cake Stand 33cm</p>
-                        <p class="shop-item-price"><a href="#">£87.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Carving Knifes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes4.jpg" alt=""></a>
-                        <p class="pruduct_name">Salad Bowl No12</p>
-                        <p class="shop-item-price"><a href="#">£114.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Carving Knifes">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes5.jpg" alt=""></a>
-                        <p class="pruduct_name">Cutting Board 'Racine' Olive Wood</p>
-                        <p class="shop-item-price"><a href="#">£101.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Cheese Knives -->
-                <div class="filterDiv row  Cheese Knives">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/DinnerWare/DinnerWare3.jpg" alt=""></a>
-                        <p class="pruduct_name">Berard Artisan Salt Keeper Olive Wood 10cm</p>
-                        <p class="shop-item-price"><a href="#">£34.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Cheese Knives">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/DinnerWare/DinnerWare4.jpg" alt=""></a>
-                        <p class="pruduct_name">Berard Artisan Olivewood Bowl (8cm)</p>
-                        <p class="shop-item-price"><a href="#">£53.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Cheese Knives">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Coffee & Tea Accessories/Coffee & Tea Accessories5.jpg" alt=""></a>
-                        <p class="pruduct_name">Berard Artisan Salt Keeper Olive Wood 10cm</p>
-                        <p class="shop-item-price"><a href="#">£53.50</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--  Cleavers  -->
-                <div class="filterDiv row  Cleavers">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Loaf Tins/Loaf Tins1.jpg" alt=""></a>
-                        <p class="pruduct_name">Perforated Crispy Bread Pan 27X10.5cm</p>
-                        <p class="shop-item-price"><a href="#">£35.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Cleavers">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Loaf Tins/Loaf Tins2.jpg" alt=""></a>
-                        <p class="pruduct_name">Gobel Non Stick Round Bread Pan 27cm</p>
-                        <p class="shop-item-price"><a href="#">£19.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Cleavers">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Loaf Tins/Loaf Tins6.jpg" alt=""></a>
-                        <p class="pruduct_name">Perforated Crispy Bread Pan 27X10.5cm</p>
-                        <p class="shop-item-price"><a href="#">£35.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Steak Knives-->
-                <div class="filterDiv row  Steak Knives">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Trays_not/Baking Trays1.jpg" alt=""></a>
-                        <p class="pruduct_name">Silicon Baking Mat</p>
-                        <p class="shop-item-price"><a href="#">£25.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Steak Knives">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Trays_not/Baking Trays2.png" alt=""></a>
-                        <p class="pruduct_name">KuchenProfi Baking Tray Extendable - 36cm</p>
-                        <p class="shop-item-price"><a href="#">£22.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Steak Knives">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Trays_not/Baking Trays3.jpg" alt=""></a>
-                        <p class="pruduct_name">Silicon Baking Mat</p>
-                        <p class="shop-item-price"><a href="#">£25.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!-- Utility Knives -->
-                <div class="filterDiv row  Utility Knives">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Tools_not/Baking Tools1.png" alt=""></a>
-                        <p class="pruduct_name">De Buyer Professional Chef's Torch</p>
-                        <p class="shop-item-price"><a href="#">£45.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Utility Knives">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Tools_not/Baking Tools2.jpg" alt=""></a>
-                        <p class="pruduct_name">Round Cooling Tray 28cm</p>
-                        <p class="shop-item-price"><a href="#">£16.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Utility Knives">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes5.jpg" alt=""></a>
-                        <p class="pruduct_name">Marcato Pasta Wheel Cutter- Red</p>
-                        <p class="shop-item-price"><a href="#">£35.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <!--Knife Sets-->
-                <div class="filterDiv row  Knife Sets">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Tools_not/Baking Tools1.png" alt=""></a>
-                        <p class="pruduct_name">De Buyer Professional Chef's Torch</p>
-                        <p class="shop-item-price"><a href="#">£45.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Knife Sets">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Baking Tools_not/Baking Tools2.jpg" alt=""></a>
-                        <p class="pruduct_name">Round Cooling Tray 28cm</p>
-                        <p class="shop-item-price"><a href="#">£16.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="filterDiv row  Knife Sets">
-                    <div class="col-1">
-                        <a href="#"><img class="product_image" src="img/Serving Trays & Dishes_Not/Serving Trays & Dishes5.jpg" alt=""></a>
-                        <p class="pruduct_name">Marcato Pasta Wheel Cutter- Red</p>
-                        <p class="shop-item-price"><a href="#">£35.00</a></p>
-                        <button class="btn btn-primary " type="button">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
         </section>
-    </div>
-    <!-- Footer -->
-    <div class="section-bottom-links">
-        <div class="section-sub-bottom-links">
-            <div class="sub-section-bottom-links">
-                <div class="sub-bottom-links-title">
-                    <strong>
-								   <span>Contact Us</span>
-							   </strong>
-                    <ul>
-                        <li><a class="find-us" href="./Contact.html">Find us here</a></li>
-                        <li>
-                            <p>Ludford Bridge Ind Est, Temeside, Ludlow SY8 1PE, UK</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
-        <div class="section-sub-bottom-links">
-            <div class="sub-section-bottom-links">
-                <div class="sub-bottom-links-title">
-                    <strong>
-							   <span>Social Media</span>
-						   </strong>
-                    <ul>
-                        <li>
-                            <a href="https://www.facebook.com/LHomecareLtd/" class="fa fa-facebook"></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/company/ludlow-homecare-limited/about/" class="fa fa-linkedin"></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/LudlowHomecare" class="fa fa-twitter"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="section-sub-bottom-links">
-            <div class="sub-section-bottom-links">
-                <div class="sub-bottom-links-title">
-                    <strong>
-							   <span>Our Blogs</span>
-						   </strong>
-                    <ul>
-                        <li><a class="blog blog-tips" href="#">Tips & Advice</a></li>
-                        <li><a class="blog blog-insp" href="#">Inspiration</a></li>
-                        <li><a class="blog blog-calc" href="#">Calculators</a></li>
-                        <li><a class="blog blog-shopB" href="#">Shop Brands</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class="footer">
-        <!--W3 Validator gave us this badge when it found no errors in our CSS code for this page-->
-        <p>Copyright &copy; Ludlow Homecare &nbsp;
-            <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
-            </a>
-        </p>
-    </footer>
-    <!-- from w3schools-->
-    <!--product js file link-->
-    <script src="./product.js"></script>
 
-    <script src="./cart.js"></script>
+<!--------------------------------------------------------------------------------------------
+--------------------------------------------- Footer -----------------------------------------
+---------------------------------------------------------------------------------------------->
+		
+		<div class="section-bottom-links">
+				
+			<div class="section-sub-bottom-links">
+				<div class="sub-section-bottom-links">
+					<div class="sub-bottom-links-title">
+							<!-- Contact Us Title -->
+							<p>
+								<span>Contact Us</span>
+							</p>
+							<!-- Contact Us Link (Placed into an Unorderd List) -->
+							<ul>
+								<li><a class = "find-us" href="./Contact.html">Find us here</a></li>
+								<li><p id="storeaddress">Ludford Bridge Ind Est, Temeside, Ludlow SY8 1PE, UK</p></li>
+							</ul>
+					</div>
+				</div>
+			</div>
+			<div class="section-sub-bottom-links">
+				<div class="sub-section-bottom-links">
+					<div class="sub-bottom-links-title">
+						<!-- Social Media Title -->
+						<p>
+							<span>Social Media</span>
+						</p>
+						<!-- Social Medias Links (Placed into an Unorderd List) -->
+						<ul>
+							<li><a href="https://www.facebook.com/LHomecareLtd/" class="fa fa-facebook"></a></li>
+							<li><a href="https://www.linkedin.com/company/ludlow-homecare-limited/about/" class="fa fa-linkedin"></a></li>
+							<li><a href="https://twitter.com/LudlowHomecare" class="fa fa-twitter"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="section-sub-bottom-links">
+				<div class="sub-section-bottom-links">
+					<div class="sub-bottom-links-title">
+						<!-- Our Blogs Title -->
+						<p>
+							<span>Our Blogs</span>
+						</p>
+						<!-- Our Blogs Links (Placed into an Unorderd List) -->
+						<ul>
+							<li><a class="blog blog-tips" href="#">Tips & Advice</a></li>
+							<li><a class="blog blog-insp" href="#">Inspiration</a></li>
+							<li><a class="blog blog-calc" href="#">Calculators</a></li>
+							<li><a class="blog blog-shopB" href="#">Shop Brands</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>   
+		</div>
+		
+		<footer class="footer">
+		<!-- Copyright and W3C validation -->
+		<!--W3 Validator gave us this badge when it found no errors in our CSS code for this page-->
+		<p>Copyright &copy; Ludlow Homecare &nbsp; <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+						src="http://jigsaw.w3.org/css-validator/images/vcss"
+						alt="Valid CSS!" />
+				</a>
+		</p>
+		</footer>
 
-    <script src="./Ludlow_JS.js"></script>
-    <!--Script needs to be here to avoid null error. Code  from tutorial: https://youtu.be/UHSeFxZIuv8. It cannot be called before the object is loaded  -->
-    <script>
-        const navBar = document.querySelector(".navBar");
-        window.onscroll = () => {
-            this.scrollY > 20 ? navBar.classList.add("sticky") : navBar.classList.remove("sticky"); //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
-        }
-    </script>
-</body>
+
+
+        <!-- from w3schools-->
+        <!--product js file link-->
+        <script src="./product.js"></script>
+
+        <script src="./shoppingCart.js"></script>
+
+        <script src="./Ludlow_JS.js"></script>
+        <!--Script needs to be here to avoid null error. Code  from tutorial: https://youtu.be/UHSeFxZIuv8. It cannot be called before the object is loaded  -->
+        <script>
+            const navBar = document.querySelector(".navBar");
+            window.onscroll = () => {
+                this.scrollY > 20 ? navBar.classList.add("sticky") : navBar.classList.remove("sticky"); //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
+            }
+        </script>
+
+    </body>
 
 </html>
