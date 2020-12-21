@@ -527,7 +527,7 @@
 
 /* Places de body under the Menu */
 #plainHeader{
-	height: 130vh; /*stablishes the height of the the box*/
+	height: 160vh; /*stablishes the height of the the box*/
 	background-color: whitesmoke; /* Background Colour */
 	background-size: cover; /*image stretches to cover the entirety of the 'header' box*/
 	padding: 40px 0; /*creates a separation this box from the one before it*/
@@ -773,7 +773,27 @@
 	border: 2px solid rgb(184, 183, 183); /* Sets the border colour, type and thickness */
 	margin-bottom: 10px; /* Sets a margin bottom ox 10px*/
 }
+
+
+/***************************************************************************************/
+/******************* Shopping Cart - Created by Samsom Mihreteab ***********************/
+/***************************************************************************************/
+
 /*Experimental Pay Pal button*/
+
+#item-options{
+	font-size: 15px;
+}
+
+/* Paypal Buttons*/
+#smart-button-container{
+	position:relative; /* Sets a position relative */
+	z-index: 0; 
+
+}
+
+
+
 /*set checkout container*/
 .checkout-row{
     display: flex; /* Sets container to display in flexible */
@@ -782,32 +802,239 @@
     justify-content: space-around; /* Justifies content in the center */
     margin-top: 10%;
 }
-.Checkout-container {
+
+.Checkout-container{
     display: flex; /* Sets to display as flexible */
 	flex-wrap: wrap; /*Sets wrap in order to have all sub containers and elements insite it */
 	overflow: hidden; /* Hide the overflow in the container */
-    margin-top: 2.5%; /* Margin top set to 2% */
+	margin-top: 2.5%; /* Margin top set to 2% */
+	padding-right: 2%;
     background-color: whitesmoke; /* background colour setup */
     border: 1px solid darkgreen; /* Sets the border colour */
     border-radius: 15px; /* Sets the border radius to 15px */
-    height: 90vh;
+	height: 120vh;
+	margin: 3% 0% 0% 1%; /* Margin set all around */
 }
-.checkout-row{postion:relative;}
+
+.checkout-row{position:relative;}
+
 /* Product Cart List */
 .cart-holder {
-    margin: 1% 0% 0% 1%; /* Margin set all around */
-    border: 1px solid lightgrey; /* Sets a border colour */
+    border: 2px solid lightgrey; /* Sets a border colour */
     background-color: rgba(0, 0, 0, 0.192); /* Background Colour setup */
     border-radius: 5px; /* Border Radius Setup */
     color: rgba(0, 0, 0, 0.548); /* Font Colour */
-    font-size: 20px; /* Font Size */
+    font-size:12px; /* Font Size */
     padding: 10px; /* Padding of 10px all around */
-    height: 90vh; /* Sets the Container height*/
-    width: 50%; /* Sets the container width to 28%*/
+    height: 120vh; /* Sets the Container height*/
+	width: 35%; /* Sets the container width to 28%*/
+	margin: -2% 1% 0% 0%; /* Margin set all around */	
 }
+
 /* Cart Header */
 .cart-header {
     display: flex; /* Sets container to display as flexible (List everything inline */
 	justify-content: space-around;
 }
-#smart-button-container{z-index:0;}
+
+.pTitle{
+	width:35%;
+}
+
+.pPrice{
+	width:10%;
+	font-size: 18px;
+	display:flex;
+	align-content: right;
+	margin-left: 5%;
+}
+
+.pQuantity{
+	position: flex;
+	width:20%;
+	font-size: 18px;
+	display:flex;
+	align-items: center;
+}
+
+.pTotal{
+	width:10%;
+	font-size:22px;
+	color: black;
+	display:flex;
+	align-items: center;
+	margin-left:5%;
+}
+
+.product{
+	width: 100%;
+	display:flex;
+	justify-content: space-around;
+	align-items:center;
+	padding: 5px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.342);
+}
+
+
+#smart-button-container{
+	z-index:0;
+}
+
+.cartTotalTitle{
+	text-align: right;
+	font-size: 25px;
+	font-weight: bold;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+/*Items Selected */
+.prod-row{
+    border-bottom:1px solid rgba(0, 0, 0, 0.349);
+    padding-bottom: 1%;
+    margin-top: 1%;
+    margin-left: 2%; /* Sets margin left to 2% */
+}
+
+/* Product Image Resizing */
+.product-img{
+    width: 60px; /* Sets width to 85px */
+    height:60px; /* Sets height to 85px */
+}
+
+.product-desc{
+    font-size: 12px;
+    font-weight: 500;
+    width: 17%;
+    color:black;
+}
+
+
+
+/* Checkout Main Container setup */
+.checkout-detail {
+    display: flex; /* Sets it to display in flexible */
+    width: 700px; /* Sets its width to 800px */
+}
+
+.checkout-title {
+    width: 45%; /* Sets the Product Description Width */
+    margin-left: 2%; /* Sets margin left to 2% */
+    font-weight: 600;/* Sets font weight to 600*/
+    border-bottom: 2px solid rgba(0, 0, 0, 0.548); /* Sets Border Colour with some opacity */
+}
+
+.checkout-price {
+    width: 15%;/*Width set to 15% */
+    display: flex;/* Displays as flexible */
+    align-items: center;/* Aligns Items in the center */
+    font-weight: 600;/* Sets font weight to 600*/
+    border-bottom: 2px solid rgba(0, 0, 0, 0.548); /* Sets Border Colour with some opacity */
+}
+
+.checkout-quantity {
+    width: 20%;/*Width set to 20% */
+    display: flex;/* Displays as flexible */
+    align-items: center;/* Aligns Items in the center */
+    font-weight: 600;/* Sets font weight to 600*/
+    border-bottom: 2px solid rgba(0, 0, 0, 0.548); /* Sets Border Colour with some opacity */
+}
+
+.checkout-total {
+    width: 15%; /*Width set to 15% */
+    display: flex; /* Displays as flexible */
+    align-items: center; /* Aligns Items in the center */
+    font-weight: 600;/* Sets font weight to 600*/
+    border-bottom: 2px solid rgba(0, 0, 0, 0.548); /* Sets Border Colour with some opacity */
+}
+
+
+
+/*set detail*/
+.detail {
+    width:100%;
+}
+
+/* Billing Address and Payment Title Style */
+.BillTitle{
+    border-bottom: 2px solid black; /* Sets the line below the words */
+    margin-left: 4%; /* Sets the left margin to 4% */
+    margin-right: 4%; /* Sets the right margin to 4% */
+}
+
+/* "Accepted cards" positioing */
+#AcceptCard{
+    margin-left: 4%; /* Margin left set to 4% */
+    margin-top:10%;
+}
+
+/* Icons in the Billing Adress Optinos */
+.fa.fa-user, .fa.fa-envelope, .fa.fa-address-card-o, .fa.fa-institution{
+    font-size: 20px; /* Sizes the Icons */
+}
+
+/* Setting text input*/
+.billInputFields[type=text] {
+    width: 92%; /* Sets input width */
+    padding: 12px; /* Sets padding*/
+    border: 1px solid #ccc; /* Sets boarder */
+    border-radius: 3px; /* Sets border radius to 3px */
+    margin-left: 4%; /* Sets Margin on the left side */
+    margin-top: -50px; /* Sets margin top to -50px*/
+}
+
+/* Labels Style */
+.billLabel {
+    font-size: 15px; /* Sets Font Size */
+    font-weight: 600; /* Sets Font Weight */
+
+}
+
+/* Label County and Post Code Style and Positioning */
+.NoIcon{
+    font-size: 15px; /* Sets Font Size */
+    font-weight: 600; /* Sets Font Weight */
+    margin-left: 5%; /* Sets Margin left to 5% */
+    margin-top: 5% ; /* Sets Margin top to 5%*/
+
+}
+
+/* Input County and Post Code Style and Positioning */
+.NoIconInput{
+    margin-top: 20px;
+    width: 90%; /* Sets input width */
+    padding: 12px; /* Sets padding*/
+    border: 1px solid #ccc; /* Sets boarder */
+    border-radius: 3px; /* Sets border radius to 3px */
+    margin-left: 4%; /* Sets Margin on the left side */
+    margin-top:0%; /* Sets Margin Top to 0% */
+}
+
+/* Payment icons */
+.icon-container {
+    margin-top: -60px; /* Sets Margin for the Credit Card icons */
+    font-size: 24px; /* Sets their size */
+}
+
+/*set button*/
+.checkout-btn {
+    justify-content: center;/*set center*/
+    background-color: #4CAF50; /*background color green*/
+    color: white;/*color white*/
+    padding: 12px;/*set padding*/
+    margin: 2% 10% 0%;/*set margin*/
+    border: none;/*set border to none*/
+    width: 80%; /*border width*/
+    border-radius: 3px;/*border radius*/
+    cursor: pointer; /*set cursor*/ 
+    font-size: 17px;/*set font*/
+}
+
+
+/* hover */
+.checkout-btn:hover {
+    background-color: #45a049;/*hower background green*/
+}
+
+
+

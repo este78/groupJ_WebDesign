@@ -35,9 +35,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         
         <!-- Css file link -->
-		<link rel="stylesheet" href="groupCss.css">
-		<link rel="stylesheet" href="./MobileView.css">
-	
+        <link rel="stylesheet" href="groupCss.css">
+        <link rel="stylesheet" href="MobileView.css">
+
+        <!-- JavaScript-->
+        <script src="./Ludlow_JS.js"></script>
         
 
     </head>
@@ -96,36 +98,96 @@
         </nav>
 
         <!--Checkout starts-->
-		<div id="plainHeader">
+        <div id="plainHeader">
 
-			<section class="checkout-row">
+            <section class="checkout-row">
+
+                    <!--personal information-->
+                    <div class="personalDetail">
+                        <div class="Checkout-container">
+
+                            <div class="checkout-detail">
+                                <div class="detail bailing-Addres">
+                                    
+                                    <h3 class="BillTitle">Billing Address</h3>
+                                    <label class="billLabel" for="fname"><i class="fa fa-user"></i>Full Name</label>
+                                    <input class="billInputFields" type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                    <label class="billLabel" for="email"><i class="fa fa-envelope"></i>Email</label>
+                                    <input class="billInputFields" type="text" id="email" name="email" placeholder="john@example.com">
+                                    <label class="billLabel" for="adr"><i class="fa fa-address-card-o"></i>Address</label>
+                                    <input class="billInputFields" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                    <label class="billLabel" for="city"><i class="fa fa-institution"></i>City</label>
+                                    <input class="billInputFields" type="text" id="city" name="city" placeholder="Dublin">
+                                    <label class="billLabel NoIcon" for="County">County</label>
+                                    <input class="NoIconInput" type="text" id="county" name="county" placeholder="Dublin County">
+                                    <br/>
+                                    <label class="billLabel NoIcon" for="zip">Post Code</label>
+                                    <input class="NoIconInput" type="text" id="postCode" name="post code" placeholder="D07 NTN2">
+                                    <label class="billLabel NoIcon"><input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing</label>
+                                    
+                                </div>
+                                <div class="detail payment">
+                                    <h3 class="BillTitle">Payment</h3>
+                                    <label id="AcceptCard" for="fname">Accepted Cards</label>
+                                    <div class="icon-container">
+                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                    
+                                        <!--  PAYPAL BUTTON from paypal.com-->
+                                        <div id="smart-button-container">
+                                              <div style="text-align: center;">
+                                                <div style="margin-bottom: 1.5rem;">
+                                                  
+                                                  <select style="visibility: hidden" id="quantitySelect">test</select>
+                                                </div>
+                                              <div id="paypal-button-container"></div>
+                                             </div>
+                                        </div>
+                                        <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=GBP" data-sdk-integration-source="button-factory"></script>
+                                        
+                                    
+                                    </div>
+                                    <label class="billLabel NoIcon" for="cname">Card Holder's Name</label>
+                                    <input class="NoIconInput" type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                    <label class="billLabel NoIcon" for="ccnum">Credit card number</label>
+                                    <input class="NoIconInput" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                    <label class="billLabel NoIcon" for="expmonth">Exp Month</label>
+                                    <input class="NoIconInput" type="text" id="expmonth" name="expmonth" placeholder="September">
+                                    <div class="cardDate">
+                                        <div class="detail cardDate">
+                                            <label class="billLabel NoIcon" for="expyear">Exp Year</label>
+                                            <input class="NoIconInput" type="text" id="expyear" name="expyear" placeholder="2021">
+                                        </div>
+                                        <div class="detail cardNumber">
+                                            <label class="billLabel NoIcon" for="cvv">CVV</label>
+                                            <input class="NoIconInput" type="text" id="cvv" name="cvv" placeholder="352">
+                                        </div>
+                                         
+                                    </div>   
+                                </div>  
+                            </div>   
+                        </div>
+                        <input type="submit" value="Continue to checkout" class="checkout-btn">
+                    </div>
+                    <div class="cart-holder">
+                        <div class="cart-header">
+                            <h5 class="checkout-title">PRODUCT</h5>
+                            <h5 class="checkout-price">PRICE</h5>
+                            <h5 class="checkout-quantity">QUANTITY</h5>
+                            <h5 class="checkout-total">TOTAL</h5>
+                        </div>
+                        <!-- DIV Proctds Add the Items in the List-->
+                        <div class="products">
+                            
                        
-				<div class="cart-holder">
-					<div class="cart-header">
-						<h5 class="product-title">PRODUCT</h5>
-						<h5 class="checkout-price">PRICE</h5>
-						<h5 class="checkout-quantity">QTY</h5>
-						<h5 class="checkout-total">TOTAL</h5>
-					</div>
-					<div class="products">
-
-					</div>
-				</div>
-				<!--  PAYPAL BUTTON from paypal.com-->
-				<div id="smart-button-container">
-					  <div style="text-align: center;">
-						<div style="margin-bottom: 1.25rem;">
-						  <p></p>
-						  <select id="item-options"><option value="" price=""> -  GBP</option></select>
-						  <select style="visibility: hidden" id="quantitySelect"></select>
-						</div>
-					  <div id="paypal-button-container"></div>
-					 </div>
-				</div>
-				<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=GBP" data-sdk-integration-source="button-factory"></script>
-				
-			</section>
-		</div>
+                        </div>
+                        
+                    </div>
+                    
+            </section>
+        </div>
 
 
 <!--------------------------------------------------------------------------------------------
@@ -200,117 +262,97 @@
 ----------------------------- It cannot be called before the object is loaded ----------------------
 --------------------------------------------------------------------------------------------------->
 
-<script>	
-    const navBar = document.querySelector(".navBar");
-    window.onscroll = () =>{
-        //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style
-        this.scrollY > 20 ?  navBar.classList.add("sticky") : navBar.classList.remove("sticky"); 	
-    }
-</script>
+        <script>	
+            const navBar = document.querySelector(".navBar");
+            window.onscroll = () =>{
+                //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style
+                this.scrollY > 20 ?  navBar.classList.add("sticky") : navBar.classList.remove("sticky"); 	
+            }
 
+        </script>
 
+        <!-- PAYPAL script-->
+        <script>
+                function initPayPalButton() {
+                var shipping = 0;
+                var itemOptions = document.querySelector("#smart-button-container #item-options");
+            var quantity = parseInt();
+            var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+            if (!isNaN(quantity)) {
+                quantitySelect.style.visibility = "visible";
+            }
+            var orderDescription = '';
+            if(orderDescription === '') {
+                orderDescription = 'Item';
+            }
+            paypal.Buttons({
+                style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+                
+                },
+                createOrder: function(data, actions) {
+                var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+                var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+                var tax = (7 === 0) ? 0 : (selectedItemPrice * (parseFloat(7)/100));
+                if(quantitySelect.options.length > 0) {
+                    quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+                } else {
+                    quantity = 1;
+                }
 
+                tax *= quantity;
+                tax = Math.round(tax * 100) / 100;
+                var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+                priceTotal = Math.round(priceTotal * 100) / 100;
+                var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')
-    </script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script>
-    <script src="../../../../assets/js/vendor/holder.min.js"></script>
-    <!--Script needs to be here to avoid null error . It cannot be called before the object is loaded  -->
-    <script>
-        const navBar = document.querySelector(".navBar");
-        window.onscroll = () => {
-            this.scrollY > 20 ? navBar.classList.add("sticky") : navBar.classList.remove("sticky"); //if this window screen scrolls beyond point Y=20 add sticky style otherwise remove sticky style	
-        }
-    </script>
-	<!-- PAYPAL script-->
-	<script>
-		  function initPayPalButton() {
-			var shipping = 0;
-			var itemOptions = document.querySelector("#smart-button-container #item-options");
-		var quantity = parseInt();
-		var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
-		if (!isNaN(quantity)) {
-		  quantitySelect.style.visibility = "visible";
-		}
-		var orderDescription = '';
-		if(orderDescription === '') {
-		  orderDescription = 'Item';
-		}
-		paypal.Buttons({
-		  style: {
-			shape: 'rect',
-			color: 'gold',
-			layout: 'vertical',
-			label: 'paypal',
-			
-		  },
-		  createOrder: function(data, actions) {
-			var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
-			var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
-			var tax = (7 === 0) ? 0 : (selectedItemPrice * (parseFloat(7)/100));
-			if(quantitySelect.options.length > 0) {
-			  quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
-			} else {
-			  quantity = 1;
-			}
-
-			tax *= quantity;
-			tax = Math.round(tax * 100) / 100;
-			var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
-			priceTotal = Math.round(priceTotal * 100) / 100;
-			var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
-
-			return actions.order.create({
-			  purchase_units: [{
-				description: orderDescription,
-				amount: {
-				  currency_code: 'GBP',
-				  value: priceTotal,
-				  breakdown: {
-					item_total: {
-					  currency_code: 'GBP',
-					  value: itemTotalValue,
-					},
-					shipping: {
-					  currency_code: 'GBP',
-					  value: shipping,
-					},
-					tax_total: {
-					  currency_code: 'GBP',
-					  value: tax,
-					}
-				  }
-				},
-				items: [{
-				  name: selectedItemDescription,
-				  unit_amount: {
-					currency_code: 'GBP',
-					value: selectedItemPrice,
-				  },
-				  quantity: quantity
-				}]
-			  }]
-			});
-		  },
-		  onApprove: function(data, actions) {
-			return actions.order.capture().then(function(details) {
-			  alert('Transaction completed by ' + details.payer.name.given_name + '!');
-			});
-		  },
-		  onError: function(err) {
-			console.log(err);
-		  },
-		}).render('#paypal-button-container');
-	  }
-	  initPayPalButton();
-	</script>
-
+                return actions.order.create({
+                    purchase_units: [{
+                    description: orderDescription,
+                    amount: {
+                        currency_code: 'GBP',
+                        value: priceTotal,
+                        breakdown: {
+                        item_total: {
+                            currency_code: 'GBP',
+                            value: itemTotalValue,
+                        },
+                        shipping: {
+                            currency_code: 'GBP',
+                            value: shipping,
+                        },
+                        tax_total: {
+                            currency_code: 'GBP',
+                            value: tax,
+                        }
+                        }
+                    },
+                    items: [{
+                        name: selectedItemDescription,
+                        unit_amount: {
+                        currency_code: 'GBP',
+                        value: selectedItemPrice,
+                        },
+                        quantity: quantity
+                    }]
+                    }]
+                });
+                },
+                onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+                },
+                onError: function(err) {
+                console.log(err);
+                },
+            }).render('#paypal-button-container');
+            }
+            initPayPalButton();
+        </script>
 
 <!--------------------------------------------------------------------------------------------------
 ----------------------------------- Shoping Cart and Product Js Script------------------------------
@@ -318,8 +360,7 @@
 ----------------------------- It cannot be called before the object is loaded ----------------------
 --------------------------------------------------------------------------------------------------->
        
-        <script src="./product.js"></script>
-        <script src="./shoppingCart.js"></script>
+    <script src="./shoppingCart.js"></script>
 
     </body>
 </html>
