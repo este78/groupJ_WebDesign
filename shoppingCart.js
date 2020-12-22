@@ -19,7 +19,7 @@ let products = [
         },
         {
             name: "Ilsa Mussel Pot",
-			tag:"lid",	
+			tag:"MusselsPan",	
             price: 25,
             inCart: 0
         },
