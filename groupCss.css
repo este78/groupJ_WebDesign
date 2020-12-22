@@ -413,6 +413,10 @@
 	font-size: 1.1em;
 }
 
+/* Keeps the same font colour of a ilink after it has been visited*/
+.sub-bottom-links-title a:link{   
+	color: white; /* Changes the colour when Buttons are hovered */
+}
 /* Changes the decoration when a link has been visited*/
 .sub-bottom-links-title a:visited{   
 	color: white; /* Changes the colour when Buttons are hovered */
