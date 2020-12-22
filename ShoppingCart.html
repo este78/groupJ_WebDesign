@@ -23,6 +23,9 @@
         <!--Allow ViewPort Visualization, the scale of the website when it load up-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <!-- enable page to be displayed in legacy browsers-->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
         <!--Google API JQuery link-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -135,6 +138,8 @@
                                         <i class="fa fa-cc-mastercard" style="color:red;"></i>
                                         <i class="fa fa-cc-discover" style="color:orange;"></i>
                                     
+                                        
+
                                         <!--  PAYPAL BUTTON from paypal.com-->
                                         <div id="smart-button-container">
                                               <div style="text-align: center;">
@@ -171,6 +176,7 @@
                         </div>
                         <input type="submit" value="Continue to checkout" class="checkout-btn">
                     </div>
+                   
                     <div class="cart-holder">
                         <div class="cart-header">
                             <h5 class="checkout-title">PRODUCT</h5>
@@ -179,11 +185,14 @@
                             <h5 class="checkout-total">TOTAL</h5>
                         </div>
                         <!-- DIV Proctds Add the Items in the List-->
+                        
                         <div class="products">
                             
                        
                         </div>
-                        
+                        <div class="clearBtn">
+                            <a onclick="clearLoStorage()" href="./ShoppingCart.html"><i class="fa fa-times-circle" aria-hidden="true"><span id="danger-btn">&#160;Click here to remove all items.<span></span></i>
+                        </div>
                     </div>
                     
             </section>
@@ -194,8 +203,7 @@
 --------------------------------------------- Footer -----------------------------------------
 ---------------------------------------------------------------------------------------------->
 		
-        <div class="section-bottom-links">
-                        
+        <div class="section-bottom-links">   
             <div class="section-sub-bottom-links">
                 <div class="sub-section-bottom-links">
                     <div class="sub-bottom-links-title">

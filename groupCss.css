@@ -163,10 +163,10 @@
 /*Centers the picture in the middle of the carousel*/
 .item{
     position: absolute; /* Sets the container as absolute */
-    left: 20; /* Left Positioning */
+   /* left: 20; /* Left Positioning */
     right: 0; /* Right Positioning */
     top: 0px; /* Top Positioning */
-    bottom: 5; /* Bottom Positioning */
+   /* bottom: 5; /* Bottom Positioning */
 }
 
 /* Carousel Image Setup */
@@ -218,7 +218,7 @@
 
 /* Content link with the tah A Styling */
 .reviews a{
-	font-style: bold; /* Bold Style */
+	font-weight: bold; /* Bold Style */
 	color: rgb(5,119,61); /* Font Colour */
 }
 
@@ -245,7 +245,11 @@
 	display: flex; /* Sets it to display as a flex*/
 	align-items: flex-start; /* Aligns the items on the top */
 	justify-content: space-around; /* Justifies with space around the elements */
+	list-style-type: none;
 }
+
+
+
 
 /***************************************************************************************/
 /****************** Google Maps - Created by Esteban Araujo-fervenza *******************/
@@ -589,7 +593,6 @@
 
 /* Style and positioning of the messages that are displayed when the fields haven't been filled out properly */
 .error{
-	position: flex; /* Set to be in a relative position */
 	text-align: left; /* Text Aligen to the left */
 	font-family:Arial, Helvetica, sans-serif; /* Defines a font family */
 	font-size: 13px; /* Font size */
@@ -792,6 +795,18 @@
 
 }
 
+#danger-btn{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+.clearBtn .fa.fa-times-circle{
+	position:relative;
+	font-size: 25px;
+	font-weight: bold;
+	color: rgba(255, 0, 0, 0.466);
+
+}
 
 
 /*set checkout container*/
@@ -845,12 +860,11 @@
 	width:10%;
 	font-size: 18px;
 	display:flex;
-	align-content: right;
+	align-content: center;
 	margin-left: 5%;
 }
 
 .pQuantity{
-	position: flex;
 	width:20%;
 	font-size: 18px;
 	display:flex;

@@ -156,7 +156,7 @@
         color: rgb(5, 119, 61);
     }
     .reviews a {
-        font-style: bold;
+        font-weight: bold;
         color: rgb(5, 119, 61);
     }
     .reviews p {
@@ -245,7 +245,7 @@
         border: none;
     }
     /*Jose Carlos= Contact=========================================================*/
-    .body-content-contact {}
+   
     .body-content-div {
         background-color: whitesmoke;
         text-align: center;
@@ -478,8 +478,11 @@
     }
     .item img {
         width: 100%;
+        min-width: 200px;
         padding: 0;
     }
+
+
     /*Review images*/
     .snipets ul {
         display: block;

@@ -1,3 +1,6 @@
+/* Code adapted step by step from the following tutorial (https://www.youtube.com/watch?v=B20Getj_Zk4&list=RDCMUCADAkBGiLWIPkCu8D1R1M6g&index=2 by Telmo Sampaio)
+
+
 /*targeting/calling add-cart class */
 let carts = document.querySelectorAll('.add-cart');
 
@@ -16,7 +19,7 @@ let products = [
         },
         {
             name: "Ilsa Mussel Pot",
-			tag:"MusselsPOST_1024x1024",	
+			tag:"lid",	
             price: 25,
             inCart: 0
         },
