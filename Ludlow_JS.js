@@ -29,6 +29,8 @@ $(function(){
 
 		/* Validation Rules */
 		rules:{
+			/* Contact.html Validation Form */
+			
 			/* Name Field is required */
 			fname:{
 				required: true
@@ -46,7 +48,56 @@ $(function(){
 			/* textArea is required, in order to send a request just when data is input */
 			textArea:{
 				required:true
+			},
+
+			/* ShoppingCart.html Validation Form */
+			billName:{
+				required: true
+			},
+			/* Email field is required and it inspects whether it has the standard layout or not */
+			billEmail:{
+				required: true,
+				email: true
+			},
+			/* All the fields below are required */
+			billAdress:{
+				required: true
+			},
+
+			billCity:{
+				required: true
+			},
+			
+			billCounty:{
+				required: true
+			},
+
+			billPostCode:{
+				required: true
+			},
+			/* Just Accepts Numbers*/
+			cardName:{
+				required: true,
+			},
+
+			cardNumber:{
+				required: true,
+				digits: true
+			},
+
+			expMonth:{
+				required: true
+			},
+
+			expYear:{
+				required: true
+			},
+
+			cvv:{
+				required: true,
+				digits: true
 			}
+
 		},
 
 		/* Error Messages (it uses the "Name" of the element) */
@@ -67,6 +118,50 @@ $(function(){
 
 			textArea:{
 				required: "Don't you want to leave a message?"
+			},
+
+			billName:{
+				required:""
+			},
+
+			billEmail:{
+				required:""
+			},
+			
+			billAdress:{
+				required:""
+			},
+
+			billCity:{
+				required:""
+			},
+
+			billCounty:{
+				required:""
+			},
+
+			billPostCode:{
+				required:""
+			},
+
+			cardName:{
+				required:""
+			},
+			
+			cardNumber:{
+				required:""
+			},
+
+			expMonth:{
+				required:""
+			},
+
+			expYear:{
+				required:""
+			},
+
+			cvv:{
+				required:""	
 			}
 
 		}
