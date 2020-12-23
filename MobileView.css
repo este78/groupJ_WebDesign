@@ -299,9 +299,13 @@
         margin: 0;
         background-color:whitesmoke;
     }
+	/*Used to differentiate which option has been highlighted*/
     .cook-items a {
        color:  rgb(5,119,61);
     }
+	.cook-items a:hover{
+		color:darkorange;
+	}
     /**/
     .category {
         margin: auto;
@@ -320,9 +324,10 @@
         padding: 10px 0;
         text-align: center;
     }
+
     /*styles the filter menu items*/
     .product-container {
-        display: block;
+        display: flex-wrap;
         overflow: hidden;
         padding: 22px;
         width: 80%;
@@ -339,7 +344,7 @@
         text-align: center;
     }
     .filterDiv img {
-        width: 100%;
+        width: 50%;
     }
     /*Shopping Cart*============================================================================================*/
     .checkout-row {

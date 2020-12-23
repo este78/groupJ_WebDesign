@@ -30,26 +30,26 @@ let products = [
             inCart: 0
         },
         {
-            name: "De Buyer Non Stick Frypan - Blue",
-			tag:"Fryingpans3",
+            name: "De Buyer Non Stick Frypan - Copper",
+			tag:"Fryingpans2",
             price: 66,
             inCart: 0
         },
         {
             name: "De Buyer Non Stick Frypan - Black",
-			tag:"Fryingpans4",
+			tag:"Fryingpans3",
             price: 45,
             inCart: 0
         },
         {
-            name: "De Buyer Non Stick Frypan - Red",
-			tag:"Fryingpans6",
+            name: "De Buyer Non Stick Frypan - Lid",
+			tag:"Fryingpans4",
             price: 54,
             inCart: 0
         },
         {
-            name: "De Buyer Non Stick Frypan - Blue",
-			tag:"Fryingpans2",
+            name: "De Buyer Non Stick Frypan - Grilled",
+			tag:"Fryingpans6",
             price: 55,
             inCart: 0
         }
