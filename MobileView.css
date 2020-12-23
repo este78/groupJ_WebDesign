@@ -148,6 +148,7 @@
         padding: 0;
     }
 	.item .carousel-caption{
+		display:flex-wrap;
 		position:absolute;
 		left: 14%;
 		right:14%;
@@ -155,6 +156,7 @@
 		width: 75%;
 		height: 75%;
 	}
+
 
     /*About Text=======================================================================================================================================================================================================================================*/
     .reviews {
@@ -545,8 +547,10 @@
     }
 
 }
-/*shopping  Cart product display correction*/
+
 @media screen and (max-width: 450px) {
+
+	/*shopping  Cart product display correction*/
 	.pQuantity{
 		width: 30%;
 	}
